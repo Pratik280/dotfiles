@@ -1,0 +1,29 @@
+# Inserts a blank line between shell prompts
+add_newline = true
+
+[line_break]
+disabled = true
+
+[python]
+disabled = true
+
+[package]
+disabled = true
+
+[ruby]
+disabled = true
+
+[rust]
+disabled = true
+
+[nodejs]
+disabled = true
+
+[java]
+disabled = true
+
+[golang]
+disabled = true
+
+[aws]
+disabled = true
