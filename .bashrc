@@ -72,6 +72,8 @@ alias rm='rm -i'
 alias n='nvim'
 alias v='nvim'
 alias vim='nvim'
+
+alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
 
 # git
