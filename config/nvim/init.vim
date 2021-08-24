@@ -5,9 +5,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Nord Theme
 Plug 'arcticicestudio/nord-vim'
-Plug 'sainnhe/everforest'
-" Nightfox theme
-Plug 'EdenEast/nightfox.nvim'
 
 " Emmet
 Plug 'mattn/emmet-vim'
@@ -17,7 +14,7 @@ Plug 'pangloss/vim-javascript'
 " React syntax highlight
 Plug 'MaxMEllon/vim-jsx-pretty'
 " Typescript syntax hightlight
-"Plug 'HerringtonDarkholme/yats.vim'
+Plug 'HerringtonDarkholme/yats.vim'
 " Another js syntax hightlight
 "Plug 'yuezk/vim-js'
 
