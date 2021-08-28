@@ -38,6 +38,9 @@ Plug 'vimwiki/vimwiki'
 " Markdown
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 
+" Goyo
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 " ----------------------------------------------------------------------------------------------
