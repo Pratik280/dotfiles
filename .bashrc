@@ -89,6 +89,7 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
+alias backup='git add . && git commit -am. && git push origin master'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
