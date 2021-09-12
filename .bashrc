@@ -14,6 +14,9 @@
 
 export HISTCONTROL=ignoreboth:erasedups
 
+# go lang
+export PATH=$PATH:/usr/local/go/bin
+export BAT_THEME="Nord"
 # Make nano the default editor
 
 export EDITOR='nvim'
@@ -34,6 +37,11 @@ bind "set completion-ignore-case on"
 
 #kitty image viewer
 alias icat="kitty +kitten icat"
+
+# curl
+alias weather="curl wttr.in"
+alias parrot="curl parrot.live"
+alias btc="curl rate.sx"
 
 # Changing "ls" to "exa"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
@@ -56,12 +64,15 @@ alias suspend='systemctl suspend'
 
 # alias upqll="paru -Syu --"
 alias upqll="paru -Syu"
-alias upal="paru -Syu"
+alias upal="paru -Syu && paru -Sua"
 
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
+
+# cleaning
+alias clean="sudo paccache -rk1"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -223,6 +234,25 @@ ex ()
   fi
 }
 
+# timer and stopwatch
+
+function countdown(){
+   date1=$((`date +%s` + $1)); 
+   while [ "$date1" -ge `date +%s` ]; do 
+     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
+     sleep 0.1
+   done
+}
+function stopwatch(){
+  date1=`date +%s`; 
+   while true; do 
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+    sleep 0.1
+   done
+}
+
+alias c25="countdown $((25*60))"
+alias c5="countdown $((5*60))"
 # vim mode in bash
 set -o vi
 
@@ -231,4 +261,6 @@ eval "$(starship init bash)"
 # figlet -f small PRATIK PC
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
-
+# colorscript -e panes
+colorscript -e crunchbang-mini
+echo "  " $(date)

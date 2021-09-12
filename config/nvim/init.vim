@@ -4,7 +4,9 @@
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Nord Theme
-Plug 'arcticicestudio/nord-vim'
+" Plug 'arcticicestudio/nord-vim'
+
+Plug 'shaunsingh/nord.nvim'
 
 " Emmet
 Plug 'mattn/emmet-vim'
@@ -51,22 +53,14 @@ set termguicolors
 colorscheme nord
 
 " For Transparency
-au ColorScheme * hi Normal ctermbg=none guibg=none
-au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+" au ColorScheme * hi Normal ctermbg=none guibg=none
+" au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 
-" Nightfox theme
-let g:nightfox_style = "nordfox"
-let g:nightfox_color_delimiter = "red"
-let g:nightfox_italic_comments = 1
-" let g:nightfox_transparent = "false" 
-let g:nightfox_italic_comments = 0
-" Load the colorscheme
-" colorscheme nightfox
 " ----------------------------------------------------------------------------------------------
 " Markdown Preview 
 " ----------------------------------------------------------------------------------------------
 
-let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
+" let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
 let g:mkdp_refresh_slow = 1 "1 : will not live update 
 
 " ----------------------------------------------------------------------------------------------
@@ -143,6 +137,7 @@ function! NetrwOnBufferOpen()
     return
   endif
   call ToggleNetrw()
+  setlocal statusline=/
 endfun
 
 " Close Netrw if it's the only buffer open
@@ -183,7 +178,7 @@ set statusline+=\ %r
 set statusline+=\ %F
 "set statusline+=%#CursorLineNr#
 set statusline+=%=
-set statusline+=%#DiffChange#
+set statusline+=%#DiffText#
 set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
 set statusline+=\ [%n]
@@ -264,6 +259,7 @@ set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
 set formatoptions-=ro        "disbales next line auto comment
 set noswapfile                "set no swap file
+set nowrap
 
 " ----------------------------------------------------------------------------------------------
 " CSS auto complete 
@@ -281,6 +277,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " ----------------------------------------------------------------------------------------------
 set path+=**
 set wildmenu
+" nnoremap <C-p> :find *
+nnoremap <C-p> :vs *
 
 " ----------------------------------------------------------------------------------------------
 " => Text, tab and indent related
@@ -307,8 +305,8 @@ inoremap <expr> <c-k> ("\<C-p>")
 " Use alt + hjkl to resize windows
 nnoremap <M-j>    :resize -2<CR>
 nnoremap <M-k>    :resize +2<CR>
-nnoremap <M-h>    :vertical resize -2<CR>
-nnoremap <M-l>    :vertical resize +2<CR>
+nnoremap <M-l>    :vertical resize -2<CR>
+nnoremap <M-h>    :vertical resize +2<CR>
 
 " I hate escape more than anything else
 inoremap jk <Esc>
