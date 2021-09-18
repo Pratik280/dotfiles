@@ -239,8 +239,11 @@ let g:closetag_close_shortcut = '<leader>>'
 " ----------------------------------------------------------------------------------------------
 
 syntax enable
+set smartcase
+set ignorecase
 set relativenumber
 set nu
+set completeopt=menuone,noinsert,noselect
 set path+=**			        " Searches current directory recursively.
 set t_Co=256                    " Set if term supports 256 colors.
 set clipboard=unnamedplus       " Copy/paste between vim and other programs.
@@ -260,7 +263,23 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set formatoptions-=ro        "disbales next line auto comment
 set noswapfile                "set no swap file
 set nowrap
+" maximize minimize splits using cltr+W M/m
+nnoremap <C-W>M <C-W>\| <C-W>_
+nnoremap <C-W>m <C-W>=
 
+" copy paste system clipboard
+set clipboard+=unnamedplus
+" Copy to clipboard
+vnoremap  <leader>y  "+y
+nnoremap  <leader>Y  "+yg_
+nnoremap  <leader>y  "+y
+nnoremap  <leader>yy  "+yy
+
+" " Paste from clipboard
+nnoremap <leader>p "+p
+nnoremap <leader>P "+P
+vnoremap <leader>p "+p
+vnoremap <leader>P "+P
 " ----------------------------------------------------------------------------------------------
 " CSS auto complete 
 " ----------------------------------------------------------------------------------------------

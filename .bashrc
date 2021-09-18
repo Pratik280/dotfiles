@@ -263,4 +263,4 @@ eval "$(starship init bash)"
 # ~/fm6000 -asok -n -c bright_white
 # colorscript -e panes
 colorscript -e crunchbang-mini
-echo "  " $(date)
+# echo "  " $(date)
