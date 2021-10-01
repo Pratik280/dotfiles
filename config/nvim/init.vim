@@ -141,7 +141,7 @@ function! NetrwOnBufferOpen()
 endfun
 
 " Close Netrw if it's the only buffer open
-autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
+" autocmd WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&filetype") == "netrw" || &buftype == 'quickfix' |q|endif
 
 " Make netrw act like a project Draw
 augroup ProjectDrawer
@@ -183,6 +183,30 @@ set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
 set statusline+=\ [%n]
 
+" hi TabLineSel  ctermfg=ECEFF4 ctermbg=235 cterm=bold
+" hi TabLine     ctermfg=242 ctermbg=0 cterm=none
+" hi TabLineFill ctermfg=#fff ctermbg=238 cterm=none
+
+" Highlight the active tab.
+" augroup TabColors
+"   autocmd!
+"   autocmd ColorScheme *
+"         \ highlight TabLineFill
+"         \   ctermfg=Black
+"         \   ctermbg=NONE
+"   autocmd ColorScheme *
+"         \ highlight TabLine
+"         \   ctermfg=NONE
+"         \   ctermbg=NONE
+"   autocmd ColorScheme *
+"         \ highlight TabLineSel
+"         \   ctermfg=NONE
+"         \   ctermbg=DarkBlue
+"   autocmd ColorScheme *
+"         \ highlight Title
+"         \   ctermfg=NONE
+"         \   ctermbg=NONE
+" augroup END
 " ----------------------------------------------------------------------------------------------
 " Emmet  
 " ----------------------------------------------------------------------------------------------
@@ -280,6 +304,12 @@ nnoremap <leader>p "+p
 nnoremap <leader>P "+P
 vnoremap <leader>p "+p
 vnoremap <leader>P "+P
+
+" Code Folding
+set foldmethod=indent " Folding based on indentation. 
+set foldlevelstart=10 " Fold only long blocks of code.
+set foldnestmax=10 " Folds can be nested, this ensures max 10 nested folds.
+
 " ----------------------------------------------------------------------------------------------
 " CSS auto complete 
 " ----------------------------------------------------------------------------------------------
@@ -294,10 +324,14 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " ----------------------------------------------------------------------------------------------
 " :find inbuilt find search in vim 
 " ----------------------------------------------------------------------------------------------
-set path+=**
+" set path=.,,**
+set path+=**                                                                    
 set wildmenu
-" nnoremap <C-p> :find *
-nnoremap <C-p> :vs *
+set wildignore+=*/min/*,*/vendor/*,*/node_modules/*,*/bower_components/*
+set wildmode=longest:full,full
+nnoremap <leader><C-f> :find *
+nnoremap <leader><C-v> :vert sf *
+nnoremap <leader><C-h> :sf *
 
 " ----------------------------------------------------------------------------------------------
 " => Text, tab and indent related
@@ -307,7 +341,9 @@ set expandtab                   " Use spaces instead of tabs.
 set smarttab                    " Be smart using tabs ;)
 set shiftwidth=2                " One tab == four spaces.
 set tabstop=2                   " One tab == four spaces.
-
+" set listchars=tab:\|\ 
+" set list  
+" set cursorline
 "" ----------------------------------------------------------------------------------------------
 " NEOVIM KEYBINDINGS
 " ----------------------------------------------------------------------------------------------
@@ -355,3 +391,7 @@ nnoremap <C-c> <Esc> Keybinds
 " Searched word will appear in middle of screen
 nnoremap n nzzzv
 nnoremap N Nzzzv
+
+" select and move up down shift + J/K
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv

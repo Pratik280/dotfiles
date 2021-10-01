@@ -47,7 +47,7 @@ alias btc="curl rate.sx"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first' # tree listing
+alias lt='exa -aT --color=always --group-directories-first -h --git-ignore' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 #fix obvious typo's
@@ -253,14 +253,22 @@ function stopwatch(){
 
 alias c25="countdown $((25*60))"
 alias c5="countdown $((5*60))"
+
+# alias default css
+alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
+alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
+
+alias r="ranger"
 # vim mode in bash
-set -o vi
+# set -o vi
 
 # Starship prompt
 eval "$(starship init bash)"
 # figlet -f small PRATIK PC
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
-# colorscript -e panes
-colorscript -e crunchbang-mini
+colorscript -e panes
+# colorscript -e blocks1
+# colorscript -e crunchbang-mini
+# colorscript -e crunch
 # echo "  " $(date)
