@@ -1,11 +1,7 @@
-" ----------------------------------------------------------------------------------------------
-" VIM PLUG 
-" ----------------------------------------------------------------------------------------------
+" Plugins ------------------------------------------------ {{{
 call plug#begin('~/.config/nvim/autoload/plugged')
 
 " Nord Theme
-" Plug 'arcticicestudio/nord-vim'
-
 Plug 'shaunsingh/nord.nvim'
 
 " Emmet
@@ -22,9 +18,6 @@ Plug 'HerringtonDarkholme/yats.vim'
 
 " Python Syntax
 Plug 'kh3phr3n/python-syntax'
-
-" Prettier
-" Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Closetag 
 Plug 'tpope/vim-surround'
@@ -44,28 +37,26 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'junegunn/goyo.vim'
 
 call plug#end()
+" }}}
 
-" ----------------------------------------------------------------------------------------------
-" THEME 
-" ----------------------------------------------------------------------------------------------
-"  Nord Theme configuraion
+" Theme Setting --------------------- {{{
 set termguicolors
 colorscheme nord
 
 " For Transparency
 " au ColorScheme * hi Normal ctermbg=none guibg=none
 " au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
+" }}}
 
-" ----------------------------------------------------------------------------------------------
-" Markdown Preview 
-" ----------------------------------------------------------------------------------------------
+" MarkdowmPreview Setting --------------------- {{{
 
 " let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
 let g:mkdp_refresh_slow = 1 "1 : will not live update 
 
-" ----------------------------------------------------------------------------------------------
-" NETRW 
-" ----------------------------------------------------------------------------------------------
+" }}}
+
+" netrw Setting --------------------- {{{
+
 " Netrw settings
 let g:netrw_keepdir = 0
 let g:netrw_winsize = 25
@@ -89,7 +80,7 @@ function! OpenBelow()
   execute 'belowright new' g:path
   :normal <C-w>l
 endfunction
-
+ 
 function! OpenTab()
   :normal v
   let g:path=expand('%:p')
@@ -152,10 +143,9 @@ augroup ProjectDrawer
 augroup END
 
 let g:NetrwIsOpen=0
+" }}}
 
-" ----------------------------------------------------------------------------------------------
-" STATUS LINE
-" ----------------------------------------------------------------------------------------------
+" Statusline --------------------- {{{
 
 let g:currentmode={
       \ 'n'  : 'NORMAL ',
@@ -168,9 +158,21 @@ let g:currentmode={
       \ 'c'  : 'Command ',
       \}
 
+function! GitBranch()
+  return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
+endfunction
+
+function! StatuslineGit()
+  let l:branchname = GitBranch()
+  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+endfunction
+
 set statusline=
 set statusline+=%#DiffAdd#
 set statusline+=\ %{toupper(g:currentmode[mode()])}
+set statusline+=%#DiffChange#
+" set statusline+=\ %{StatuslineGit()}
+set statusline+=%{StatuslineGit()}
 set statusline+=%#StatusLine#
 "set statusline+=\ %M
 set statusline+=\ %y
@@ -183,84 +185,30 @@ set statusline+=\ %c:%l/%L
 set statusline+=\ %p%%
 set statusline+=\ [%n]
 
-" hi TabLineSel  ctermfg=ECEFF4 ctermbg=235 cterm=bold
-" hi TabLine     ctermfg=242 ctermbg=0 cterm=none
-" hi TabLineFill ctermfg=#fff ctermbg=238 cterm=none
+" }}}
 
-" Highlight the active tab.
-" augroup TabColors
-"   autocmd!
-"   autocmd ColorScheme *
-"         \ highlight TabLineFill
-"         \   ctermfg=Black
-"         \   ctermbg=NONE
-"   autocmd ColorScheme *
-"         \ highlight TabLine
-"         \   ctermfg=NONE
-"         \   ctermbg=NONE
-"   autocmd ColorScheme *
-"         \ highlight TabLineSel
-"         \   ctermfg=NONE
-"         \   ctermbg=DarkBlue
-"   autocmd ColorScheme *
-"         \ highlight Title
-"         \   ctermfg=NONE
-"         \   ctermbg=NONE
-" augroup END
-" ----------------------------------------------------------------------------------------------
-" Emmet  
-" ----------------------------------------------------------------------------------------------
+" Emmet Setting --------------------- {{{
 let g:user_emmet_leader_key='<A-c>' " set emmet key to alt+c
+" }}}
 
-" ----------------------------------------------------------------------------------------------
-" CLOSED TAG 
-" ----------------------------------------------------------------------------------------------
+" close tag Setting --------------------- {{{
 
-" filenames like *.xml, *.html, *.xhtml, ...
-" These are the file extensions where this plugin is enabled.
-"
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.js,*.jsx,*.ts,*.tsx'
-
-" filenames like *.xml, *.xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filenames = '*.xhtml,*.jsx,*.js,*.ts,*.tsx'
-
-" filetypes like xml, html, xhtml, ...
-" These are the file types where this plugin is enabled.
-"
 let g:closetag_filetypes = 'html,xhtml,phtml,js,jsx,ts,tsx'
-
-" filetypes like xml, xhtml, ...
-" This will make the list of non-closing tags self-closing in the specified files.
-"
 let g:closetag_xhtml_filetypes = 'xhtml,jsx,ts,tsx,js,jsx'
-
-" integer value [0|1]
-" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
-"
 let g:closetag_emptyTags_caseSensitive = 1
-
-" dict
-" Disables auto-close if not in a "valid" region (based on filetype)
-"
 let g:closetag_regions = {
       \ 'typescript.tsx': 'jsxRegion,tsxRegion',
       \ 'javascript.jsx': 'jsxRegion',
       \ 'typescriptreact': 'jsxRegion,tsxRegion',
       \ 'javascriptreact': 'jsxRegion',
       \ }
-
-" Shortcut for closing tags, default is '>'
-"
 let g:closetag_shortcut = '>'
-
-" Add > at current position without closing the current tag, default is ''
-"
 let g:closetag_close_shortcut = '<leader>>'
-" ----------------------------------------------------------------------------------------------
-" General Settings 
-" ----------------------------------------------------------------------------------------------
+" }}}
+
+" General Setting --------------------- {{{
 
 syntax enable
 set smartcase
@@ -287,32 +235,16 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set formatoptions-=ro        "disbales next line auto comment
 set noswapfile                "set no swap file
 set nowrap
-" maximize minimize splits using cltr+W M/m
-nnoremap <C-W>M <C-W>\| <C-W>_
-nnoremap <C-W>m <C-W>=
 
-" copy paste system clipboard
-set clipboard+=unnamedplus
-" Copy to clipboard
-vnoremap  <leader>y  "+y
-nnoremap  <leader>Y  "+yg_
-nnoremap  <leader>y  "+y
-nnoremap  <leader>yy  "+yy
+augroup config_setting
+    autocmd!
+    autocmd FileType vim setlocal foldlevel=0 foldmethod=marker
+augroup END
 
-" " Paste from clipboard
-nnoremap <leader>p "+p
-nnoremap <leader>P "+P
-vnoremap <leader>p "+p
-vnoremap <leader>P "+P
+" }}}
 
-" Code Folding
-set foldmethod=indent " Folding based on indentation. 
-set foldlevelstart=10 " Fold only long blocks of code.
-set foldnestmax=10 " Folds can be nested, this ensures max 10 nested folds.
+" CSS Autocomplete using inbuilt --------------------- {{{
 
-" ----------------------------------------------------------------------------------------------
-" CSS auto complete 
-" ----------------------------------------------------------------------------------------------
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType jsx set omnifunc=csscomplete#CompleteCSS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
@@ -321,37 +253,34 @@ autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType jsx set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 
-" ----------------------------------------------------------------------------------------------
-" :find inbuilt find search in vim 
-" ----------------------------------------------------------------------------------------------
+" }}}
+
+" Find inbuilt find search in vim --------------------- {{{
+
 " set path=.,,**
 set path+=**                                                                    
 set wildmenu
 set wildignore+=*/min/*,*/vendor/*,*/node_modules/*,*/bower_components/*
 set wildmode=longest:full,full
-nnoremap <leader><C-f> :find *
-nnoremap <leader><C-v> :vert sf *
-nnoremap <leader><C-h> :sf *
 
-" ----------------------------------------------------------------------------------------------
-" => Text, tab and indent related
-" ----------------------------------------------------------------------------------------------
+" }}}
+
+" Text, Tabs and indenatation --------------------- {{{
 
 set expandtab                   " Use spaces instead of tabs.
 set smarttab                    " Be smart using tabs ;)
 set shiftwidth=2                " One tab == four spaces.
 set tabstop=2                   " One tab == four spaces.
-" set listchars=tab:\|\ 
-" set list  
 " set cursorline
-"" ----------------------------------------------------------------------------------------------
-" NEOVIM KEYBINDINGS
-" ----------------------------------------------------------------------------------------------
 
-" Setting <Leader> to Spacebar button
+" }}}
+
+" Keybindings --------------------- {{{
+
 set timeoutlen=500
+" Setting <Leader> to Spacebar button
 " let g:mapleader = "\<Space>"
-nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
+" nnoremap <silent> <leader>      :<c-u>WhichKey '<Space>'<CR>
 
 " " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
@@ -367,9 +296,9 @@ nnoremap <M-h>    :vertical resize +2<CR>
 inoremap jk <Esc>
 inoremap kj <Esc>
 
-" Easy CAPS
-" inoremap <c-u> <ESC>viwUi
-" nnoremap <c-u> viwU<Esc>
+" Easy full word CAPS
+inoremap <c-u> <ESC>viwUi
+nnoremap <c-u> viwU<Esc>
 
 " Better tabbing
 vnoremap < <gv
@@ -385,8 +314,6 @@ nnoremap <C-l> <C-w>l
 nnoremap <C-s> :w<CR>
 " Alternate way to quit
 nnoremap <C-Q> :wq!<CR>
-" Use control-c instead of escape
-nnoremap <C-c> <Esc> Keybinds
 
 " Searched word will appear in middle of screen
 nnoremap n nzzzv
@@ -395,3 +322,17 @@ nnoremap N Nzzzv
 " select and move up down shift + J/K
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" maximize minimize splits using cltr+W M/m
+nnoremap <C-W>M <C-W>\| <C-W>_
+nnoremap <C-W>m <C-W>=
+
+" find file using leader + cltr + f
+nnoremap <leader><C-f> :find *
+" find file and split open vertical using leader + cltr + f
+nnoremap <leader><C-v> :vert sf *
+" find file and split open horizontal using leader + cltr + f
+nnoremap <leader><C-h> :sf *
+
+" }}}
+
