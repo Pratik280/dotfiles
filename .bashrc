@@ -19,6 +19,8 @@ export PATH=$PATH:/usr/local/go/bin
 export BAT_THEME="Nord"
 # Make nano the default editor
 
+# mongo alias to start instance
+alias mongod='mongod --port 27017 --dbpath ~/00MAIN/00MAIN/mongo/mongo-database/'
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -47,7 +49,8 @@ alias btc="curl rate.sx"
 alias ls='exa -al --color=always --group-directories-first' # my preferred listing
 alias la='exa -a --color=always --group-directories-first'  # all files and dirs
 alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first -h --git-ignore' # tree listing
+alias lt='exa -aT --color=always --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
+alias tree='exa -aT --color=always --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 #fix obvious typo's
@@ -70,6 +73,9 @@ alias upal="paru -Syu && paru -Sua"
 # pacman or pm
 alias pacman='sudo pacman --color auto'
 alias update='sudo pacman -Syyu'
+
+# alias pacsearch='pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S'
+# uses fzf to search throuch pacman apps and press enter to download
 
 # cleaning
 alias clean="sudo paccache -rk1"
@@ -196,6 +202,8 @@ alias nq="$EDITOR ~/.config/qtile/config.py"
 alias nn="$EDITOR ~/.config/nvim/init.vim"
 alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
+alias bat="bat --style=numbers"
+alias find="find . -type f | fzf"
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
 alias downgrada="sudo downgrade --ala-url https://bike.seedhost.eu/arcolinux/"
@@ -277,3 +285,7 @@ colorscript -e panes
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -f ~/fzf.bash ] && source ~/.fzf.bash
+source /usr/share/fzf/key-bindings.bash
+source /usr/share/fzf/completion.bash
+alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
