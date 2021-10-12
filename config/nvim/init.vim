@@ -7,6 +7,9 @@ Plug 'shaunsingh/nord.nvim'
 " Gruvbox theme
 Plug 'gruvbox-community/gruvbox'
 
+" Statusline
+Plug 'itchyny/lightline.vim'
+
 " tree fern
 Plug 'lambdalisue/fern.vim'
 " fonts for fern tree
@@ -17,7 +20,7 @@ Plug 'lambdalisue/fern.vim'
 Plug 'mattn/emmet-vim'
 
 " css color
-Plug 'ap/vim-css-color'
+Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
 
 " Javascript syntax highlight
 Plug 'pangloss/vim-javascript'
@@ -68,6 +71,22 @@ au ColorScheme * hi Normal ctermbg=none guibg=none
 au ColorScheme myspecialcolors hi Normal ctermbg=red guibg=red
 " }}}
 
+" css color Setting --------------------- {{{
+
+let g:Hexokinase_ftEnabled = ['css', 'scss', 'sass', 'html', 'javascript']
+let g:Hexokinase_highlighters = [ 'virtual' ]
+" let g:Hexokinase_highlighters = [ 'backgroundfull' ]
+" let g:Hexokinase_highlighters = [
+" \   'virtual',
+" \   'sign_column',
+" \   'background',
+" \   'backgroundfull',
+" \   'foreground',
+" \   'foregroundfull'
+" \ ]
+
+" }}}
+
 " MarkdowmPreview Setting --------------------- {{{
 
 " let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
@@ -107,7 +126,8 @@ function! s:init_fern() abort
 	nmap <buffer> M <Plug>(fern-action-move)
 	nmap <buffer> C <Plug>(fern-action-copy)
 	nmap <buffer> N <Plug>(fern-action-new-path)
-	nmap <buffer> T <Plug>(fern-action-new-file)
+	" nmap <buffer> T <Plug>(fern-action-new-file)
+	nmap <buffer> F <Plug>(fern-action-new-file)
 	nmap <buffer> D <Plug>(fern-action-new-dir)
 	nmap <buffer> S <Plug>(fern-action-hidden-toggle)
   nmap <buffer> r <Plug>(fern-action-reload)
@@ -235,44 +255,70 @@ endfunction
 
 " Statusline --------------------- {{{
 
-let g:currentmode={
-      \ 'n'  : 'NORMAL ',
-      \ 'v'  : 'VISUAL ',
-      \ 'V'  : 'V·Line ',
-      \ "\<C-V>" : 'V·Block ',
-      \ 'i'  : 'INSERT ',
-      \ 'R'  : 'R ',
-      \ 'Rv' : 'V·Replace ',
-      \ 'c'  : 'Command ',
-      \ 't'  : 'TERMINAL ',
-      \}
-
 function! GitBranch()
   return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
 endfunction
 
 function! StatuslineGit()
   let l:branchname = GitBranch()
-  return strlen(l:branchname) > 0?'  '.l:branchname.' ':''
+  return strlen(l:branchname) > 0?''.l:branchname.'':''
 endfunction
 
-set statusline=
-set statusline+=%#DiffAdd#
-set statusline+=\ %{toupper(g:currentmode[mode()])}
-set statusline+=%#DiffChange#
-" set statusline+=\ %{StatuslineGit()}
-set statusline+=%{StatuslineGit()}
-set statusline+=%#StatusLine#
-"set statusline+=\ %M
-set statusline+=\ %y
-set statusline+=\ %r
-set statusline+=\ %F
-"set statusline+=%#CursorLineNr#
-set statusline+=%=
-set statusline+=%#DiffText#
-set statusline+=\ %c:%l/%L
-set statusline+=\ %p%%
-set statusline+=\ [%n]
+" lightline 
+
+set laststatus=2
+
+let g:lightline = {
+      \ 'colorscheme': 'nord',
+      \ 'active': {
+      \   'left': [ [ 'mode', 'paste' ],
+      \             ['readonly', 'filename', 'modified' ] ]
+      \ ,
+      \   'right': [ [ 'lineinfo' ],
+      \              [ 'percent' ],
+      \              [ 'fileformat', 'showstatus' ] ]
+      \ },
+      \ 'component': {
+      \   'helloworld': 'Hello, world!',
+      \   'showstatus': StatuslineGit()
+      \ },
+      \ }
+
+      " \   'right': [ [ 'lineinfo' ],
+      " \              [ 'percent' ],
+      " \              [ 'fileformat', 'fileencoding', 'filetype', 'showstatus' ] ]
+
+" inbuilt
+"let g:currentmode={
+"      \ 'n'  : 'NORMAL ',
+"      \ 'v'  : 'VISUAL ',
+"      \ 'V'  : 'V·Line ',
+"      \ "\<C-V>" : 'V·Block ',
+"      \ 'i'  : 'INSERT ',
+"      \ 'R'  : 'R ',
+"      \ 'Rv' : 'V·Replace ',
+"      \ 'c'  : 'Command ',
+"      \ 't'  : 'TERMINAL ',
+"      \}
+
+
+"set statusline=
+"set statusline+=%#DiffAdd#
+"set statusline+=\ %{toupper(g:currentmode[mode()])}
+"set statusline+=%#DiffChange#
+"" set statusline+=\ %{StatuslineGit()}
+"set statusline+=%{StatuslineGit()}
+"set statusline+=%#StatusLine#
+""set statusline+=\ %M
+"set statusline+=\ %y
+"set statusline+=\ %r
+"set statusline+=\ %F
+""set statusline+=%#CursorLineNr#
+"set statusline+=%=
+"set statusline+=%#DiffText#
+"set statusline+=\ %c:%l/%L
+"set statusline+=\ %p%%
+"set statusline+=\ [%n]
 
 " }}}
 
@@ -433,6 +479,9 @@ inoremap kj <Esc>
 inoremap <c-u> <ESC>viwUi
 nnoremap <c-u> viwU<Esc>
 
+" makes capital copy line from cursor till end
+nnoremap Y yg$
+
 " Better tabbing
 vnoremap < <gv
 vnoremap > >gv
@@ -451,6 +500,7 @@ nnoremap <C-Q> :wq!<CR>
 " Searched word will appear in middle of screen
 nnoremap n nzzzv
 nnoremap N Nzzzv
+nnoremap J mzJ`z
 
 " select and move up down shift + J/K
 vnoremap J :m '>+1<CR>gv=gv
