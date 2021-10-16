@@ -270,16 +270,6 @@ alias r="ranger"
 # vim mode in bash
 # set -o vi
 
-# Starship prompt
-eval "$(starship init bash)"
-# figlet -f small PRATIK PC
-# pfetch
-# ~/fm6000 -asok -n -c bright_white
-colorscript -e panes
-# colorscript -e blocks1
-# colorscript -e crunchbang-mini
-# colorscript -e crunch
-# echo "  " $(date)
 
 
 export NVM_DIR="$HOME/.nvm"
@@ -289,3 +279,14 @@ export NVM_DIR="$HOME/.nvm"
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash
 alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
+
+# Starship prompt
+eval "$(starship init bash)"
+# figlet -f small PRATIK PC
+# pfetch
+# ~/fm6000 -asok -n -c bright_white
+# colorscript -e panes
+# colorscript -e blocks1
+colorscript -e crunchbang-mini
+# colorscript -e crunch
+# echo "  " $(date)

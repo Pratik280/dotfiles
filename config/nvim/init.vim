@@ -108,8 +108,9 @@ let g:fern#drawer_width = 40
 let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 
-noremap <silent> <C-b> :Fern . -drawer -reveal=% -toggle -width=40<CR><C-w>=
-
+" noremap <silent> <C-b> :Fern . -drawer -reveal=% -toggle -width=40<CR><C-w>=
+noremap <leader>e :Fern . -drawer -reveal=% -toggle -width=40<CR><C-w>=
+      
 function! s:init_fern() abort
   nmap <buffer><expr>
       \ <Plug>(fern-my-expand-or-collapse)
@@ -476,8 +477,8 @@ inoremap jk <Esc>
 inoremap kj <Esc>
 
 " Easy full word CAPS
-inoremap <c-u> <ESC>viwUi
-nnoremap <c-u> viwU<Esc>
+" inoremap <c-u> <ESC>viwUi
+" nnoremap <c-u> viwU<Esc>
 
 " makes capital copy line from cursor till end
 nnoremap Y yg$
