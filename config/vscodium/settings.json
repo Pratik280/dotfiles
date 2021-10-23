@@ -8,7 +8,7 @@
   // "workbench.iconTheme": "material-icon-theme",
   "window.menuBarVisibility": "hidden",
   "workbench.statusBar.visible": true,
-  "workbench.activityBar.visible": false,
+  // "workbench.activityBar.visible": false,
   "terminal.integrated.inheritEnv": false,
   // "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
