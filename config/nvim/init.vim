@@ -1,8 +1,10 @@
 " Plugins ------------------------------------------------ {{{
 call plug#begin('~/.config/nvim/autoload/plugged')
 
-" Nord Theme
+" Themes
 Plug 'shaunsingh/nord.nvim'
+Plug 'mhartington/oceanic-next'
+Plug 'chriskempson/base16-vim'
 
 " Gruvbox theme
 Plug 'gruvbox-community/gruvbox'
@@ -62,8 +64,21 @@ call plug#end()
 " }}}
 
 " Theme Setting --------------------- {{{
-set termguicolors
+
+" Theme
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+" Or if you have Neovim >= 0.1.5
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" Theme
+syntax enable
+" colorscheme OceanicNext
 colorscheme nord
+" colorscheme base16-tomorrow-night
+" colorscheme monokai_pro
 " colorscheme gruvbox
 
 " For Transparency
@@ -140,7 +155,7 @@ endfunction
 
 augroup fern-custom
   autocmd! *
-  autocmd FileType fern call s:init_fern()
+  autocmd FileType fern setlocal norelativenumber | setlocal nonumber | call s:init_fern()
 augroup END
 
 " let g:fern#renderer = "nerdfont"
