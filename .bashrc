@@ -204,6 +204,7 @@ alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
 alias bat="bat --style=numbers"
 alias find="find . -type f | fzf"
+alias duhere="du -sh * | sort -r -h"
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
 alias downgrada="sudo downgrade --ala-url https://bike.seedhost.eu/arcolinux/"
@@ -285,8 +286,9 @@ eval "$(starship init bash)"
 # figlet -f small PRATIK PC
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
-# colorscript -e panes
+# motivate
+colorscript -e panes
 # colorscript -e blocks1
-colorscript -e crunchbang-mini
+# colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)
