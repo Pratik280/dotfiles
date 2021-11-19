@@ -1,0 +1,72 @@
+{
+  "workbench.colorTheme": "Nord",
+  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 14,
+  "window.zoomLevel": 1.25,
+  "workbench.settings.useSplitJSON": true,
+  "extensions.ignoreRecommendations": true,
+  // window
+  // "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  // editor
+  "diffEditor.wordWrap": "on",
+  "editor.acceptSuggestionOnEnter": "off",
+  "editor.renderLineHighlight": "none",
+  // "editor.parameterHints.enabled": false,
+  "files.trimFinalNewlines": true,
+  "window.restoreWindows": "none",
+  "editor.occurrencesHighlight": false,
+  "glassit.alpha": 230,
+  // tabs and spaces
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "[typescript]": {
+    "editor.tabSize": 2
+  },
+  "[html]": {
+    "editor.tabSize": 2
+  },
+  "[css]": {
+    "editor.tabSize": 2
+  },
+  "[scss]": {
+    "editor.tabSize": 2
+  },
+  "[javascript]": {
+    "editor.tabSize": 2
+  },
+  "[python]": {
+    "editor.tabSize": 4
+  },
+  // emmet
+  //emmet inside react jsx
+  // "emmet.includeLanguages": {
+  //     "javascript": "javascriptreact"
+  // },
+  // "emmet.excludeLanguages": [
+  //     "markdown"
+  // ],
+  // git
+  "git.decorations.enabled": false,
+  "git.enabled": false,
+  // cursor customization
+  "editor.cursorBlinking": "expand",
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffff00",
+    "terminalCursor.foreground": "#ffff00",
+  },
+  // vim
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  "workbench.startupEditor": "none",
+  // autocmp off
+  // "editor.quickSuggestionsDelay": 10000,
+  // "editor.quickSuggestions": false,
+  // "editor.suggest.showTypeParameters": false,
+  // "editor.hover.enabled": false,
+  // "diffEditor.ignoreTrimWhitespace": false,
+  // java
+  // "java.completion.enabled": false,
+  //"java.configuration.checkProjectSettingsExclusions": false,
+}
