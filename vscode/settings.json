@@ -55,6 +55,7 @@
   "editor.cursorBlinking": "expand",
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#ffff00",
+    // "editorCursor.foreground": "#EBCB8B",
     "terminalCursor.foreground": "#ffff00",
   },
   // vim

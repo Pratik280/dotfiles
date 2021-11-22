@@ -44,7 +44,7 @@ configuration {
     selected-normal-background:  @nord3;
     border-color:                @nord15;
     spacing:                     2;
-    separatorcolor:              @blue;
+    separatorcolor:              @nord0;
     urgent-background:           @background;
     selected-urgent-background:  @nord3;
     alternate-urgent-foreground: @urgent-foreground;
@@ -63,7 +63,7 @@ configuration {
 }
 
 #mainbox {
-    border:  2;
+    border:  0;
     padding: 10;
 }
 
@@ -143,7 +143,7 @@ configuration {
     text-color: @normal-foreground;
     padding:    5px ;
     border:	0 0 1;
-    border-color: @separatorcolor;
+    /* border-color: @separatorcolor; */
 }
 
 #case-indicator {
