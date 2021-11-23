@@ -12,6 +12,7 @@ declare -a options=(
 "neovim - $HOME/dotfiles/config/nvim/init.vim"
 "kitty - $HOME/dotfiles/config/kitty/kitty.conf"
 "rofi - $HOME/dotfiles/config/rofi/config.rasi"
+"rofi-scripts - $HOME/dotfiles/config/rofi/rofi-scripts"
 "picom - $HOME/dotfiles/config/picom/picom.conf"
 "ranger - $HOME/dotfiles/config/ranger/rc.conf"
 "starship - $HOME/dotfiles/starship.toml"

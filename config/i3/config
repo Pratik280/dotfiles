@@ -92,8 +92,8 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+# bindsym $mod+s layout stacking
+# bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -177,15 +177,23 @@ mode "resize" {
     bindsym $mod+r mode "default"
 }
 
+
 bindsym $mod+r mode "resize"
+
+# floating only apps
+for_window [class="stacer"] floating enable
+
+#rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 
 # bindsym $mod+shift+x exec i3lock
 # bindsym --release $mod+shift+x exec slock
 bindsym --release $mod+shift+x exec ~/dotfiles/config/rofi/rofi-scripts/power-rofi.sh
 bindsym --release $mod+c exec ~/dotfiles/config/rofi/rofi-scripts/config-rofi.sh
+bindsym --release $mod+w exec ~/dotfiles/config/rofi/rofi-scripts/bookmarks-rofi.sh
 
 gaps inner 10
+# gaps outer 20
 
 # nord colors
 set $nord0 #2E3440
@@ -217,6 +225,14 @@ client.unfocused        $nord2  $nord2  $nord2  $nord2    $nord2
 client.urgent           $nord2  $nord2  $nord2  $nord2    $nord2
 
 client.background       #ffffff
+
+# scratchpad for pavucontrol
+exec_always --no-startup-id pavucontrol --name soundcontrol
+for_window [instance="soundcontrol"] floating enable
+for_window [instance="soundcontrol"] move scratchpad
+bindsym $mod+minus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+
+# autostart
 
 # nitrogen wallpaper
 exec --no-startup-id nitrogen --restore
