@@ -47,7 +47,7 @@ configuration {
 }
 
 element {
-  padding: 12;
+  padding: 6;
   text-color: @fg-alt;
 }
 
@@ -63,7 +63,7 @@ element-text {
 
 entry {
   background-color: @bg-alt;
-  padding: 12;
+  padding: 6;
   text-color: @fg;
 }
 
@@ -74,7 +74,7 @@ inputbar {
 listview {
   background-color: @bg;
   columns: 1;
-  lines: 10;
+  lines: 8;
 }
 
 mainbox {
