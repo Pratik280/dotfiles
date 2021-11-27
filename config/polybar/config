@@ -1,5 +1,4 @@
 [colors]
-;background = ${xrdb:color0:#222}
 # nord colors
 nord0 = #2E3440
 nord1 = #3B4252
@@ -20,8 +19,11 @@ nord12 = #D08770
 nord13 = #EBCB8B
 nord14 = #A3BE8C
 nord15 = #B48EAD
-background = #222
-background-alt = #444
+
+accent-one = #695966
+
+background-one = #2E3440
+background-two = #3B4252
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -42,16 +44,16 @@ background = ${colors.nord0}
 foreground = ${colors.nord5}
 
 line-size = 3
-line-color = #f00
+line-color = ${colors.nord15}
 
 border-size = 0
 border-color = #00000000
 
-padding-left = 1
-padding-right = 2
+padding-left = 0
+padding-right = 0
 
-module-margin-left = 1
-module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
 font-0 = InconsolataLGC Nerd Font:size=10
 
@@ -61,12 +63,8 @@ modules-right = date time sound powermenu
 
 tray-position = right
 tray-padding = 10
-tray-background = ${colors.nord1}
+tray-background = ${colors.nord3}
 
-;wm-restack = i3
-;override-redirect = true
-;scroll-up = i3wm-wsnext
-;scroll-down = i3wm-wsprev
 cursor-click = pointer
 cursor-scroll = ns-resize
 
@@ -74,6 +72,9 @@ cursor-scroll = ns-resize
 type = custom/text
 content =  
 click-left = exec rofi -show drun -show-icons
+# content-underline = ${colors.nord15}
+content-background = ${colors.nord10}
+content-padding = 2
 
 [module/xwindow]
 type = internal/xwindow
@@ -89,11 +90,11 @@ label-mode-padding = 1
 label-mode-foreground = #000
 label-mode-background = ${colors.primary}
 label-focused = %index%
-label-focused-background = #695966
+label-focused-background = ${colors.accent-one}
 label-focused-underline = ${colors.nord15}
-label-focused-padding = 1
+label-focused-padding = 2
 label-unfocused = %index%
-label-unfocused-padding = 1
+label-unfocused-padding = 2
 label-visible = %index%
 label-visible-background = ${self.label-focused-background}
 label-visible-underline = ${self.label-focused-underline}
@@ -108,6 +109,10 @@ exec = date '+%A %d %B %Y'
 # label = "  %output%"
 label = "%output%"
 interval = 5
+format-underline = ${colors.nord14}
+format-background = ${colors.nord2}
+format-padding = 1
+format-margin-right = 5
 
 [module/time]
 type = custom/script
@@ -115,19 +120,25 @@ exec = date '+%I:%M %p'
 # label = " %output%"
 label = "%output%"
 interval = 5
+format-underline = ${colors.nord14}
+format-background = ${colors.nord2}
+format-padding = 1
 
 [module/sound]
 type = custom/text
 content = "墳"
-click-left = exec pavucontrol
-click-right = killall pavucontrol
-interval = 5
-content-mode-background = ${colors.nord1}
+click-left = exec i3-msg scratchpad show
+# content-underline = ${colors.nord13}
+content-background = ${colors.nord10}
+content-padding = 2
 
 [module/powermenu]
 type = custom/text
 content = ""
 click-left = exec ~/dotfiles/config/rofi/rofi-scripts/power-rofi.sh
+# content-underline = ${colors.nord13}
+content-background = ${colors.nord10}
+content-padding = 2
 
 [settings]
 screenchange-reload = true

@@ -182,7 +182,7 @@ bindsym $mod+r mode "resize"
 
 # floating only apps
 for_window [class="stacer"] floating enable
-for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
+# for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
 
 bindsym $mod+shift+s exec pavucontrol
 #rofi
@@ -229,10 +229,10 @@ client.urgent           $nord2  $nord2  $nord2  $nord2    $nord2
 client.background       #ffffff
 
 # scratchpad for pavucontrol
-# exec_always --no-startup-id pavucontrol --name soundcontrol
-# for_window [instance="soundcontrol"] floating enable
-# for_window [instance="soundcontrol"] move scratchpad
-# bindsym $mod+minus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+exec_always --no-startup-id pavucontrol --name soundcontrol
+for_window [instance="soundcontrol"] floating enable move position 1200 px 30 px
+for_window [instance="soundcontrol"] move scratchpad
+bindsym $mod+minus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
 
 # autostart
 
