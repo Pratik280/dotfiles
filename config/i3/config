@@ -184,15 +184,19 @@ bindsym $mod+r mode "resize"
 for_window [class="stacer"] floating enable
 # for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
 
+# screenshot using miam
+bindsym $mod+Print exec maim -u $HOME/Pictures/screenshots/"$(date +%Y-%h-%d-%H-%M-%S).png"
+bindsym $mod+shift+Print exec maim -u -s $HOME/Pictures/screenshots/"$(date +%Y-%h-%d-%H-%M-%S).png"
+
 bindsym $mod+shift+s exec pavucontrol
 #rofi
 bindsym $mod+d exec --no-startup-id rofi -show drun -show-icons
 
 # bindsym $mod+shift+x exec i3lock
 # bindsym --release $mod+shift+x exec slock
-bindsym --release $mod+shift+x exec ~/dotfiles/config/rofi/rofi-scripts/power-rofi.sh
-bindsym --release $mod+c exec ~/dotfiles/config/rofi/rofi-scripts/config-rofi.sh
-bindsym --release $mod+w exec ~/dotfiles/config/rofi/rofi-scripts/bookmarks-rofi.sh
+bindsym --release $mod+shift+x exec ~/dotfiles/config/scripts/power-rofi.sh
+bindsym --release $mod+c exec ~/dotfiles/config/scripts/config-rofi.sh
+bindsym --release $mod+w exec ~/dotfiles/config/scripts/bookmarks-rofi.sh
 
 gaps inner 10
 # gaps outer 20

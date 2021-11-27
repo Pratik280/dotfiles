@@ -73,6 +73,7 @@ type = custom/text
 content =  
 click-left = exec rofi -show drun -show-icons
 # content-underline = ${colors.nord15}
+content-underline = #546f8f
 content-background = ${colors.nord10}
 content-padding = 2
 
@@ -128,15 +129,17 @@ format-padding = 1
 type = custom/text
 content = "墳"
 click-left = exec i3-msg scratchpad show
-# content-underline = ${colors.nord13}
+# content-underline = ${colors.nord2}
+content-underline = #546f8f
 content-background = ${colors.nord10}
 content-padding = 2
 
 [module/powermenu]
 type = custom/text
 content = ""
-click-left = exec ~/dotfiles/config/rofi/rofi-scripts/power-rofi.sh
-# content-underline = ${colors.nord13}
+click-left = exec ~/dotfiles/config/scripts/power-rofi.sh
+# content-underline = ${colors.nord2}
+content-underline = #546f8f
 content-background = ${colors.nord10}
 content-padding = 2
 
