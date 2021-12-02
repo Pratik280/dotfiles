@@ -40,6 +40,17 @@
   "[python]": {
     "editor.tabSize": 4
   },
+  
+  //tailwind
+  "css.validate": false,
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
   // emmet
   //emmet inside react jsx
   // "emmet.includeLanguages": {

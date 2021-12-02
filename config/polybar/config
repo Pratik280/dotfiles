@@ -59,7 +59,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 
 modules-left = arch i3
 ; modules-center = xwindow
-modules-right = date time sound powermenu
+modules-right = uptime date time sound powermenu
 
 tray-position = right
 tray-padding = 10
@@ -73,7 +73,8 @@ type = custom/text
 content =  
 click-left = exec rofi -show drun -show-icons
 # content-underline = ${colors.nord15}
-content-underline = #546f8f
+# content-underline = #546f8f
+content-underline = ${colors.nord10}
 content-background = ${colors.nord10}
 content-padding = 2
 
@@ -104,16 +105,36 @@ label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
+[module/polypomo]
+type = custom/script
+exec = ~/dotfiles/config/scripts/polypomo.sh
+tail = true
+label = %output%
+click-left = /path/to/polypomo toggle
+click-right = /path/to/polypomo end
+click-middle = /path/to/polypomo lock
+scroll-up = /path/to/polypomo time +60
+scroll-down = /path/to/polypomo time -60
+
+[module/uptime]
+type = custom/script
+exec = uptime -p
+# label = "  %output%"
+label = "%output%"
+interval = 5
+format-underline = ${colors.nord15}
+format-background = ${colors.nord15}
+format-padding = 1
+
 [module/date]
 type = custom/script
 exec = date '+%A %d %B %Y'
 # label = "  %output%"
 label = "%output%"
 interval = 5
-format-underline = ${colors.nord14}
-format-background = ${colors.nord2}
+format-underline = ${colors.nord12}
+format-background = ${colors.nord12}
 format-padding = 1
-format-margin-right = 5
 
 [module/time]
 type = custom/script
@@ -121,8 +142,8 @@ exec = date '+%I:%M %p'
 # label = " %output%"
 label = "%output%"
 interval = 5
-format-underline = ${colors.nord14}
-format-background = ${colors.nord2}
+format-underline = ${colors.nord11}
+format-background = ${colors.nord11}
 format-padding = 1
 
 [module/sound]
@@ -130,7 +151,8 @@ type = custom/text
 content = "墳"
 click-left = exec i3-msg scratchpad show
 # content-underline = ${colors.nord2}
-content-underline = #546f8f
+# content-underline = #546f8f
+content-underline = ${colors.nord10}
 content-background = ${colors.nord10}
 content-padding = 2
 
@@ -139,7 +161,8 @@ type = custom/text
 content = ""
 click-left = exec ~/dotfiles/config/scripts/power-rofi.sh
 # content-underline = ${colors.nord2}
-content-underline = #546f8f
+# content-underline = #546f8f
+content-underline = ${colors.nord10}
 content-background = ${colors.nord10}
 content-padding = 2
 
