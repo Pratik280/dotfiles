@@ -267,6 +267,13 @@ alias c5="countdown $((5*60))"
 alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
 alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
 
+# git commands for 00MAIN and dotfiles
+alias git-dot="git add -A && git commit -am. && git push origin main"
+
+# redshift
+alias nightlight="redshift -O 4500K -r -P"
+alias daylight="redshift -O 6500K -r -P"
+
 alias r="ranger"
 # vim mode in bash
 # set -o vi
