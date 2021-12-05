@@ -18,7 +18,7 @@
   "files.trimFinalNewlines": true,
   "window.restoreWindows": "none",
   "editor.occurrencesHighlight": false,
-  "glassit.alpha": 230,
+  "glassit.alpha": 250,
   // tabs and spaces
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
