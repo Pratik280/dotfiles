@@ -4,6 +4,9 @@ BROWSER="brave"
 
 declare -a options=(
 "quit"
+"just the DOM - https://www.youtube.com/playlist?list=PLyuRouwmQCjlrOdLPmPMr04lARwMicfLe"
+"completed projects - https://www.vanillajavascriptprojects.com/"
+"code - https://github.com/john-smilga/javascript-basic-projects"
 "Snapdrop - https://snapdrop.net/"
 "Youtube Subscription - https://www.youtube.com/feed/subscriptions"
 "Youtube Watch Later - https://www.youtube.com/playlist?list=WL"
