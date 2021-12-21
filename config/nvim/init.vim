@@ -386,6 +386,8 @@ set formatoptions-=cro                  " Stop newline continution of comments
 set formatoptions-=ro        "disbales next line auto comment
 set noswapfile                "set no swap file
 set nowrap
+let g:vimwiki_list = [{'path': '~/00MAIN/00MAIN/vimwiki/' }]
+
 
 " fold for wrap in init.vim
 augroup config_setting

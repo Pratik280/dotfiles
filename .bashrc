@@ -58,27 +58,20 @@ alias cd..='cd ..'
 alias ..='cd ..'
 alias pdw="pwd"
 
-# pacman and paru
-alias udpate='sudo pacman -Syyu'
-alias upate='sudo pacman -Syyu'
-alias updte='sudo pacman -Syyu'
-alias updqte='sudo pacman -Syyu'
 alias suspend='systemctl suspend'
-
-# alias upqll="paru -Syu --"
-alias upqll="paru -Syu"
-alias upal="paru -Syu && paru -Sua"
 
 # Aliases for software managment
 # pacman or pm
 alias pacman='sudo pacman --color auto'
-alias update='sudo pacman -Syyu'
+# alias update='sudo pacman -Syyu'
+alias update='yay -Syu && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt'
+alias package-sync='pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && pacman -Q > ~/dotfiles/all-pacman-apps-list.txt'
 
 # alias pacsearch='pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S'
 # uses fzf to search throuch pacman apps and press enter to download
 
 # cleaning
-alias clean="sudo paccache -rk1"
+alias clean="sudo paccache -rk1 && yay -Yc"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -87,8 +80,7 @@ alias rm='rm -i'
 
 # neovim
 alias n='nvim'
-alias v='nvim'
-alias vim='nvim'
+alias v='vim'
 
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
@@ -299,3 +291,4 @@ colorscript -e panes
 # colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)
+# pfetch

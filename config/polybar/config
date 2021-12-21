@@ -57,9 +57,12 @@ module-margin-right = 0
 
 font-0 = InconsolataLGC Nerd Font:size=10
 
-modules-left = arch i3
+modules-left = i3
 ; modules-center = xwindow
-modules-right = uptime date time sound powermenu
+# modules-right = updates kernel ram uptime weather date time sound
+modules-right = updates kernel uptime ram date time sound
+
+separator = " "
 
 tray-position = right
 tray-padding = 10
@@ -116,6 +119,49 @@ click-middle = /path/to/polypomo lock
 scroll-up = /path/to/polypomo time +60
 scroll-down = /path/to/polypomo time -60
 
+[module/updates]
+type = custom/script
+exec = checkupdates 2>/dev/null | wc -l
+click-left = exec kitty -e yay -Syu 
+# label = " %output%"
+label = "Updates : %output%"
+interval = 5
+format-underline = ${colors.nord11}
+# format-background = ${colors.nord11}
+format-padding = 1
+
+[module/weather]
+type = custom/script
+exec = curl wttr.in/?0?q?T 2>/dev/null | awk '/°(C|F)/ {printf $(NF-1) $NF " ("a")"} /,/ {a=$0}'
+# label = " %output%"
+label = "%output%"
+interval = 5
+format-underline = ${colors.nord12}
+# format-background = ${colors.nord11}
+format-padding = 1
+
+[module/kernel]
+type = custom/script
+exec = uname -r
+# label = " %output%"
+label = "Kernel : %output%"
+interval = 5
+format-underline = ${colors.nord13}
+# format-background = ${colors.nord11}
+format-padding = 1
+
+[module/ram]
+type = custom/script
+exec = echo "CPU `LC_ALL=C top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'`% RAM `free -m | awk '/Mem:/ { printf("%3.1f%%", $3/$2*100) }'`"
+# label = " %output%"
+label = "%output%"
+interval = 5
+format-underline = ${colors.nord14}
+# format-background = ${colors.nord11}
+format-padding = 1
+# click-left = exec kitty -e htop
+click-left = exec /usr/share/stacer/stacer
+
 [module/uptime]
 type = custom/script
 exec = uptime -p
@@ -123,7 +169,7 @@ exec = uptime -p
 label = "%output%"
 interval = 5
 format-underline = ${colors.nord15}
-format-background = ${colors.nord15}
+# format-background = ${colors.nord15}
 format-padding = 1
 
 [module/date]
@@ -132,8 +178,8 @@ exec = date '+%A %d %B %Y'
 # label = "  %output%"
 label = "%output%"
 interval = 5
-format-underline = ${colors.nord12}
-format-background = ${colors.nord12}
+format-underline = ${colors.nord11}
+# format-background = ${colors.nord12}
 format-padding = 1
 
 [module/time]
@@ -142,8 +188,8 @@ exec = date '+%I:%M %p'
 # label = " %output%"
 label = "%output%"
 interval = 5
-format-underline = ${colors.nord11}
-format-background = ${colors.nord11}
+format-underline = ${colors.nord12}
+# format-background = ${colors.nord12}
 format-padding = 1
 
 [module/sound]
@@ -162,8 +208,8 @@ content = ""
 click-left = exec ~/dotfiles/config/scripts/power-rofi.sh
 # content-underline = ${colors.nord2}
 # content-underline = #546f8f
-content-underline = ${colors.nord10}
-content-background = ${colors.nord10}
+# content-underline = ${colors.nord10}
+# content-background = ${colors.nord10}
 content-padding = 2
 
 [settings]

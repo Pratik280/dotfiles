@@ -183,6 +183,7 @@ bindsym $mod+r mode "resize"
 # floating only apps
 for_window [class="stacer"] floating enable
 for_window [class="Nitrogen"] floating enable
+for_window [class="Warpinator"] floating enable
 # for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
 
 # screenshot using miam
@@ -251,3 +252,4 @@ exec picom
 
 # polybar launch script
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+

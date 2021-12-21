@@ -1,0 +1,11 @@
+brave-bin
+discord_arch_electron
+google-chrome
+numix-circle-icon-theme-git
+nvm
+papirus-icon-theme-git
+pfetch
+qogir-gtk-theme
+shell-color-scripts
+stacer-bin
+visual-studio-code-bin

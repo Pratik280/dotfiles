@@ -72,6 +72,7 @@
   // vim
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "workbench.startupEditor": "none",
+  "security.workspace.trust.untrustedFiles": "open",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,
