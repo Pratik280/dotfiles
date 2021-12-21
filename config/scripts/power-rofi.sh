@@ -24,14 +24,14 @@ elif [[ $chosen = "Shutdown" ]]; then
 elif [[ $chosen = "Reboot" ]]; then
 	systemctl reboot
 elif [[ $chosen = "Suspend" ]]; then
-	systemctl suspend 
+	systemctl suspend && slock
 elif [[ $chosen = "Hibernate" ]]; then
-	systemctl hibernate 
+	systemctl hibernate && slock
 elif [[ $chosen = "Hybrid-sleep" ]]; then
 	systemctl hibernate &&
   slock
 elif [[ $chosen = "Suspend-then-hibernate" ]]; then
-	systemctl suspend-then-hibernate
+	systemctl suspend-then-hibernate && slock
 fi
 
 

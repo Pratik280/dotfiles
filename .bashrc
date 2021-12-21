@@ -195,7 +195,7 @@ alias nn="$EDITOR ~/.config/nvim/init.vim"
 alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
 alias bat="bat --style=numbers"
-alias find="find . -type f | fzf"
+# alias find="find . -type f | fzf"
 alias duhere="du -sh * | sort -r -h"
 #maintenance
 alias big="expac -H M '%m\t%n' | sort -h | nl"
