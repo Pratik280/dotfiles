@@ -80,7 +80,7 @@ alias rm='rm -i'
 
 # neovim
 alias n='nvim'
-alias v='vim'
+alias v='nvim'
 
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
@@ -258,6 +258,8 @@ alias c5="countdown $((5*60))"
 # alias default css
 alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
 alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
+alias scss="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss ."
+alias scss-small="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss-small ."
 
 # git commands for 00MAIN and dotfiles
 alias git-dot="git add -A && git commit -am. && git push origin main"

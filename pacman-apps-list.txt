@@ -172,7 +172,6 @@ pipewire-media-session
 pipewire-pulse
 pkgconf
 pkgfile
-polybar
 poppler-glib
 ppp
 pptpclient
@@ -220,6 +219,8 @@ unzip
 upower
 usb_modeswitch
 usbutils
+viewnior
+vlc
 vpnc
 warpinator
 welcome

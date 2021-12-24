@@ -184,6 +184,9 @@ bindsym $mod+r mode "resize"
 for_window [class="stacer"] floating enable
 for_window [class="Nitrogen"] floating enable
 for_window [class="Warpinator"] floating enable
+for_window [class="Viewnior"] floating enable
+for_window [class="vlc"] floating enable
+for_window [class="mpv"] floating enable
 # for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
 
 # screenshot using miam
