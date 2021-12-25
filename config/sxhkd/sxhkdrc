@@ -1,0 +1,33 @@
+# restart sxhkd config
+super + Escape
+  pkill -USR1 -x sxhkd
+
+# terminal kitty
+super + Return
+  kitty
+
+# using maim for screenshot
+super + Print
+  maim -u $HOME/Pictures/screenshots/"$(date +%Y-%h-%d-%H-%M-\
+  %S).png"
+
+super + shift + Print
+  maim -u -s $HOME/Pictures/screenshots/"$(date +%Y-%h-%d\
+  -%H-%M-%S).png"
+
+# slock
+super + shift + Escape
+  slock
+
+# rofi
+super + d ; {d,x,c,w}
+  {rofi -show drun -show-icons,~/dotfiles/config/scripts/power-rofi.sh,\
+  ~/dotfiles/config/scripts/config-rofi.sh,~/dotfiles/config/scripts/bookmarks-rofi.sh}
+
+# browser
+super + b
+  brave
+
+# nemo file browser
+super + n
+  nemo
