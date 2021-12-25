@@ -60,7 +60,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = updates kernel uptime ram date time sound
+modules-right = updates kernel uptime ram weather date time sound
 
 separator = " "
 
@@ -132,16 +132,6 @@ format-underline = ${colors.nord11}
 # format-background = ${colors.nord11}
 format-padding = 1
 
-[module/weather]
-type = custom/script
-exec = curl wttr.in/?0?q?T 2>/dev/null | awk '/°(C|F)/ {printf $(NF-1) $NF " ("a")"} /,/ {a=$0}'
-# label = " %output%"
-label = "%output%"
-interval = 5
-format-underline = ${colors.nord12}
-# format-background = ${colors.nord11}
-format-padding = 1
-
 [module/kernel]
 type = custom/script
 exec = uname -r
@@ -172,6 +162,15 @@ label = "羽 %output%"
 interval = 5
 format-underline = ${colors.nord15}
 # format-background = ${colors.nord15}
+format-padding = 1
+
+[module/weather]
+type = custom/script
+exec = ~/dotfiles/config/scripts/weather.sh
+label = "%output%"
+interval = 5
+format-underline = ${colors.nord12}
+# format-background = ${colors.nord11}
 format-padding = 1
 
 [module/date]
