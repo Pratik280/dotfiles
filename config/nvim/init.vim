@@ -366,6 +366,7 @@ set smartcase
 set ignorecase
 set relativenumber
 set nu
+set cursorline
 set completeopt=menuone,noinsert,noselect
 set path+=**			        " Searches current directory recursively.
 set t_Co=256                    " Set if term supports 256 colors.

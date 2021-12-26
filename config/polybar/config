@@ -108,17 +108,6 @@ label-urgent = %index%
 label-urgent-background = ${colors.alert}
 label-urgent-padding = 1
 
-[module/polypomo]
-type = custom/script
-exec = ~/dotfiles/config/scripts/polypomo.sh
-tail = true
-label = %output%
-click-left = /path/to/polypomo toggle
-click-right = /path/to/polypomo end
-click-middle = /path/to/polypomo lock
-scroll-up = /path/to/polypomo time +60
-scroll-down = /path/to/polypomo time -60
-
 [module/updates]
 type = custom/script
 exec = checkupdates 2>/dev/null | wc -l
@@ -166,7 +155,7 @@ format-padding = 1
 
 [module/weather]
 type = custom/script
-exec = ~/dotfiles/config/scripts/weather.sh
+exec = ~/dotfiles/config/scripts/polybar-weather.sh
 label = "%output%"
 interval = 5
 format-underline = ${colors.nord12}

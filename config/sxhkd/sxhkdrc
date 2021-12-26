@@ -20,10 +20,11 @@ super + shift + Escape
   slock
 
 # rofi
-super + d ; {d,x,c,w,s,e}
-  {rofi -show drun -show-icons,~/dotfiles/config/scripts/power-rofi.sh,\
-  ~/dotfiles/config/scripts/config-rofi.sh,~/dotfiles/config/scripts/bookmarks-rofi.sh,\
-  ~/dotfiles/config/scripts/gsearch-rofi.sh,rofi -show emoji -modi emoji}
+super + d ; {d,x,c,w,s,e,m}
+  {rofi -show drun -show-icons,~/dotfiles/config/scripts/rofi-power.sh,\
+  ~/dotfiles/config/scripts/rofi-config.sh,~/dotfiles/config/scripts/rofi-bookmarks.sh,\
+  ~/dotfiles/config/scripts/rofi-gsearch.sh,rofi -show emoji -modi emoji,\
+  ~/dotfiles/config/scripts/rofi-beats.sh}
 
 # browser
 super + b
