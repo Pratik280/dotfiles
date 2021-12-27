@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-BROWSER="brave"
+BROWSER="chromium"
 
 declare -a options=(
 "quit"

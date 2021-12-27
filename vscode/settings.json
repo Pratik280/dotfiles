@@ -1,13 +1,13 @@
 {
   "workbench.colorTheme": "Nord",
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 14,
-  "window.zoomLevel": 1.25,
+  "editor.fontSize": 12,
+  "window.zoomLevel": 2,
   "workbench.settings.useSplitJSON": true,
   "extensions.ignoreRecommendations": true,
   // window
   // "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false,
+  // "workbench.activityBar.visible": false,
   "editor.minimap.enabled": false,
   "window.menuBarVisibility": "toggle",
   // editor
@@ -61,7 +61,6 @@
   // ],
   // git
   "git.decorations.enabled": false,
-  "git.enabled": false,
   // cursor customization
   "editor.cursorBlinking": "expand",
   "workbench.colorCustomizations": {
@@ -73,6 +72,7 @@
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "workbench.startupEditor": "none",
   "security.workspace.trust.untrustedFiles": "open",
+  "terminal.external.linuxExec": "kitty",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,

@@ -21,6 +21,7 @@ bison
 btrfs-progs
 cantarell-fonts
 capitaine-cursors
+chromium
 crda
 cryptsetup
 device-mapper
@@ -187,6 +188,7 @@ reflector-simple
 reiserfsprogs
 ristretto
 rofi
+rofi-emoji
 rp-pppoe
 rsync
 s-nail
@@ -198,7 +200,9 @@ smartmontools
 sof-firmware
 spice-vdagent
 sshfs
+steam
 sudo
+sxhkd
 sysfsutils
 systemd-sysvcompat
 telegram-desktop
@@ -264,6 +268,7 @@ xfwm4-themes
 xl2tpd
 xorg-server
 xorg-xdpyinfo
+xorg-xev
 xorg-xinit
 xorg-xinput
 xorg-xkill
@@ -272,3 +277,4 @@ xz
 yad-eos
 yarn
 yay
+youtube-dl

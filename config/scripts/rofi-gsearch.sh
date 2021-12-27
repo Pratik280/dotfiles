@@ -7,7 +7,7 @@
 # Contributors: Derek Taylor
 
 # Defining our web browser.
-DMBROWSER="brave"
+DMBROWSER="chromium"
 
 # An array of search engines.  You can edit this list to add/remove
 # search engines. The format must be: "engine_name - url".

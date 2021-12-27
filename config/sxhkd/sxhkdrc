@@ -28,7 +28,7 @@ super + d ; {d,x,c,w,s,e,m}
 
 # browser
 super + b
-  brave
+  chromium
 
 # nemo file browser
 super + n
