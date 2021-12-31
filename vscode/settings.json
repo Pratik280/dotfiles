@@ -1,8 +1,7 @@
 {
-  "workbench.colorTheme": "Nord",
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 12,
-  "window.zoomLevel": 2,
+  "editor.fontSize": 14,
+  "window.zoomLevel": 1,
   "workbench.settings.useSplitJSON": true,
   "extensions.ignoreRecommendations": true,
   // window
@@ -73,6 +72,7 @@
   "workbench.startupEditor": "none",
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.linuxExec": "kitty",
+  "workbench.colorTheme": "Nord",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,

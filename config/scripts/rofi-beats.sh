@@ -29,7 +29,10 @@ menu(){
   printf "13. Rain Piano\n"
   printf "14. Lofi Girl Album\n"
   printf "15. Lofi Girl Compilations\n"
+  printf "16. Anime Lofi\n"
+  printf "17. My Lofi\n"
 }
+
 
 main() {
 	choice=$(menu | rofi -dmenu | cut -d. -f1)
@@ -99,6 +102,14 @@ main() {
 		15)
 			notification "Lofi Girl Compilations";
             URL="https://youtube.com/playlist?list=PL6NdkXsPL07KN01gH2vucrHCEyyNmVEx4"
+      ;;
+		16)
+			notification "Anime Lofi";
+            URL="https://youtube.com/playlist?list=PLnQe65T2ABT93uUe8skxyDOGFzSavFV5B"
+      ;;
+		17)
+			notification "My Lofi";
+            URL="https://youtube.com/playlist?list=PLnQe65T2ABT-VYTcx2mPxy8x4XZLEO-D6"
 			break
 			;;
 	esac
