@@ -21,12 +21,11 @@ super + shift + Escape
 
 # rofi
 super + d ; {d,x,c,w,s,e,m}
-  {rofi -show drun -show-icons,~/dotfiles/config/scripts/rofi-power.sh,\
-  ~/dotfiles/config/scripts/rofi-config.sh,~/dotfiles/config/scripts/rofi-bookmarks.sh,\
-  ~/dotfiles/config/scripts/rofi-gsearch.sh,rofi -show emoji -modi emoji,\
-  ~/dotfiles/config/scripts/rofi-beats.sh}
+  {rofi -show drun -show-icons,~/dotfiles/scripts/rofi-power.sh,\
+  ~/dotfiles/scripts/rofi-config.sh,~/dotfiles/scripts/rofi-bookmarks.sh,\
+  ~/dotfiles/scripts/rofi-gsearch.sh,rofi -show emoji -modi emoji,\
+  ~/dotfiles/scripts/rofi-beats.sh}
 
-# browser
 super + b
   chromium
 

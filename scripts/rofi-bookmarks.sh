@@ -9,6 +9,7 @@ declare -a options=(
 "Youtube Watch Later - https://www.youtube.com/playlist?list=WL"
 "yt daily-dev - https://www.youtube.com/playlist?list=PLnQe65T2ABT-IfvcNrzzGmEa4YKUIsrOE"
 "Twitch - https://www.twitch.tv/"
+"MahaDBT - https://mahadbtmahait.gov.in/login/login"
 "Spotify - https://open.spotify.com/"
 "ProtonDB - https://www.protondb.com/"
 "Reddit Saved - https://www.reddit.com/user/PratikChandlekar/saved/"

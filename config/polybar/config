@@ -60,7 +60,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = updates kernel uptime ram weather date time sound
+modules-right = updates kernel uptime ram date time sound
 
 separator = " "
 
@@ -110,48 +110,47 @@ label-urgent-padding = 1
 
 [module/updates]
 type = custom/script
-exec = checkupdates 2>/dev/null | wc -l
+exec = ~/dotfiles/scripts/polybar-pacupdate.sh
+label = " %output%"
 click-left = exec kitty -e yay -Syu 
-# label = " %output%"
-label = "Updates : %output%"
-format-prefix = "  "
-format-prefix-foreground = ${colors.nord13}
+format-prefix = " "
+format-prefix-foreground = ${colors.nord4}
 interval = 5
-format-underline = ${colors.nord11}
+format-underline = ${colors.nord15}
 # format-background = ${colors.nord11}
 format-padding = 1
 
 [module/kernel]
 type = custom/script
-exec = uname -r
-# label = " %output%"
-label = "  %output%"
-interval = 5
+exec = ~/dotfiles/scripts/polybar-kernel.sh
+label = " %output%"
+format-prefix = " "
+format-prefix-foreground = ${colors.nord4}
+interval = 10
 format-underline = ${colors.nord13}
 # format-background = ${colors.nord11}
 format-padding = 1
 
-[module/ram]
-type = custom/script
-exec = echo "CPU `LC_ALL=C top -bn1 | grep "Cpu(s)" | sed "s/.*, *\([0-9.]*\)%* id.*/\1/" | awk '{print 100 - $1}'`% RAM `free -m | awk '/Mem:/ { printf("%3.1f%%", $3/$2*100) }'`"
-# label = " %output%"
-label = "%output%"
-interval = 5
-format-underline = ${colors.nord14}
-# format-background = ${colors.nord11}
-format-padding = 1
-# click-left = exec kitty -e htop
-click-left = exec /usr/share/stacer/stacer
-
 [module/uptime]
 type = custom/script
-exec = uptime -p
-# label = "  %output%"
-label = "羽 %output%"
+exec = ~/dotfiles/scripts/polybar-uptime.sh
+format-prefix = "羽"
+format-prefix-foreground = ${colors.nord4}
+label = " %output%"
 interval = 5
 format-underline = ${colors.nord15}
-# format-background = ${colors.nord15}
 format-padding = 1
+# 
+[module/ram]
+type = custom/script
+exec = ~/dotfiles/scripts/polybar-ram.sh
+label = " %output%"
+format-prefix = " "
+format-prefix-foreground = ${colors.nord4}
+interval = 5
+format-underline = ${colors.nord13}
+format-padding = 1
+click-left = exec /usr/share/stacer/stacer
 
 [module/weather]
 type = custom/script
@@ -164,30 +163,28 @@ format-padding = 1
 
 [module/date]
 type = custom/script
-exec = date '+%A %d %B %Y'
-label = "  %output%"
-# label = "%output%"
+exec = ~/dotfiles/scripts/polybar-date.sh
+label = " %output%"
+format-prefix = " "
+format-prefix-foreground = ${colors.nord4}
 interval = 5
-format-underline = ${colors.nord11}
-# format-background = ${colors.nord12}
+format-underline = ${colors.nord15}
 format-padding = 1
 
 [module/time]
 type = custom/script
-exec = date '+%I:%M %p'
-label = "  %output%"
-# label = "%output%"
+exec = ~/dotfiles/scripts/polybar-time.sh
+label = " %output%"
+format-prefix = " "
+format-prefix-foreground = ${colors.nord4}
 interval = 5
-format-underline = ${colors.nord12}
-# format-background = ${colors.nord12}
+format-underline = ${colors.nord13}
 format-padding = 1
 
 [module/sound]
 type = custom/text
 content = "墳"
 click-left = exec i3-msg scratchpad show
-# content-underline = ${colors.nord2}
-# content-underline = #546f8f
 content-underline = ${colors.nord10}
 content-background = ${colors.nord10}
 content-padding = 2
@@ -195,11 +192,7 @@ content-padding = 2
 [module/powermenu]
 type = custom/text
 content = ""
-click-left = exec ~/dotfiles/config/scripts/power-rofi.sh
-# content-underline = ${colors.nord2}
-# content-underline = #546f8f
-# content-underline = ${colors.nord10}
-# content-background = ${colors.nord10}
+click-left = exec ~/dotfiles/scripts/power-rofi.sh
 content-padding = 2
 
 [settings]

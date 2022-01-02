@@ -272,7 +272,7 @@ alias r="ranger"
 # vim mode in bash
 # set -o vi
 
-export PATH=$PATH:~/dotfiles/config/scripts/
+export PATH=$PATH:~/dotfiles/scripts/
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
