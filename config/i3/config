@@ -181,9 +181,13 @@ for_window [class="Kvantum Manager"] floating enable
 
 # scratchpad for pavucontrol
 exec_always --no-startup-id pavucontrol --name soundcontrol
-for_window [instance="soundcontrol"] floating enable move position 1200 px 30 px
+for_window [instance="soundcontrol"] floating enable move position 950 px 32 px
 for_window [instance="soundcontrol"] move scratchpad
 bindsym $mod+minus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+
+# Assign Workspaces:
+assign [class="Steam"] $ws6
+assign [class="discord"] $ws8
 
 # autostart
 # nitrogen wallpaper
