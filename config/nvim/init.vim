@@ -537,8 +537,8 @@ nnoremap <C-W>m <C-W>=
 " nnoremap <leader><C-h> :sf *
 
 " fzf ... cltr+p to search :Files
-" nnoremap <C-p> :Files<Cr>
-nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
+nnoremap <C-p> :Files<Cr>
+" nnoremap <expr> <C-p> (len(system('git rev-parse')) ? ':Files' : ':GFiles --exclude-standard --others --cached')."\<cr>"
 
 " x will only cut but not keep in clipboard
 noremap x "_x

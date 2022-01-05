@@ -135,6 +135,9 @@ bindsym $mod+r mode "resize"
 gaps inner 10
 # gaps outer 20
 
+bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
+
 # theming
 # nord colors
 set $nord0 #2E3440

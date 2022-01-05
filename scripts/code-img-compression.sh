@@ -1,2 +1,2 @@
 #!/bin/sh
-mogrify -format jpg -resize 1200X1200 -quality 80 -strip -path compressed/ *
+mogrify -format jpg -resize 1600X1600 -quality 80 -strip -path compressed/ *

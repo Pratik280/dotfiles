@@ -11,5 +11,25 @@
     "key": "k",
     "when": "neovim.mode == insert && editorTextFocus",
     "args": "k"
+  },
+  {
+    "key": "alt+c",
+    "command": "-workbench.action.terminal.toggleFindCaseSensitive",
+    "when": "terminalFindFocused && terminalHasBeenCreated || terminalFindFocused && terminalProcessSupported || terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "alt+o",
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "-list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+k shift+enter",
+    "command": "-workbench.action.pinEditor",
+    "when": "!activeEditorIsPinned"
   }
 ]

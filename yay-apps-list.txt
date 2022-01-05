@@ -1,12 +1,10 @@
-brave-bin
+appimagelauncher
 discord_arch_electron
 google-chrome
-numix-circle-icon-theme-git
 nvm
 papirus-icon-theme-git
 pfetch
 polybar-git
-qogir-gtk-theme
 shell-color-scripts
 stacer-bin
 visual-studio-code-bin

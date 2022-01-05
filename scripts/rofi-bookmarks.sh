@@ -5,6 +5,7 @@ BROWSER="chromium"
 declare -a options=(
 "quit"
 "Github Repos - https://github.com/Pratik280?tab=repositories"
+"gh js hard-parts - https://github.com/StevanCakic/js-hard-parts"
 "Youtube Subscription - https://www.youtube.com/feed/subscriptions"
 "Youtube Watch Later - https://www.youtube.com/playlist?list=WL"
 "yt daily-dev - https://www.youtube.com/playlist?list=PLnQe65T2ABT-IfvcNrzzGmEa4YKUIsrOE"

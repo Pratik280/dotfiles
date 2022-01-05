@@ -13,7 +13,7 @@ declare -a options=(
 "kitty - $HOME/dotfiles/config/kitty/kitty.conf"
 "rofi - $HOME/dotfiles/config/rofi/config.rasi"
 "sxhkd - $HOME/dotfiles/config/sxhkd/sxhkdrc"
-"scripts - $HOME/dotfiles/config/scripts"
+"scripts - $HOME/dotfiles/scripts"
 "picom - $HOME/dotfiles/config/picom/picom.conf"
 "ranger - $HOME/dotfiles/config/ranger/rc.conf"
 "starship - $HOME/dotfiles/starship.toml"

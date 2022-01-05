@@ -101,6 +101,7 @@ ipw2200-fw
 iwd
 jfsutils
 kitty
+kvantum
 less
 libdvdcss
 libgsf
