@@ -180,7 +180,8 @@ for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Kvantum Manager"] floating enable
-# for_window [class="Pavucontrol"] floating enable move position 1200 px 30 px
+for_window [class="Google-chrome" window_role="pop-up"] floating enable
+for_window [class="firefox" window_role="toolbox"] floating enable
 
 # scratchpad for pavucontrol
 exec_always --no-startup-id pavucontrol --name soundcontrol
