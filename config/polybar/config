@@ -44,7 +44,7 @@ fixed-center = false
 background = ${colors.nord0}
 foreground = ${colors.nord5}
 
-line-size = 3
+line-size = 0
 line-color = ${colors.nord15}
 
 border-size = 0

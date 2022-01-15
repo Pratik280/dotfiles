@@ -18,6 +18,7 @@ declare -a options=(
 "youtube - https://www.youtube.com/results?search_query="
 "duckduckgo - https://duckduckgo.com/?q="
 "protonDB - https://www.protondb.com/search?q="
+"caniuse - https://caniuse.com/?search="
 "googleimages - https://www.google.com/search?hl=en&tbm=isch&q="
 "googlenews - https://news.google.com/search?q="
 "amazon - https://www.amazon.in/s?k="

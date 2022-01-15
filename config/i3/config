@@ -132,11 +132,11 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 10
-# gaps outer 20
+gaps inner 0
+gaps outer 0
 
 bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
-bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
+bindsym $mod+Shift+g gaps inner all set 8; gaps outer all set 16
 
 # theming
 # nord colors
@@ -180,8 +180,8 @@ for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Kvantum Manager"] floating enable
-for_window [class="Google-chrome" window_role="pop-up"] floating enable
-for_window [class="firefox" window_role="toolbox"] floating enable
+# for_window [class="Google-chrome" window_role="pop-up"] floating enable
+# for_window [class="firefox" window_role="toolbox"] floating enable
 
 # scratchpad for pavucontrol
 exec_always --no-startup-id pavucontrol --name soundcontrol
