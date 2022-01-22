@@ -1,6 +1,7 @@
 appimagelauncher
 discord_arch_electron
 google-chrome
+herbe
 nvm
 papirus-icon-theme-git
 pfetch

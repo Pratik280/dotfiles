@@ -100,6 +100,7 @@ ipw2100-fw
 ipw2200-fw
 iwd
 jfsutils
+jre8-openjdk
 kitty
 kvantum
 less
@@ -169,7 +170,6 @@ pcurses
 perl
 picom
 pipewire-alsa
-pipewire-jack
 pipewire-media-session
 pipewire-pulse
 pkgconf

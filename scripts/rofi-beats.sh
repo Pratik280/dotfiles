@@ -31,6 +31,7 @@ menu(){
   printf "15. Lofi Girl Compilations\n"
   printf "16. Anime Lofi\n"
   printf "17. My Lofi\n"
+  printf "18. Deathnote theme bg\n"
 }
 
 
@@ -110,6 +111,10 @@ main() {
 		17)
 			notification "My Lofi";
             URL="https://youtube.com/playlist?list=PLnQe65T2ABT-VYTcx2mPxy8x4XZLEO-D6"
+			;;
+		18)
+			notification "Deathnote theme bg\n";
+            URL="https://youtube.com/playlist?list=PLnQe65T2ABT-KGMWAS5VttWwOv2UHvDaL"
 			break
 			;;
 	esac

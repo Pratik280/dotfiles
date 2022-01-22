@@ -20,12 +20,18 @@ super + shift + Escape
   slock
 
 # rofi
-super + d ; {d,x,c,w,s,e,m,5,2,4}
-  {rofi -show drun -show-icons,~/dotfiles/scripts/rofi-power.sh,\
-  ~/dotfiles/scripts/rofi-config.sh,~/dotfiles/scripts/rofi-bookmarks.sh,\
-  ~/dotfiles/scripts/rofi-gsearch.sh,rofi -show emoji -modi emoji,\
-  ~/dotfiles/scripts/rofi-beats.sh,~/dotfiles/scripts/rofi-5-pomo.sh,\
-  ~/dotfiles/scripts/rofi-25-pomo.sh,~/dotfiles/scripts/rofi-45-pomo.sh}
+super + d ; {d,x,c,w,s,e,m,5,2,4,f}
+  {rofi -show drun -show-icons,\
+  ~/dotfiles/scripts/rofi-power.sh,\
+  ~/dotfiles/scripts/rofi-config.sh,\
+  ~/dotfiles/scripts/rofi-bookmarks.sh,\
+  ~/dotfiles/scripts/rofi-gsearch.sh,\
+  rofi -show emoji -modi emoji,\
+  ~/dotfiles/scripts/rofi-beats.sh,\
+  ~/dotfiles/scripts/rofi-5-pomo.sh,\
+  ~/dotfiles/scripts/rofi-25-pomo.sh,\
+  ~/dotfiles/scripts/rofi-45-pomo.sh,\
+  ~/dotfiles/scripts/rofi-projs.sh}
 
 super + b
   chromium

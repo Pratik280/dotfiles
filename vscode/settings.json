@@ -58,11 +58,11 @@
   // "emmet.excludeLanguages": [
   //     "markdown"
   // ],
-  // git
-  "git.decorations.enabled": false,
-  "git.enabled": false,
-  "git.path": null,
-  "git.autofetch": false,
+  // disable git 
+  // "git.decorations.enabled": false,
+  // "git.enabled": false,
+  // "git.path": null,
+  // "git.autofetch": false,
   // cursor customization
   "editor.cursorBlinking": "expand",
   "workbench.colorCustomizations": {
@@ -80,7 +80,7 @@
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,
   // "editor.suggest.showTypeParameters": false,
-  // "editor.hover.enabled": false,
+  "editor.hover.enabled": false,
   // "diffEditor.ignoreTrimWhitespace": false,
   // java
   // "java.completion.enabled": false,
@@ -110,6 +110,7 @@
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
-  }
+  },
+  "explorer.confirmDragAndDrop": false
 
 }
