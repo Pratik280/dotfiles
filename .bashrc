@@ -288,9 +288,9 @@ eval "$(starship init bash)"
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
 # motivate
-# colorscript -e panes
+colorscript -e panes
 # colorscript -e blocks1
-colorscript -e crunchbang-mini
+# colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)
 # pfetch

@@ -75,7 +75,7 @@
   "workbench.startupEditor": "none",
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.linuxExec": "kitty",
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "One Dark Pro",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,
@@ -111,6 +111,7 @@
     "<C-a>": false,
     "<C-f>": false
   },
-  "explorer.confirmDragAndDrop": false
+  "explorer.confirmDragAndDrop": false,
+  "oneDarkPro.vivid": false
 
 }

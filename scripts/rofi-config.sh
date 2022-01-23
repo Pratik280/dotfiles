@@ -9,7 +9,7 @@ declare -a options=(
 "bash - $HOME/dotfiles/.bashrc"
 "i3 - $HOME/dotfiles/config/i3/config"
 "polybar - $HOME/dotfiles/config/polybar/config"
-"neovim - $HOME/dotfiles/config/nvim/init.vim"
+"nvim - $HOME/.config/nvim"
 "kitty - $HOME/dotfiles/config/kitty/kitty.conf"
 "rofi - $HOME/dotfiles/config/rofi/config.rasi"
 "sxhkd - $HOME/dotfiles/config/sxhkd/sxhkdrc"
