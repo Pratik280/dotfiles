@@ -4,6 +4,7 @@ BROWSER="chromium"
 
 declare -a options=(
 "quit"
+"Scrimba Space tut - https://scrimba.com/learn/spacetravel/"
 "College meet - https://meet.google.com/landing?authuser=1"
 "College drive - https://drive.google.com/drive/u/1/my-drive"
 "College classroom - https://classroom.google.com/u/1/h"

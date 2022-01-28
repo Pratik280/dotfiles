@@ -5,7 +5,7 @@ DMEDITOR="nemo"
 # An array of options to choose.
 # You can edit this list to add/remove config files.
 declare -a options=(
-"Projects - $HOME/100daysofcode"
+"Repos - $HOME/repos"
 "dotfiles- $HOME/dotfiles"
 "00MAIN- $HOME/00MAIN"
 "Downloads- $HOME/Downloads"
