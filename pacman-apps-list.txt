@@ -103,6 +103,7 @@ jfsutils
 jre8-openjdk
 kitty
 kvantum
+lazygit
 less
 libdvdcss
 libgsf

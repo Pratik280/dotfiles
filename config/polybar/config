@@ -1,7 +1,15 @@
 [colors]
 # nord colors
+
+# nord bg
 # nord0 = #2E3440
+
+# onedark bg
 nord0 = #282C34
+
+# darkplus bg
+# nord0 = #1E1E1E
+
 nord1 = #3B4252
 nord2 = #434C5E
 nord3 = #4C566A

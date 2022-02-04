@@ -56,7 +56,35 @@ alias l.='exa -a | egrep "^\."'
 #fix obvious typo's
 alias cd..='cd ..'
 alias ..='cd ..'
+alias .1='cd ..'
+alias .2='cd ../..'
+alias .3='cd ../../..'
+alias .4='cd ../../../..'
+alias .5='cd ../../../../..'
+alias ...='cd ../..'
 alias pdw="pwd"
+# navigation
+up () {
+  local d=""
+  local limit="$1"
+
+  # Default to limit of 1
+  if [ -z "$limit" ] || [ "$limit" -le 0 ]; then
+    limit=1
+  fi
+
+  for ((i=1;i<=limit;i++)); do
+    d="../$d"
+  done
+
+  # perform cd. Show error if cd fails
+  if ! cd "$d"; then
+    echo "Couldn't go up $limit dirs.";
+  fi
+}
+
+alias mkdir='mkdir -pv'
+
 
 alias suspend='systemctl suspend'
 
@@ -98,7 +126,7 @@ alias push='git push origin'
 alias stat='git status'  # 'status' is protected name so using 'stat' instead
 alias tag='git tag'
 alias newtag='git tag -a'
-alias backup='git add . && git commit -am. && git push origin master'
+alias backup='git add -A && git commit -am. && git push origin main'
 
 ## Colorize the grep command output for ease of use (good for log files)##
 alias grep='grep --color=auto'
@@ -288,12 +316,12 @@ eval "$(starship init bash)"
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
 # motivate
-colorscript -e panes
-# colorscript -e blocks1
+# colorscript -e panes
+colorscript -e blocks1
 # colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)
-# pfetch
+pfetch
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
