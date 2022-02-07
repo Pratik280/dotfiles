@@ -12,6 +12,7 @@ declare -a options=(
 "Pictures- $HOME/Pictures"
 "Applications- $HOME/Applications"
 "nvim- $HOME/.config/nvim"
+"screenshots- $HOME/Pictures/screenshots"
 "quit"
 )
 

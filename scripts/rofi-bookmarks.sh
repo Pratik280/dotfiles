@@ -14,6 +14,7 @@ declare -a options=(
 "College classroom - https://classroom.google.com/u/1/h"
 "College gmail - https://mail.google.com/mail/u/1/#inbox"
 "Github Repos - https://github.com/Pratik280?tab=repositories"
+"Github New Repo - https://github.com/new"
 "gh js hard-parts - https://github.com/StevanCakic/js-hard-parts"
 "Youtube Subscription - https://www.youtube.com/feed/subscriptions"
 "Youtube Watch Later - https://www.youtube.com/playlist?list=WL"

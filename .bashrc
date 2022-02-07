@@ -92,7 +92,7 @@ alias suspend='systemctl suspend'
 # pacman or pm
 alias pacman='sudo pacman --color auto'
 # alias update='sudo pacman -Syyu'
-alias update='yay -Syu && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt'
+alias update='pacman -Syyu && yay -Syyu && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt'
 alias package-sync='pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && pacman -Q > ~/dotfiles/all-pacman-apps-list.txt'
 
 # alias pacsearch='pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S'
@@ -287,7 +287,6 @@ alias c5="countdown $((5*60))"
 alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
 alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
 alias scss="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss ."
-alias scss-small="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss-small ."
 
 # git commands for 00MAIN and dotfiles
 alias git-dot="git add -A && git commit -am. && git push origin main"

@@ -196,6 +196,8 @@ assign [class="discord"] $ws8
 assign [class="Code"] $ws3
 
 # autostart
+# polkit
+exec lxsession
 # nitrogen wallpaper
 exec killall nitrogen
 exec_always --no-startup-id nitrogen --restore
