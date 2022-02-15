@@ -33,13 +33,10 @@
   "[scss]": {
     "editor.tabSize": 2
   },
-  "[javascript]": {
-    "editor.tabSize": 2
-  },
   "[python]": {
     "editor.tabSize": 4
   },
-  
+
   //tailwind
   "css.validate": false,
   "tailwindCSS.includeLanguages": {
@@ -58,7 +55,7 @@
   // "emmet.excludeLanguages": [
   //     "markdown"
   // ],
-  // disable git 
+  // disable git
   // "git.decorations.enabled": false,
   // "git.enabled": false,
   // "git.path": null,
@@ -68,7 +65,7 @@
   "workbench.colorCustomizations": {
     "editorCursor.foreground": "#ffff00",
     // "editorCursor.foreground": "#EBCB8B",
-    "terminalCursor.foreground": "#ffff00",
+    "terminalCursor.foreground": "#ffff00"
   },
   // vim
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
@@ -112,6 +109,16 @@
     "<C-f>": false
   },
   "explorer.confirmDragAndDrop": false,
-  "oneDarkPro.vivid": false
+  "oneDarkPro.vivid": false,
 
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  // "[javascript]": {
+  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // },
+  // Set the default
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true
+  }
 }

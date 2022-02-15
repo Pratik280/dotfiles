@@ -288,6 +288,9 @@ alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
 alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
 alias scss="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss ."
 
+# play song in loop in background
+alias play-song="mpv --no-video --loop"
+
 # git commands for 00MAIN and dotfiles
 alias git-dot="git add -A && git commit -am. && git push origin main"
 
@@ -301,9 +304,12 @@ alias r="ranger"
 
 export PATH=$PATH:~/dotfiles/scripts/
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export NODE_PATH="npm root -g"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -f ~/fzf.bash ] && source ~/.fzf.bash
 source /usr/share/fzf/key-bindings.bash
 source /usr/share/fzf/completion.bash

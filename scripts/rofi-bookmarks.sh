@@ -9,6 +9,7 @@ declare -a options=(
 "javascript github concepts - https://github.com/leonardomso/33-js-concepts"
 "You dont know JS - https://github.com/getify/You-Dont-Know-JS"
 "mycodeschool DSA - https://www.youtube.com/watch?v=92S4zgXN17o&list=PL2_aWCzGMAwI3W_JlcBbtYTwiQSsOTa6P"
+"Codewars - https://www.codewars.com/dashboard"
 "College meet - https://meet.google.com/landing?authuser=1"
 "College drive - https://drive.google.com/drive/u/1/my-drive"
 "College classroom - https://classroom.google.com/u/1/h"

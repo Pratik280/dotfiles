@@ -120,6 +120,7 @@ lsb-release
 lsscsi
 lvm2
 lxappearance
+lxsession
 m4
 maim
 make
