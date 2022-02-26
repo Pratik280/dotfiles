@@ -132,8 +132,8 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 0
-gaps outer 0
+gaps inner 10
+gaps outer 10
 
 bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
 bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 10
@@ -181,6 +181,7 @@ for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Kvantum Manager"] floating enable
+for_window [class="simple_droidcam_client"] floating enable
 # for_window [class="Google-chrome" window_role="pop-up"] floating enable
 # for_window [class="firefox" window_role="toolbox"] floating enable
 
@@ -188,7 +189,13 @@ for_window [class="Kvantum Manager"] floating enable
 exec_always --no-startup-id pavucontrol --name soundcontrol
 for_window [instance="soundcontrol"] floating enable move position 950 px 32 px
 for_window [instance="soundcontrol"] move scratchpad
-bindsym $mod+minus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+bindsym $mod+plus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+
+# scratchpad for pavucontrol
+exec_always --no-startup-id kitty --name kitty-sp
+# for_window [instance="kitty-sp"] floating enable position center
+for_window [instance="kitty-sp"] move scratchpad
+bindsym $mod+minus [class="kitty" instance="kitty-sp"] scratchpad show
 
 # Assign Workspaces:
 assign [class="Steam"] $ws6

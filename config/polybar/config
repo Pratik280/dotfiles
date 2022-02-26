@@ -194,7 +194,7 @@ format-padding = 1
 [module/sound]
 type = custom/text
 content = "墳"
-click-left = exec i3-msg scratchpad show
+click-left = exec i3-msg [instance="soundcontrol"] scratchpad show
 content-underline = ${colors.nord10}
 content-background = ${colors.nord10}
 content-padding = 2

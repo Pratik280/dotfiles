@@ -46,11 +46,11 @@ alias parrot="curl parrot.live"
 alias btc="curl rate.sx"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --group-directories-first'  # long format
-alias lt='exa -aT --color=always --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
-alias tree='exa -aT --color=always --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
+alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
+alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
+alias ll='exa -l --color=always --icons --group-directories-first'  # long format
+alias lt='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git'
+alias tree='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
 alias l.='exa -a | egrep "^\."'
 
 #fix obvious typo's
@@ -321,8 +321,8 @@ eval "$(starship init bash)"
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
 # motivate
-# colorscript -e panes
-colorscript -e blocks1
+colorscript -e panes
+# colorscript -e blocks1
 # colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)

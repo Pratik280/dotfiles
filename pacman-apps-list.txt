@@ -108,6 +108,7 @@ less
 libdvdcss
 libgsf
 libopenraw
+libreoffice-still
 libtool
 libwnck3
 lightdm-slick-greeter

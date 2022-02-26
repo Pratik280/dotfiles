@@ -5,8 +5,10 @@ herbe
 librewolf-bin
 nvm
 papirus-icon-theme-git
+papirus-libreoffice-theme
 pfetch
 polybar-git
 shell-color-scripts
+simple-droidcam-client
 stacer-bin
 visual-studio-code-bin

@@ -17,7 +17,7 @@ super + shift + Print
 
 # slock
 super + shift + Escape
-  slock
+  xflock4
 
 # rofi
 super + d ; {d,x,c,w,s,e,m,5,2,4,f}

@@ -32,6 +32,10 @@ menu(){
   printf "16. Anime Lofi\n"
   printf "17. My Lofi\n"
   printf "18. Deathnote theme bg\n"
+  printf "19. To Give a Marionette Life Lofi\n"
+  printf "20. Hyori Ittai Lofi\n"
+  printf "21. You say run\n"
+  printf "22. You say run lofi\n"
 }
 
 
@@ -115,12 +119,28 @@ main() {
 		18)
 			notification "Deathnote theme bg\n";
             URL="https://youtube.com/playlist?list=PLnQe65T2ABT-KGMWAS5VttWwOv2UHvDaL"
+      ;;
+		19)
+			notification "To Give a Marionette Life Lofi"; 
+            URL="https://youtu.be/RpgvdkeBDJE" 
+      ;;
+		20)
+			notification "Hyori Ittai Lofi";
+            URL="https://youtu.be/UB3iQEgSn0I"
+      ;;
+		21)
+			notification "You say run";
+            URL="https://youtu.be/iYZIUtDAFIw"
+      ;;
+		22)
+			notification "You say run lofi";
+            URL="https://youtu.be/8HJykNfvtec"
 			break
 			;;
 	esac
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    mpv $ARGS --title="radio-mpv" $URL --no-video --shuffle
+    mpv $ARGS --title="radio-mpv" $URL --no-video --shuffle --loop
 }
 
 pkill -f radio-mpv || main
