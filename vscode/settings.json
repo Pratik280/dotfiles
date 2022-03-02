@@ -1,14 +1,47 @@
 {
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 14,
-  "window.zoomLevel": 1,
+  "editor.fontSize": 13,
+  "window.zoomLevel": 1.25,
+  // minimal
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
+  "editor.minimap.enabled": false,
+  "breadcrumbs.enabled": false,
+  "window.menuBarVisibility": "toggle",
+  // disable git
+  "git.decorations.enabled": false,
+  "git.enabled": false,
+  "git.path": null,
+  "git.autofetch": false,
+  "workbench.colorCustomizations": {
+    "editorCursor.foreground": "#ffff00",
+    // "editorCursor.foreground": "#EBCB8B",
+    "terminalCursor.foreground": "#ffff00",
+    "[Nord]": {
+      // "sideBar.foreground": "#c7c7c7",
+      "sideBar.background": "#23272E",
+      "sideBarSectionHeader.background": "#23272E",
+      "editor.background": "#282C34",
+      "breadcrumb.background": "#282C34",
+      "statusBar.background": "#23272E",
+      // "statusBar.foreground": "#626262",
+      "minimap.background": "#282C34",
+      "titleBar.activeBackground": "#282C34",
+      "editorGroupHeader.tabsBackground": "#23272E",
+      "activityBar.background": "#23272E",
+      "tab.inactiveBackground": "#23272E",
+      "tab.activeBackground": "#282C34",
+      "tab.activeBorder": "#282C34",
+      // "editorLineNumber.foreground": "#282C34"
+      "editorGutter.background": "#282C34",
+      "panel.background": "#23272E",
+      "terminal.background": "#23272E"
+    }
+  },
+  "editor.cursorBlinking": "expand",
   "workbench.settings.useSplitJSON": true,
   "extensions.ignoreRecommendations": true,
   // window
-  // "workbench.statusBar.visible": false,
-  // "workbench.activityBar.visible": false,
-  "editor.minimap.enabled": false,
-  "window.menuBarVisibility": "toggle",
   // editor
   "diffEditor.wordWrap": "on",
   "editor.acceptSuggestionOnEnter": "off",
@@ -55,18 +88,6 @@
   // "emmet.excludeLanguages": [
   //     "markdown"
   // ],
-  // disable git
-  // "git.decorations.enabled": false,
-  // "git.enabled": false,
-  // "git.path": null,
-  // "git.autofetch": false,
-  // cursor customization
-  "editor.cursorBlinking": "expand",
-  "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#ffff00",
-    // "editorCursor.foreground": "#EBCB8B",
-    "terminalCursor.foreground": "#ffff00"
-  },
   // vim
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "workbench.startupEditor": "none",
@@ -111,14 +132,16 @@
   "explorer.confirmDragAndDrop": false,
   "oneDarkPro.vivid": false,
 
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
   // "[javascript]": {
   //   "editor.defaultFormatter": "esbenp.prettier-vscode"
   // },
   // Set the default
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   // Enable per-language
   "[javascript]": {
     "editor.formatOnSave": true
-  }
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right"
 }

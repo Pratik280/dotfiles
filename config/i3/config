@@ -132,8 +132,10 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 10
-gaps outer 10
+# gaps inner 10
+gaps inner 0
+# gaps outer 10
+gaps outer 0
 
 bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
 bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 10

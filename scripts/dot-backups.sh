@@ -1,5 +1,5 @@
 #! /bin/sh 
-cd ~/00MAIN/ &&
+cd ~/00MAIN/ ;
 git add -A &&
 git commit -am. &&
 git push origin main &&
