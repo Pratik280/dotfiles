@@ -57,6 +57,7 @@ file
 file-roller
 findutils
 firefox
+flatpak
 flex
 freetype2
 fsarchiver
