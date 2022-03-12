@@ -11,4 +11,5 @@ polybar-git
 shell-color-scripts
 simple-droidcam-client
 stacer-bin
+teams
 visual-studio-code-bin
