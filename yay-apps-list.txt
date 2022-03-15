@@ -12,4 +12,5 @@ shell-color-scripts
 simple-droidcam-client
 stacer-bin
 teams
+ttf-ms-fonts
 visual-studio-code-bin
