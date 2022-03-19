@@ -5,7 +5,9 @@ add_newline = true
 disabled = true
 
 [python]
-disabled = true
+symbol = ""
+pyenv_version_name = true
+python_binary = ["./venv/bin/python", "python", "python3", "python2"]
 
 [package]
 disabled = true

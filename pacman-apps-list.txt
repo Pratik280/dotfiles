@@ -82,6 +82,7 @@ gst-libav
 gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
+gufw
 gvfs
 gvfs-afc
 gvfs-gphoto2
@@ -109,7 +110,6 @@ less
 libdvdcss
 libgsf
 libopenraw
-libreoffice-still
 libtool
 libwnck3
 lightdm-slick-greeter
@@ -224,6 +224,7 @@ ttf-dejavu
 ttf-liberation
 ttf-opensans
 tumbler
+ufw
 unrar
 unzip
 upower
