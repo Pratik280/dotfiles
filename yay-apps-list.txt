@@ -2,7 +2,6 @@ appimagelauncher
 discord_arch_electron
 google-chrome
 herbe
-librewolf-bin
 nvm
 papirus-icon-theme-git
 papirus-libreoffice-theme

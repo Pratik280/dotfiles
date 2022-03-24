@@ -92,14 +92,14 @@ alias suspend='systemctl suspend'
 # pacman or pm
 alias pacman='sudo pacman --color auto'
 # alias update='sudo pacman -Syyu'
-alias update='dot-backups.sh ; pacman -Syyu && yay -Syyu && flatpak update && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt'
+alias update='dot-backups.sh ; pacman -Syyu && yay -Syyu && flatpak update && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && flatpak update'
 alias package-sync='pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && pacman -Q > ~/dotfiles/all-pacman-apps-list.txt'
 
 # alias pacsearch='pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S'
 # uses fzf to search throuch pacman apps and press enter to download
 
 # cleaning
-alias clean="sudo paccache -rk1 && yay -Yc"
+alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
