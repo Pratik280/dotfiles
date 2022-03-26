@@ -1,5 +1,4 @@
 appimagelauncher
-discord_arch_electron
 google-chrome
 herbe
 nvm
@@ -10,6 +9,5 @@ polybar-git
 shell-color-scripts
 simple-droidcam-client
 stacer-bin
-teams
 ttf-ms-fonts
 visual-studio-code-bin

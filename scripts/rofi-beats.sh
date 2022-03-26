@@ -37,6 +37,7 @@ menu(){
   printf "21. You say run\n"
   printf "22. You say run lofi\n"
   printf "23. Demon Slayer - Survive and Get the Blade lofi\n"
+  printf "24. Sigma Grind Guitar\n"
 }
 
 
@@ -140,6 +141,10 @@ main() {
 		23)
 			notification "Demon Slayer - Survive and Get the Blade Lofi";
             URL="https://youtu.be/HfJnB8sekZ0"
+      ;;
+		24)
+			notification "Sigma Grind Guitar";
+            URL="https://youtu.be/AHGVAwbs2dA"
 			break
 			;;
 	esac

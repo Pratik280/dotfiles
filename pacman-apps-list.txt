@@ -211,7 +211,6 @@ sudo
 sxhkd
 sysfsutils
 systemd-sysvcompat
-telegram-desktop
 texinfo
 thunar
 thunar-archive-plugin
