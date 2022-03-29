@@ -113,6 +113,9 @@ alias v='nvim'
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
 
+
+alias nemod="nemo 00MAIN/ repos/  Documents/ Downloads/Telegram\ Desktop/ dotfiles/ .config/ --tabs"
+
 # git
 alias addup='git add -u'
 alias addall='git add .'

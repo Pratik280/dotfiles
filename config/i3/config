@@ -201,6 +201,7 @@ for_window [instance="kitty-sp"] move scratchpad
 bindsym $mod+minus [class="kitty" instance="kitty-sp"] scratchpad show
 
 # Assign Workspaces:
+assign [class="Nemo"] $ws1
 assign [class="Steam"] $ws3
 assign [class="discord"] $ws5
 assign [class="Code"] $ws3
@@ -216,5 +217,3 @@ exec killall picon
 exec picom
 # polybar launch script
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-# sxhkd 
-exec_always sxhkd
