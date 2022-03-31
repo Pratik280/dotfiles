@@ -1,4 +1,5 @@
 appimagelauncher
+discord-canary-electron-bin
 google-chrome
 herbe
 nvm

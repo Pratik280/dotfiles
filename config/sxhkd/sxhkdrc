@@ -6,6 +6,9 @@ super + Escape
 super + Return
   kitty
 
+super + z
+  pactl set-source-mute alsa_input.pci-0000_06_00.6.analog-stereo toggle
+
 # using maim for screenshot
 super + Print
   maim -u $HOME/Pictures/screenshots/"$(date +%Y-%h-%d-%H-%M-\
