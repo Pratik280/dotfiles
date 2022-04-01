@@ -37,8 +37,8 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f}
   ~/dotfiles/scripts/rofi-projs.sh}
 
 super + b; {b, c, f, l}
-  { chromium, google-chrome-stable, firefox, librewolf }
+  { chromium-browser, google-chrome-stable, firefox, librewolf }
 
 # nemo file browser
 super + n
-  nemo
+  nautilus

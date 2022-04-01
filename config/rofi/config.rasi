@@ -8,7 +8,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  nord0 : #2E3440;  
+  /* nord0 : #2E3440;   */
+  nord0 : #232323;  
   nord1 : #3B4252;
   nord2 : #434C5E;
   nord3 : #4C566A;
@@ -28,10 +29,11 @@ configuration {
   nord14 : #A3BE8C;
   nord15 : #B48EAD;
 
-  accent-one : #695966;
+  accent-one : #444444;
 
   bg: @nord0;
-  bg-alt: @nord10;
+  /* bg-alt: @nord10; */
+  bg-alt: #333333;
 
   fg: #FFFFFF;
   fg-alt: @nord5;
@@ -53,7 +55,8 @@ element {
 
 element selected {
   text-color: @fg;
-  background-color: @nord3;
+  /* background-color: @nord3; */
+  background-color: #444444;
 }
 
 element-text {

@@ -1,6 +1,6 @@
 #!/usr/bin/sh
 
-BROWSER="chromium"
+BROWSER="chromium-browser"
 
 declare -a options=(
 "quit"

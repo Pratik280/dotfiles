@@ -90,16 +90,19 @@ alias suspend='systemctl suspend'
 
 # Aliases for software managment
 # pacman or pm
-alias pacman='sudo pacman --color auto'
+# alias pacman='sudo pacman --color auto'
 # alias update='sudo pacman -Syyu'
-alias update='dot-backups.sh ; pacman -Syyu && yay -Syyu && flatpak update && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && flatpak update'
-alias package-sync='pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && pacman -Q > ~/dotfiles/all-pacman-apps-list.txt'
+# alias update='dot-backups.sh ; pacman -Syyu && yay -Syyu && flatpak update && pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && flatpak update'
+# alias package-sync='pacman -Qqen > ~/dotfiles/pacman-apps-list.txt && pacman -Qqem > ~/dotfiles/yay-apps-list.txt && pacman -Q > ~/dotfiles/all-pacman-apps-list.txt'
 
 # alias pacsearch='pacman -Slq | fzf --multi --preview 'cat <(pacman -Si {1}) <(pacman -Fl {1} | awk "{print \$2}")' | xargs -ro sudo pacman -S'
 # uses fzf to search throuch pacman apps and press enter to download
 
 # cleaning
-alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
+# alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
+
+alias update="sudo dnf upgrade && flatpak update"
+alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -314,8 +317,8 @@ export PATH=$PATH:~/dotfiles/scripts/
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 [ -f ~/fzf.bash ] && source ~/.fzf.bash
-source /usr/share/fzf/key-bindings.bash
-source /usr/share/fzf/completion.bash
+source /usr/share/fzf/shell/key-bindings.bash
+# source /usr/share/fzf/shell/completion.bash
 alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
 
 # Starship prompt
@@ -324,12 +327,13 @@ eval "$(starship init bash)"
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
 # motivate
+# ./repos/pfetch/pfetch
 colorscript -e panes
 # colorscript -e blocks1
 # colorscript -e crunchbang-mini
 # colorscript -e crunch
 # echo "  " $(date)
-pfetch
+# pfetch
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION

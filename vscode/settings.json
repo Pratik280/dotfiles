@@ -1,7 +1,8 @@
 {
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 13,
-  "window.zoomLevel": 1.25,
+  "editor.fontSize": 14,
+  "window.zoomLevel": 1.2,
+  "editor.lineHeight": 1.75,
   // minimal
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
@@ -93,7 +94,7 @@
   "workbench.startupEditor": "none",
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.linuxExec": "kitty",
-  "workbench.colorTheme": "Nord",
+  //"workbench.colorTheme": "Nord",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,
@@ -143,5 +144,6 @@
     "editor.formatOnSave": true
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "window.titleBarStyle": "custom"
 }

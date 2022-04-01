@@ -5,10 +5,10 @@
 # nord0 = #2E3440
 
 # onedark bg
-nord0 = #282C34
+# nord0 = #282C34
 
 # darkplus bg
-# nord0 = #1E1E1E
+nord0 = #1E1E1E
 
 nord1 = #3B4252
 nord2 = #434C5E
@@ -29,10 +29,15 @@ nord13 = #EBCB8B
 nord14 = #A3BE8C
 nord15 = #B48EAD
 
-accent-one = #695966
+# accent-one = #695966
+accent-one = #444444
 
-background-one = #2E3440
-background-two = #3B4252
+;nord
+;background-one = #2E3440
+background-one = #1E1E1E
+;nord
+;background-two = #3B4252
+background-two = #1E1E1E
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -70,7 +75,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = updates kernel uptime ram date time sound
+modules-right = kernel uptime ram date time sound
 
 separator = " "
 
@@ -134,7 +139,8 @@ format-padding = 1
 type = custom/script
 exec = ~/dotfiles/scripts/polybar-kernel.sh
 label = " %output%"
-format-prefix = " "
+# format-prefix = " "
+format-prefix = "  "
 format-prefix-foreground = ${colors.nord4}
 interval = 10
 format-underline = ${colors.nord13}
@@ -160,7 +166,7 @@ format-prefix-foreground = ${colors.nord4}
 interval = 5
 format-underline = ${colors.nord13}
 format-padding = 1
-click-left = exec /usr/share/stacer/stacer
+click-left = exec stacer
 
 [module/weather]
 type = custom/script

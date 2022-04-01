@@ -16,6 +16,7 @@ floating_modifier $mod
 
 # kill focused window
 bindsym $mod+q kill
+bindsym $mod+Enter kitty
 
 # change focus
 bindsym $mod+h focus left
@@ -132,14 +133,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# gaps inner 10
-gaps inner 0
+gaps inner 6
+# gaps inner 0
 # gaps outer 10
-gaps outer 0
+# gaps outer 0
 
-bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
+# bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
 # bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 10
-bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
+# bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
 # bindsym $mod+Shift+g gaps inner all set 8; gaps outer all set 16
 
 # theming
@@ -208,7 +209,9 @@ assign [class="Code"] $ws3
 
 # autostart
 # polkit
-exec lxsession
+# exec lxsession
+exec polkit-gnome
+exec sxhkd
 # nitrogen wallpaper
 exec killall nitrogen
 exec_always --no-startup-id nitrogen --restore
