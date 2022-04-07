@@ -12,6 +12,7 @@ declare -a options=(
 "nvim - $HOME/.config/nvim"
 "kitty - $HOME/dotfiles/config/kitty/kitty.conf"
 "rofi - $HOME/dotfiles/config/rofi/config.rasi"
+"neofetch - $HOME/dotfiles/config/neofetch/config.conf"
 "sxhkd - $HOME/dotfiles/config/sxhkd/sxhkdrc"
 "scripts - $HOME/dotfiles/scripts"
 "picom - $HOME/dotfiles/config/picom/picom.conf"

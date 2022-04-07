@@ -1,15 +1,38 @@
+# See this wiki page for more info:
+# https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 print_info() {
-    prin " "
-    info "$(color 1)  OS  " distro
+    info title
+    info underline
 
-    info "$(color 2) VER" kernel
-    info "$(color 3) UP " uptime
-    info "$(color 4) PKG" packages
-    info "$(color 5) DE " de
-    info "$(color 6) CPU" cpu
-    info "$(color 7) GPU" gpu
-    info "$(color 8) MEM" memory
-    prin "$(color 1) $(color 2) $(color 3) $(color 4) $(color 5) $(color 6) $(color 7) $(color 8)"
+    info "OS" distro
+    info "Host" model
+    info "Kernel" kernel
+    info "Uptime" uptime
+    info "Packages" packages
+    info "Memory" memory
+    info cols
+    #info "Shell" shell
+    #info "Resolution" resolution
+    #info "DE" de
+    #info "WM" wm
+    #info "WM Theme" wm_theme
+    #info "Theme" theme
+    #info "Icons" icons
+    #info "Terminal" term
+    #info "Terminal Font" term_font
+    #info "CPU" cpu
+    #info "GPU" gpu
+    # info "GPU Driver" gpu_driver  # Linux/macOS only
+    # info "CPU Usage" cpu_usage
+    # info "Disk" disk
+    # info "Battery" battery
+    # info "Font" font
+    # info "Song" song
+    # [[ "$player" ]] && prin "Music Player" "$player"
+    # info "Local IP" local_ip
+    # info "Public IP" public_ip
+    # info "Users" users
+    # info "Locale" locale  # This only works on glibc systems.
 }
 
 # Title
@@ -48,7 +71,7 @@ kernel_shorthand="on"
 # Values:   'on', 'tiny', 'off'
 # Flag:     --distro_shorthand
 # Supports: Everything except Windows and Haiku
-distro_shorthand="off"
+distro_shorthand="on"
 
 # Show/Hide OS Architecture.
 # Show 'x86_64', 'x86' and etc in 'Distro:' output.
@@ -91,7 +114,7 @@ uptime_shorthand="on"
 # Example:
 # on:   '1801MiB / 7881MiB (22%)'
 # off:  '1801MiB / 7881MiB'
-memory_percent="off"
+memory_percent="on"
 
 # Change memory output unit.
 #
@@ -217,7 +240,7 @@ cpu_cores="logical"
 # Values:  'C', 'F', 'off'
 # Flag:    --cpu_temp
 # Supports: Linux, BSD
-# NTE: For FreeBSD and NetBSD-based systems, you'll need to enable
+# NOTE: For FreeBSD and NetBSD-based systems, you'll need to enable
 #       coretemp kernel module. This only supports newer Intel processors.
 #
 # Example:
@@ -453,7 +476,7 @@ disk_percent="on"
 # xmms2d
 # xnoise
 # yarock
-music_player="mpd"
+music_player="auto"
 
 # Format to display song information.
 #
@@ -735,7 +758,7 @@ image_source="auto"
 #       Slackware, SunOS, LinuxLite, OpenSUSE, Raspbian,
 #       postmarketOS, and Void have a smaller logo variant.
 #       Use '{distro name}_small' to use the small variants.
-ascii_distro="fedora_small"
+ascii_distro="Fedora_small"
 
 # Ascii Colors
 #
@@ -826,3 +849,14 @@ xoffset=0
 # Default: ''
 # Values:  'color', 'blue'
 # Flag:    --bg_color
+background_color=
+
+
+# Misc Options
+
+# Stdout mode
+# Turn off all colors and disables image backend (ASCII/Image).
+# Useful for piping into another command.
+# Default: 'off'
+# Values: 'on', 'off'
+stdout="off"

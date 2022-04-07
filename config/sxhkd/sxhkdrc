@@ -37,7 +37,7 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f}
   ~/dotfiles/scripts/rofi-projs.sh}
 
 super + b; {b, c, f, l}
-  { chromium-browser, google-chrome-stable, firefox, librewolf }
+  { flatpak run org.chromium.Chromium, google-chrome-stable, firefox, librewolf }
 
 # nemo file browser
 super + n

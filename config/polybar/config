@@ -75,7 +75,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = kernel uptime ram date time sound
+modules-right = kernel updates uptime ram date time sound
 
 separator = " "
 
@@ -125,12 +125,12 @@ label-urgent-padding = 1
 
 [module/updates]
 type = custom/script
-exec = ~/dotfiles/scripts/polybar-pacupdate.sh
+exec = ~/dotfiles/scripts/polybar-dnfupdate.sh
 label = " %output%"
-click-left = exec kitty -e yay -Syu 
+click-left = exec kitty -e sudo dnf upgrade && flatpak update
 format-prefix = " "
 format-prefix-foreground = ${colors.nord4}
-interval = 5
+interval = 100
 format-underline = ${colors.nord14}
 # format-background = ${colors.nord11}
 format-padding = 1

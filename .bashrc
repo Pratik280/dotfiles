@@ -34,6 +34,8 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
+alias mysql-start="mysql -h localhost -u root -p"
+
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 
@@ -328,9 +330,10 @@ eval "$(starship init bash)"
 # ~/fm6000 -asok -n -c bright_white
 # motivate
 # ./repos/pfetch/pfetch
-colorscript -e panes
+# colorscript -e panes
 # colorscript -e blocks1
-# colorscript -e crunchbang-mini
+colorscript -e crunchbang-mini
+neofetch
 # colorscript -e crunch
 # echo "  " $(date)
 # pfetch

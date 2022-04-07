@@ -7,7 +7,8 @@
 # Contributors: Derek Taylor
 
 # Defining our web browser.
-DMBROWSER="chromium-browser"
+# DMBROWSER="flatpak run org.chromium.Chromium"
+DMBROWSER="brave-browser"
 
 # An array of search engines.  You can edit this list to add/remove
 # search engines. The format must be: "engine_name - url".
