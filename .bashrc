@@ -17,6 +17,9 @@ export HISTCONTROL=ignoreboth:erasedups
 # go lang
 export PATH=$PATH:/usr/local/go/bin
 export BAT_THEME="Nord"
+
+# cargo path
+export PATH=$PATH:/home/pratikc/.cargo/bin
 # Make nano the default editor
 
 # mongo alias to start instance
@@ -103,7 +106,8 @@ alias suspend='systemctl suspend'
 # cleaning
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
-alias update="sudo dnf upgrade && flatpak update"
+alias refreshdnf="sudo dnf makecache --refresh"
+alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
 alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
@@ -333,7 +337,8 @@ eval "$(starship init bash)"
 # colorscript -e panes
 # colorscript -e blocks1
 colorscript -e crunchbang-mini
-neofetch
+# neofetch
+macchina
 # colorscript -e crunch
 # echo "  " $(date)
 # pfetch
