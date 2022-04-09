@@ -1,7 +1,7 @@
 #!/usr/bin/sh
 
 # BROWSER="flatpak run org.chromium.Chromium"
-BROWSER="flatpak run com.github.Eloston.UngoogledChromium"
+BROWSER="brave-browser"
 
 declare -a options=(
 "quit"
