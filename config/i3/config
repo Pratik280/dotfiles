@@ -209,7 +209,7 @@ assign [class="Code"] $ws3
 
 # autostart
 # polkit
-# exec lxsession
+exec lxsession
 exec polkit-gnome
 exec sxhkd
 # nitrogen wallpaper

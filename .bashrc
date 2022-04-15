@@ -23,7 +23,10 @@ export PATH=$PATH:/home/pratikc/.cargo/bin
 # Make nano the default editor
 
 # mongo alias to start instance
-alias mongod='mongod --port 27017 --dbpath ~/00MAIN/00MAIN/mongo/mongo-database/'
+alias start-mongo='sudo systemctl start mongod && sudo systemctl enable mongod && mongo'
+alias start-mysql='service mysqld start'
+# alias mysql-start="mysql -h localhost -u root -p"
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -37,7 +40,6 @@ if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
 
-alias mysql-start="mysql -h localhost -u root -p"
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
@@ -122,6 +124,7 @@ alias v='nvim'
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
 
+alias anime-folder="cd /run/media/pratikc/9C2E-3351/Anime"
 
 alias nemod="nemo 00MAIN/ repos/  Documents/ Downloads/Telegram\ Desktop/ dotfiles/ .config/ --tabs"
 

@@ -39,6 +39,8 @@ menu(){
   printf "23. Demon Slayer - Survive and Get the Blade lofi\n"
   printf "24. Sigma Grind Guitar\n"
   printf "25. HxH Departure Lofi\n"
+  printf "26. You too can become a hero Lofi\n"
+  printf "27. MHA main theme Lofi\n"
 }
 
 
@@ -150,6 +152,14 @@ main() {
 		25)
 			notification "HxH Departure Lofi";
             URL="https://youtu.be/MDqvMbq8oVg"
+      ;;
+		26)
+			notification "You too can become a hero lofi";
+            URL="https://youtu.be/DpibI5O9NC4"
+			;;
+		27)
+			notification "MHA main theme lofi";
+            URL="https://youtu.be/zoqSMwRAZsg"
 			break
 			;;
 	esac

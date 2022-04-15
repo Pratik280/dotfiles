@@ -1,8 +1,11 @@
 {
-  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
+  // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  "workbench.colorTheme": "Gruvbox Dark Medium",
   "editor.fontSize": 14,
-  "window.zoomLevel": 1.2,
-  "editor.lineHeight": 1.75,
+  "window.zoomLevel": 1.1,
+  "editor.lineHeight": 2.1,
+  "update.showReleaseNotes": false,
   // minimal
   "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
@@ -18,25 +21,27 @@
     "editorCursor.foreground": "#ffff00",
     // "editorCursor.foreground": "#EBCB8B",
     "terminalCursor.foreground": "#ffff00",
-    "[Nord]": {
+    "[Gruvbox Dark Medium]": {
       // "sideBar.foreground": "#c7c7c7",
-      "sideBar.background": "#23272E",
-      "sideBarSectionHeader.background": "#23272E",
-      "editor.background": "#282C34",
-      "breadcrumb.background": "#282C34",
-      "statusBar.background": "#23272E",
+      "sideBar.background": "#242424",
+      "sideBarSectionHeader.background": "#1E1E1E",
+      "editor.background": "#1E1E1E",
+      "breadcrumb.background": "#1E1E1E",
+      "statusBar.background": "#1E1E1E",
       // "statusBar.foreground": "#626262",
-      "minimap.background": "#282C34",
-      "titleBar.activeBackground": "#282C34",
-      "editorGroupHeader.tabsBackground": "#23272E",
-      "activityBar.background": "#23272E",
-      "tab.inactiveBackground": "#23272E",
-      "tab.activeBackground": "#282C34",
-      "tab.activeBorder": "#282C34",
+      "minimap.background": "#1E1E1E",
+      "titleBar.activeBackground": "#1E1E1E",
+      "editorGroupHeader.tabsBackground": "#1E1E1E",
+      "activityBar.background": "#1E1E1E",
+      "tab.inactiveBackground": "#262626",
+      "tab.activeBackground": "#333333",
+      "tab.activeBorder": "#333333",
       // "editorLineNumber.foreground": "#282C34"
-      "editorGutter.background": "#282C34",
-      "panel.background": "#23272E",
-      "terminal.background": "#23272E"
+      "editorGutter.background": "#1E1E1E",
+      "panel.background": "#1E1E1E",
+      "terminal.background": "#1E1E1E",
+      // "editor.lineHighlightBackground": "#ffffff",
+      // "editor.lineHighlightBorder": "#0000ff"
     }
   },
   "editor.cursorBlinking": "expand",
@@ -46,7 +51,7 @@
   // editor
   "diffEditor.wordWrap": "on",
   "editor.acceptSuggestionOnEnter": "off",
-  "editor.renderLineHighlight": "none",
+  "editor.renderLineHighlight": "all",
   // "editor.parameterHints.enabled": false,
   "files.trimFinalNewlines": true,
   "window.restoreWindows": "none",
@@ -145,5 +150,5 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "window.titleBarStyle": "custom"
+  "window.titleBarStyle": "custom",
 }
