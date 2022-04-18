@@ -1,0 +1,1 @@
+viewnoir main sxhkd yaru-theme papirus-icon-theme thunar nitrogen lxappearance polybar i3-gaps 
