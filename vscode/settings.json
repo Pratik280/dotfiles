@@ -2,9 +2,9 @@
   // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "workbench.colorTheme": "Gruvbox Dark Medium",
-  "editor.fontSize": 14,
-  "window.zoomLevel": 1.1,
-  "editor.lineHeight": 2.1,
+  "editor.fontSize": 13,
+  "window.zoomLevel": 1.25,
+  "editor.lineHeight": 2,
   "update.showReleaseNotes": false,
   // minimal
   "workbench.statusBar.visible": false,
@@ -39,7 +39,7 @@
       // "editorLineNumber.foreground": "#282C34"
       "editorGutter.background": "#1E1E1E",
       "panel.background": "#1E1E1E",
-      "terminal.background": "#1E1E1E",
+      "terminal.background": "#1E1E1E"
       // "editor.lineHighlightBackground": "#ffffff",
       // "editor.lineHighlightBorder": "#0000ff"
     }
@@ -150,5 +150,5 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "window.titleBarStyle": "custom",
+  "window.titleBarStyle": "custom"
 }

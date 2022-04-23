@@ -192,31 +192,27 @@ for_window [class="simple_droidcam_client"] floating enable
 # scratchpad for pavucontrol
 exec_always --no-startup-id pavucontrol --name soundcontrol
 for_window [instance="soundcontrol"] floating enable move position 950 px 32 px
+# for_window [instance="soundcontrol"] floating enable position center
 for_window [instance="soundcontrol"] move scratchpad
-bindsym $mod+plus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
+# bindsym $mod+plus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
 
-# scratchpad for pavucontrol
+# scratchpad for terminal
+# exec_always --no-startup-id kitty @ launch --title Output --keep-focus pulsemixer --name kitty-sp
 exec_always --no-startup-id kitty --name kitty-sp
-# for_window [instance="kitty-sp"] floating enable position center
+for_window [instance="kitty-sp"] floating enable position center
 for_window [instance="kitty-sp"] move scratchpad
 bindsym $mod+minus [class="kitty" instance="kitty-sp"] scratchpad show
 
 # Assign Workspaces:
 assign [class="Nemo"] $ws1
+assign [class="Thunar"] $ws1
+assign [class="Brave-browse"] $ws2
 assign [class="Steam"] $ws3
-assign [class="discord"] $ws5
 assign [class="Code"] $ws3
+assign [class="TelegramDesktop"] $ws5
+assign [class="Pavucontrol"] $ws6
+assign [class="Noisetorch"] $ws6
 
-# autostart
-# polkit
-exec lxsession
-exec polkit-gnome
-exec sxhkd
-# nitrogen wallpaper
-exec killall nitrogen
-exec_always --no-startup-id nitrogen --restore
-# compositor picom
-exec killall picon
-exec picom
-# polybar launch script
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/dotfiles/config/i3/autostart.sh
+# exec_always --no-startup-id ~/dotfiles/config/i3/autostart.sh

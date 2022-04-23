@@ -8,6 +8,7 @@ declare -a options=(
 "quit"
 "bash - $HOME/dotfiles/.bashrc"
 "i3 - $HOME/dotfiles/config/i3/config"
+"autostart - $HOME/dotfiles/config/i3/autostart.sh"
 "polybar - $HOME/dotfiles/config/polybar/config"
 "nvim - $HOME/.config/nvim"
 "kitty - $HOME/dotfiles/config/kitty/kitty.conf"
