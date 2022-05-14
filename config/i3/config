@@ -138,7 +138,8 @@ gaps inner 6
 # gaps outer 10
 # gaps outer 0
 
-# bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
+bindsym $mod+Shift+g gaps inner all set 6
 # bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 10
 # bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
 # bindsym $mod+Shift+g gaps inner all set 8; gaps outer all set 16

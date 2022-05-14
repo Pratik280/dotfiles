@@ -76,7 +76,7 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = kernel updates uptime ram date time sound
+modules-right = kernel uptime ram date time sound
 
 separator = " "
 
