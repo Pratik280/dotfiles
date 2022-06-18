@@ -42,4 +42,4 @@ super + b; {b, c, f, l}
 
 # nemo file browser
 super + n
-  thunar
+  nautilus

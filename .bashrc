@@ -23,6 +23,9 @@ export BAT_THEME="Nord"
 export PATH=$PATH:/home/pratikc/.cargo/bin
 # Make nano the default editor
 
+export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-18.0.1.0.10-1.rolling.fc36.x86_64
+export PATH=$JAVA_HOME/bin:$PATH
+
 # mongo alias to start instance
 alias start-mongo='sudo systemctl start mongod && sudo systemctl enable mongod && mongo'
 alias start-mysql='service mysqld start'
@@ -331,7 +334,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 source /usr/share/fzf/shell/key-bindings.bash
 # source /usr/share/fzf/shell/completion.bash
 alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
-
+alias javasel="sudo alternatives --config java"
 # Starship prompt
 eval "$(starship init bash)"
 # figlet -f small PRATIK PC
@@ -340,8 +343,8 @@ eval "$(starship init bash)"
 # motivate
 # ./repos/pfetch/pfetch
 # colorscript -e panes
-# colorscript -e blocks1
-colorscript -e crunchbang-mini
+colorscript -e blocks1
+# colorscript -e crunchbang-mini
 # neofetch
 macchina
 # colorscript -e crunch

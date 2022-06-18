@@ -1,9 +1,8 @@
 {
   // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
-  "workbench.colorTheme": "Gruvbox Dark Medium",
   "editor.fontSize": 13,
-  "window.zoomLevel": 1.25,
+  "window.zoomLevel": 1.5,
   "editor.lineHeight": 2,
   "update.showReleaseNotes": false,
   // minimal
@@ -12,13 +11,17 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "toggle",
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.horizontalScrollbarSize": 6,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.scrollbar.verticalScrollbarSize": 6,
   // disable git
   "git.decorations.enabled": false,
-  "git.enabled": false,
+  // "git.enabled": false,
   "git.path": null,
   "git.autofetch": false,
   "workbench.colorCustomizations": {
-    "editorCursor.foreground": "#ffff00",
+    // // "editorCursor.foreground": "#ffff00",
     // "editorCursor.foreground": "#EBCB8B",
     "terminalCursor.foreground": "#ffff00",
     "[Gruvbox Dark Medium]": {
@@ -149,6 +152,5 @@
     "editor.formatOnSave": true
   },
   "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right",
-  "window.titleBarStyle": "custom"
+  "workbench.sideBar.location": "right"
 }
