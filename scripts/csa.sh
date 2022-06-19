@@ -4,7 +4,7 @@ mkdir $1
 cd $1
 
 npm init -y
-npm i parcel --save-dev
+npm i snowpack --save-dev
 npm i react react-dom
 npm i --save-dev gh-pages
 
@@ -24,13 +24,35 @@ echo '<!DOCTYPE html>
   </body>
 </html>' >> index.html
 
+echo '// Snowpack Configuration File
+// See all supported options: https://www.snowpack.dev/reference/configuration
+
+/** @type {import("snowpack").SnowpackUserConfig } */
+module.exports = {
+  mount: {
+    /* ... */
+  },
+  plugins: [
+    /* ... */
+  ],
+  packageOptions: {
+    /* ... */
+  },
+  devOptions: {
+    /* ... */
+  },
+  buildOptions: {
+    out: "docs",
+  },
+};' >> snowpack.config.js
+
 echo '"alias": {
     "process": false
   },
   "scripts": {
-    "dev": "parcel --dist-dir docs",
-    "build": "parcel build --dist-dir docs",
-    "build-github": "rm -rf docs/* && rm -rf .parcel-cache/ && parcel build ./src/index.html --public-url ./ --dist-dir docs",
+    "dev": "snowpack dev",
+    "build": "snowpack build",
+    "build-github": "rm -rf build && rm -rf docs && snowpack build",
     "deploy": "gh-pages -d docs/"
   },' >> scripts
 

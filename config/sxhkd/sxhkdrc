@@ -40,6 +40,6 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f}
 super + b; {b, c, f, l}
   { flatpak run com.brave.Browser, google-chrome-stable, firefox, librewolf }
 
-# nemo file browser
+# file browser
 super + n
   nautilus
