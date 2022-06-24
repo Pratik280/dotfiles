@@ -43,3 +43,6 @@ super + b; {b, c, f, l}
 # file browser
 super + n
   nautilus
+
+super + c
+  code

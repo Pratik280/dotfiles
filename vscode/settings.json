@@ -1,6 +1,6 @@
 {
-  // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
+  // "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 13,
   "window.zoomLevel": 1.5,
   "editor.lineHeight": 2,
@@ -46,6 +46,28 @@
       // "editor.lineHighlightBackground": "#ffffff",
       // "editor.lineHighlightBorder": "#0000ff"
     }
+    // "[Nord]": {
+    //   // "sideBar.foreground": "#c7c7c7",
+    //   "sideBar.background": "#23262F",
+    //   "sideBarSectionHeader.background": "#282C34",
+    //   "editor.background": "#282C34",
+    //   "breadcrumb.background": "#282C34",
+    //   "statusBar.background": "#282C34",
+    //   // "statusBar.foreground": "#626262",
+    //   "minimap.background": "#282C34",
+    //   "titleBar.activeBackground": "#282C34",
+    //   "editorGroupHeader.tabsBackground": "#282C34",
+    //   "activityBar.background": "#23262F",
+    //   "tab.inactiveBackground": "#2E3440",
+    //   "tab.activeBackground": "#5E81AC",
+    //   "tab.activeBorder": "#282C34",
+    //   // "editorLineNumber.foreground": "#282C34"
+    //   "editorGutter.background": "#282C34",
+    //   "panel.background": "#282C34",
+    //   "terminal.background": "#282C34"
+    //   // "editor.lineHighlightBackground": "#ffffff",
+    //   // "editor.lineHighlightBorder": "#0000ff"
+    // }
   },
   "editor.cursorBlinking": "expand",
   "workbench.settings.useSplitJSON": true,
@@ -153,5 +175,6 @@
   },
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
-  "workbench.colorTheme": "Gruvbox Dark Medium"
+  "glassit-linux.opacity": 95,
+  "workbench.colorTheme": "Dracula"
 }

@@ -24,7 +24,8 @@ echo '<!DOCTYPE html>
   </body>
 </html>' >> index.html
 
-echo '"alias": {
+echo '"source": "./index.html",
+"alias": {
     "process": false
   },
   "scripts": {
@@ -69,7 +70,7 @@ const Navbar = () => {
 }
 
 
-export default Navbar;' >> src/Components/Navbar.js
+export default Navbar;' >> src/Components/Navbar.jsx
 
 echo '# Logs
 logs

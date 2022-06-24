@@ -1,6 +1,6 @@
 set $mod Mod4
 font pango:RobotoMono Nerd Font
-exec_always --no-startup-id autotiling -w 3 4
+# exec_always --no-startup-id autotiling -w 3 4
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
@@ -78,8 +78,8 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-# set $ws8 "8"
-# set $ws9 "9"
+set $ws8 "8"
+set $ws9 "9"
 # set $ws10 "10"
 
 # switch to workspace
@@ -90,8 +90,8 @@ bindsym $mod+4 workspace number $ws4
 bindsym $mod+5 workspace number $ws5
 bindsym $mod+6 workspace number $ws6
 bindsym $mod+7 workspace number $ws7
-# bindsym $mod+8 workspace number $ws8
-# bindsym $mod+9 workspace number $ws9
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
 # bindsym $mod+0 workspace number $ws10
 
 # move focused container to workspace
@@ -102,8 +102,8 @@ bindsym $mod+Shift+4 move container to workspace number $ws4
 bindsym $mod+Shift+5 move container to workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6
 bindsym $mod+Shift+7 move container to workspace number $ws7
-# bindsym $mod+Shift+8 move container to workspace number $ws8
-# bindsym $mod+Shift+9 move container to workspace number $ws9
+bindsym $mod+Shift+8 move container to workspace number $ws8
+bindsym $mod+Shift+9 move container to workspace number $ws9
 # bindsym $mod+Shift+0 move container to workspace number $ws10
 
 # reload the configuration file
@@ -134,14 +134,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-gaps inner 6
+gaps inner 10
 # gaps inner 0
-# gaps outer 10
+gaps outer 22
 # gaps outer 0
 
-bindsym $mod+Shift+f gaps inner all set 0; gaps outer all set 0
-bindsym $mod+Shift+g gaps inner all set 6
-# bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 10
+bindsym $mod+Shift+f gaps inner all set 4; gaps outer all set 8
+# bindsym $mod+Shift+g gaps inner all set 6
+bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 22
 # bindsym $mod+Shift+g gaps inner all set 10; gaps outer all set 0
 # bindsym $mod+Shift+g gaps inner all set 8; gaps outer all set 16
 
@@ -170,20 +170,20 @@ set $nord15 #B48EAD
 default_border pixel 2
 
 # class                 border  backgr. text    indicator child_border
-client.focused          $nord15 $nord15 $nord15 $nord15  $nord15
-client.focused_inactive $nord2  $nord2  $nord2  $nord2    $nord2
-client.unfocused        $nord2  $nord2  $nord2  $nord2    $nord2
-client.urgent           $nord2  $nord2  $nord2  $nord2    $nord2
+client.focused          #F1FA8C #F1FA8C #F1FA8C #F1FA8C  #F1FA8C
+client.focused_inactive #44475A #44475A #44475A #44475A  #44475A
+client.unfocused        #44475A #44475A #44475A #44475A  #44475A
+client.urgent           #44475A #44475A #44475A #44475A  #44475A
 
 client.background       #ffffff
 
 # floating only apps
 for_window [class="stacer"] floating enable
-for_window [class="Nitrogen"] floating enable
+# for_window [class="Nitrogen"] floating enable
 for_window [class="Warpinator"] floating enable
 for_window [class="Viewnior"] floating enable
-for_window [class="vlc"] floating enable
-for_window [class="mpv"] floating enable
+# for_window [class="vlc"] floating enable
+# for_window [class="mpv"] floating enable
 for_window [class="Lxappearance"] floating enable
 for_window [class="qt5ct"] floating enable
 for_window [class="Kvantum Manager"] floating enable
@@ -191,19 +191,21 @@ for_window [class="simple_droidcam_client"] floating enable
 # for_window [class="Google-chrome" window_role="pop-up"] floating enable
 # for_window [class="firefox" window_role="toolbox"] floating enable
 
-# scratchpad for pavucontrol
-exec_always --no-startup-id pavucontrol --name soundcontrol
-for_window [instance="soundcontrol"] floating enable move position 950 px 32 px
+# scratchpad for p6avucontrol
+# exec_always --no-startup-id pavucontrol --name soundcontrol
+# for_window [instance="soundcontrol"] floating enable move position 950 px 32 px
+# for_window [instance="soundcontrol"] move scratchpad
+
 # for_window [instance="soundcontrol"] floating enable position center
-for_window [instance="soundcontrol"] move scratchpad
 # bindsym $mod+plus [class="Pavucontrol" instance="soundcontrol"] scratchpad show
 
 # scratchpad for terminal
 # exec_always --no-startup-id kitty @ launch --title Output --keep-focus pulsemixer --name kitty-sp
-exec_always --no-startup-id kitty --name kitty-sp
-for_window [instance="kitty-sp"] floating enable position center
-for_window [instance="kitty-sp"] move scratchpad
-bindsym $mod+minus [class="kitty" instance="kitty-sp"] scratchpad show
+
+# exec_always --no-startup-id kitty --name kitty-sp
+# for_window [instance="kitty-sp"] floating enable position center
+# for_window [instance="kitty-sp"] move scratchpad
+# bindsym $mod+minus [class="kitty" instance="kitty-sp"] scratchpad show
 
 # Assign Workspaces:
 assign [class="Nemo"] $ws1
@@ -211,10 +213,13 @@ assign [class="Thunar"] $ws1
 assign [class="Brave-browse"] $ws2
 assign [class="Steam"] $ws3
 assign [class="Code"] $ws3
-assign [class="TelegramDesktop"] $ws5
-assign [class="Pavucontrol"] $ws6
-assign [class="Noisetorch"] $ws6
+assign [class="Pavucontrol"] $ws1
+# assign [class="TelegramDesktop"] $ws6
+# assign [class="Noisetorch"] $ws6
 
 # exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+# bar {
+#   status_command i3status
+# }
 exec_always --no-startup-id $HOME/dotfiles/config/i3/autostart.sh
 # exec_always --no-startup-id ~/dotfiles/config/i3/autostart.sh

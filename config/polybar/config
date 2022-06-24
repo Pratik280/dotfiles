@@ -1,43 +1,15 @@
 [colors]
-# nord colors
+backgroundClrOne = #282A36
+backgroundClrTwo = #44475A
+foregroundClr = #F8F8F2
 
-# nord bg
-# nord0 = #2E3440
+accentOne = #6272a4
+accentTwo = #FFB86C
+accentThree = #FF79C6
+accentFour = #BD93F9
+accentFive = #FF5555 
+accentSix = #F1FA8C 
 
-# onedark bg
-# nord0 = #282C34
-
-# darkplus bg
-nord0 = #1E1E1E
-
-nord1 = #3B4252
-nord2 = #434C5E
-nord3 = #4C566A
-
-nord4 = #D8DEE9
-nord5 = #E5E9F0
-nord6 = #ECEFF4
-
-nord7 = #8FBCBB
-nord8 = #88C0D0
-nord9 = #81A1C1
-nord10 = #5E81AC
-
-nord11 = #BF616A
-nord12 = #D08770
-nord13 = #EBCB8B
-nord14 = #A3BE8C
-nord15 = #B48EAD
-
-# accent-one = #695966
-accent-one = #444444
-
-;nord
-;background-one = #2E3440
-background-one = #1E1E1E
-;nord
-;background-two = #3B4252
-background-two = #1E1E1E
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
 foreground-alt = #555
@@ -49,19 +21,19 @@ alert = #bd2c40
 bottom = false
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 30
-;offset-x = 1%
-;offset-y = 1%
+height = 34
+offset-x = 0%
+offset-y = 0%
 radius = 0
-fixed-center = false
-
-background = ${colors.nord0}
-foreground = ${colors.nord5}
-
+fixed-center = true
 line-size = 0
-line-color = ${colors.nord15}
 
-border-size = 0
+background = #aa282a36
+foreground = ${colors.foregroundClr}
+# line-size = 0
+# line-color = ${colors.nord15}
+
+border-size = 10
 border-color = #00000000
 
 padding-left = 0
@@ -76,13 +48,13 @@ font-0 = InconsolataLGC Nerd Font:size=10
 modules-left = i3
 ; modules-center = xwindow
 # modules-right = updates kernel ram uptime weather date time sound
-modules-right = kernel uptime ram date time sound
+modules-right = kernel uptime ram date time 
 
 separator = " "
 
 tray-position = right
 tray-padding = 10
-tray-background = ${colors.accent-one}
+tray-background = #aa44475a
 
 cursor-click = pointer
 cursor-scroll = ns-resize
@@ -93,8 +65,8 @@ content = 
 click-left = exec rofi -show drun -show-icons
 # content-underline = ${colors.nord15}
 # content-underline = #546f8f
-content-underline = ${colors.nord10}
-content-background = ${colors.nord10}
+# content-underline = ${colors.nord10}
+# content-background = ${colors.nord10}
 content-padding = 2
 
 [module/xwindow]
@@ -109,10 +81,10 @@ wrapping-scroll = false
 show-all = true;
 label-mode-padding = 1
 label-mode-foreground = #000
-label-mode-background = ${colors.primary}
+label-mode-background = ${colors.backgroundClrOne}
 label-focused = %index%
-label-focused-background = ${colors.accent-one}
-label-focused-underline = ${colors.nord15}
+label-focused-background = ${colors.accentFour}
+label-focused-underline = ${colors.accentSix}
 label-focused-padding = 2
 label-unfocused = %index%
 label-unfocused-padding = 2
@@ -130,9 +102,9 @@ exec = ~/dotfiles/scripts/polybar-dnfupdate.sh
 label = " %output%"
 click-left = exec kitty -e sudo dnf upgrade && flatpak update
 format-prefix = " "
-format-prefix-foreground = ${colors.nord4}
+# format-prefix-foreground = ${colors.nord4}
 interval = 100
-format-underline = ${colors.nord14}
+# format-underline = ${colors.nord14}
 # format-background = ${colors.nord11}
 format-padding = 1
 
@@ -142,9 +114,9 @@ exec = ~/dotfiles/scripts/polybar-kernel.sh
 label = " %output%"
 # format-prefix = " "
 format-prefix = "  "
-format-prefix-foreground = ${colors.nord4}
+# format-prefix-foreground = ${colors.nord4}
 interval = 10
-format-underline = ${colors.nord13}
+# format-underline = ${colors.nord13}
 # format-background = ${colors.nord11}
 format-padding = 1
 
@@ -152,10 +124,10 @@ format-padding = 1
 type = custom/script
 exec = ~/dotfiles/scripts/polybar-uptime.sh
 format-prefix = "羽"
-format-prefix-foreground = ${colors.nord4}
+# format-prefix-foreground = ${colors.nord4}
 label = " %output%"
 interval = 5
-format-underline = ${colors.nord14}
+# format-underline = ${colors.nord14}
 format-padding = 1
 # 
 [module/ram]
@@ -163,9 +135,9 @@ type = custom/script
 exec = ~/dotfiles/scripts/polybar-ram.sh
 label = " %output%"
 format-prefix = " "
-format-prefix-foreground = ${colors.nord4}
+# format-prefix-foreground = ${colors.nord4}
 interval = 5
-format-underline = ${colors.nord13}
+# format-underline = ${colors.nord13}
 format-padding = 1
 click-left = exec stacer
 
@@ -174,7 +146,7 @@ type = custom/script
 exec = ~/dotfiles/config/scripts/polybar-weather.sh
 label = "%output%"
 interval = 5
-format-underline = ${colors.nord12}
+# format-underline = ${colors.nord12}
 # format-background = ${colors.nord11}
 format-padding = 1
 
@@ -183,9 +155,9 @@ type = custom/script
 exec = ~/dotfiles/scripts/polybar-date.sh
 label = " %output%"
 format-prefix = " "
-format-prefix-foreground = ${colors.nord4}
+# format-prefix-foreground = ${colors.nord4}
 interval = 5
-format-underline = ${colors.nord14}
+# format-underline = ${colors.nord14}
 format-padding = 1
 
 [module/time]
@@ -193,17 +165,17 @@ type = custom/script
 exec = ~/dotfiles/scripts/polybar-time.sh
 label = " %output%"
 format-prefix = " "
-format-prefix-foreground = ${colors.nord4}
+format-prefix-foreground = ${colors.foregroundClr}
 interval = 5
-format-underline = ${colors.nord13}
+format-underline = ${colors.accentFour}
 format-padding = 1
 
 [module/sound]
 type = custom/text
 content = "墳"
 click-left = exec i3-msg [instance="soundcontrol"] scratchpad show
-content-underline = ${colors.nord10}
-content-background = ${colors.nord10}
+# content-underline = ${colors.nord10}
+# content-background = ${colors.nord10}
 content-padding = 2
 
 [module/powermenu]

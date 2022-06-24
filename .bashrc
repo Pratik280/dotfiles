@@ -28,6 +28,7 @@ export PATH=$PATH:/home/pratikc/.cargo/bin
 
 export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-18.0.1.0.10-1.rolling.fc36.x86_64
 export PATH=$JAVA_HOME/bin:$PATH
+export PATH=$PATH:/home/pratikc/Downloads/apache-maven-3.8.6/bin
 
 # mongo alias to start instance
 alias start-mongo='sudo systemctl start mongod && sudo systemctl enable mongod && mongo'
@@ -348,9 +349,9 @@ eval "$(starship init bash)"
 # colorscript -e panes
 colorscript -e blocks1
 # colorscript -e crunchbang-mini
-# neofetch
-macchina
+# # neofetch
 # colorscript -e crunch
+macchina
 # echo "  " $(date)
 # pfetch
 

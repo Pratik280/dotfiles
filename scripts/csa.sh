@@ -20,7 +20,7 @@ echo '<!DOCTYPE html>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="./src/index.jsx"></script>
+    <script type="module" src="./src/index.js"></script>
   </body>
 </html>' >> index.html
 
@@ -46,7 +46,8 @@ module.exports = {
   },
 };' >> snowpack.config.js
 
-echo '"alias": {
+echo '"source": "./index.html",
+"alias": {
     "process": false
   },
   "scripts": {
@@ -91,7 +92,7 @@ const Navbar = () => {
 }
 
 
-export default Navbar;' >> src/Components/Navbar.js
+export default Navbar;' >> src/Components/Navbar.jsx
 
 echo '# Logs
 logs

@@ -20,6 +20,7 @@ declare -a options=(
 "ranger - $HOME/dotfiles/config/ranger/rc.conf"
 "starship - $HOME/dotfiles/starship.toml"
 "qtile - $HOME/dotfiles/config/qtile/config.py"
+"awesome - $HOME/dotfiles/config/awesome/rc.lua"
 )
 
 # Piping the above array into dmenu.
