@@ -21,6 +21,7 @@ declare -a options=(
 "starship - $HOME/dotfiles/starship.toml"
 "qtile - $HOME/dotfiles/config/qtile/config.py"
 "awesome - $HOME/dotfiles/config/awesome/rc.lua"
+"bspwm - $HOME/dotfiles/config/bspwm/bspwmrc"
 )
 
 # Piping the above array into dmenu.

@@ -24,7 +24,7 @@ super + shift + Escape
   # xflock4
 
 # rofi
-super + d ; {d,x,c,w,s,e,m,5,2,4,f}
+super + d ; {d,x,c,w,s,e,m,5,2,4,f,n}
   {rofi -show drun -show-icons,\
   ~/dotfiles/scripts/rofi-power.sh,\
   ~/dotfiles/scripts/rofi-config.sh,\
@@ -35,7 +35,8 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f}
   ~/dotfiles/scripts/rofi-5-pomo.sh,\
   ~/dotfiles/scripts/rofi-25-pomo.sh,\
   ~/dotfiles/scripts/rofi-45-pomo.sh,\
-  ~/dotfiles/scripts/rofi-projs.sh}
+  ~/dotfiles/scripts/rofi-projs.sh,\
+  ~/dotfiles/scripts/rofi-wallp.sh }
 
 super + b; {b, c, f, l}
   { flatpak run com.brave.Browser, google-chrome-stable, firefox, librewolf }
@@ -46,3 +47,41 @@ super + n
 
 super + c
   code
+
+super + p
+  pavucontrol
+
+super + v
+  bspc rule -a \* -o state=floating && kitty -e pulsemixer
+
+super + ctrl + shift + n
+  nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill
+
+# bspwm keybinds
+# quit/restart bspwm
+super + shift + {e,r}
+	bspc {quit,wm -r}
+
+super + q
+	bspc node -c
+
+# swap the current node and the biggest node
+super + g
+	bspc node -s biggest
+
+# set the window state
+super + {t,shift + t,s,f}
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+super + {_,shift + }{1-9,0}
+	bspc {desktop --focus,node --to-desktop} 'focused:^{1-9,10}'
+
+super + {h,j,k,l}
+	bspc node -f {west,south,north,east}
+
+super + ctrl + {h,j,k,l}
+	bspc node -z {left -80 0,bottom 0 80,top 0 -80,right 80 0}
+
+super + ctrl + shift + {h,j,k,l}
+	bspc node -z {right -80 0,top 0 80,bottom 0 -80,left 80 0}
+

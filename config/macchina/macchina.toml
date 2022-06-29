@@ -46,4 +46,4 @@ physical_cores = false
 #   - Battery
 # Example:
 # show = ["Distribution", "Kernel", "OperatingSystem", "DesktopEnvironment", "WindowManager", "Packages", "Shell", "Uptime", "Processor", "ProcessorLoad", "Memory"]
-show = ["Distribution", "Kernel", "OperatingSystem", "WindowManager", "Packages", "Uptime", "Processor"]
+show = ["Distribution", "Kernel", "OperatingSystem", "DesktopEnvironment", "Packages", "Uptime", "Processor"]

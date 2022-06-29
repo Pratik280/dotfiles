@@ -8,39 +8,29 @@ configuration {
 @theme "/dev/null"
 
 * {
-  /* nord0 : #2E3440;   */
-  nord0 : #232323;  
-  nord1 : #3B4252;
-  nord2 : #434C5E;
-  nord3 : #4C566A;
-                 
-  nord4 : #D8DEE9;
-  nord5 : #E5E9F0;
-  nord6 : #ECEFF4;
-                 
-  nord7 : #8FBCBB;
-  nord8 : #88C0D0;
-  nord9 : #81A1C1;
-  nord10 : #5E81AC;
-                  
-  nord11 : #BF616A;
-  nord12 : #D08770;
-  nord13 : #EBCB8B;
-  nord14 : #A3BE8C;
-  nord15 : #B48EAD;
+  backgroundClrOne : #282A36;
+  backgroundClrTwo : #44475A;
+  foregroundClr : #F8F8F2;
+  
+  accentOne : #6272a4;
+  accentTwo : #FFB86C;
+  accentThree : #FF79C6;
+  accentFour : #BD93F9;
+  accentFive : #FF5555 ;
+  accentSix : #F1FA8C ;
 
+  nord0 : #232323;  
   accent-one : #444444;
 
-  bg: @nord0;
-  /* bg-alt: @nord10; */
-  bg-alt: #333333;
+  bg: @backgroundClrOne;
+  bg-alt: @backgroundClrTwo;
 
-  fg: #FFFFFF;
-  fg-alt: @nord5;
+  fg: @foregroundClr;
+  fg-alt: @foregroundClr;
 
-  window-border-color: #4A5057;
+  window-border-color: @accentFour;
   
-  background-color: @nord0;
+  background-color: @backgroundClrOne;
   
   border: 0;
   margin: 0;
@@ -49,14 +39,13 @@ configuration {
 }
 
 element {
-  padding: 6;
-  text-color: @fg-alt;
+  padding: 12;
+  text-color: @foregroundClr;
 }
 
 element selected {
-  text-color: @fg;
-  /* background-color: @nord3; */
-  background-color: #444444;
+  text-color: @foregroundClr;
+  background-color: @backgroundClrTwo;
 }
 
 element-text {
@@ -65,9 +54,9 @@ element-text {
 }
 
 entry {
-  background-color: @bg-alt;
+  background-color: @accentFour;
   padding: 6;
-  text-color: @fg;
+  text-color: @foregroundClr;
 }
 
 inputbar {
@@ -75,21 +64,21 @@ inputbar {
 }
 
 listview {
-  background-color: @bg;
-  columns: 1;
-  lines: 10;
+  background-color: @backgroundClrOne;
+  columns: 3;
+  lines: 8;
 }
 
 mainbox {
-  background-color: @bg;
+  background-color: @backgroundClrTwo;
   children: [inputbar, listview];
 }
 
 prompt {
-  background-color: @bg-alt;
+  background-color: @backgroundClrTwo;
   enabled: true;
   padding: 12 0 0 12;
-  text-color: @fg;
+  text-color: @foregroundClr;
 }
 
 window {

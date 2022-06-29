@@ -35,6 +35,8 @@ alias start-mongo='sudo systemctl start mongod && sudo systemctl enable mongod &
 alias start-mysql='service mysqld start'
 # alias mysql-start="mysql -h localhost -u root -p"
 
+alias kubectl="minikube kubectl --"
+
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -347,8 +349,10 @@ eval "$(starship init bash)"
 # motivate
 # ./repos/pfetch/pfetch
 # colorscript -e panes
-colorscript -e blocks1
-# colorscript -e crunchbang-mini
+# colorscript -e elfman
+# polybar-kernel.sh
+# colorscript -e blocks1
+colorscript -e crunchbang-mini
 # # neofetch
 # colorscript -e crunch
 macchina

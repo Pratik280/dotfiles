@@ -18,7 +18,7 @@ chosen=$(echo -e "[Cancel]\nLock\nLogout\nShutdown\nReboot\nSuspend\nHibernate\n
 if [[ $chosen = "Logout" ]]; then
 	jwm -exit
 elif [[ $chosen = "Lock" ]]; then
-	xflock4
+	slock
 elif [[ $chosen = "Shutdown" ]]; then
 	systemctl poweroff
 elif [[ $chosen = "Reboot" ]]; then
