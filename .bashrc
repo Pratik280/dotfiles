@@ -120,6 +120,7 @@ alias suspend='systemctl suspend'
 
 alias refreshdnf="sudo dnf makecache --refresh"
 alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt"
 alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
@@ -128,9 +129,9 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # neovim
-alias n='nvim'
-alias v='nvim'
-alias vim='nvim'
+alias n='nvim .'
+alias v='nvim .'
+alias vim='nvim .'
 
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
@@ -352,10 +353,10 @@ eval "$(starship init bash)"
 # colorscript -e elfman
 # polybar-kernel.sh
 # colorscript -e blocks1
-colorscript -e crunchbang-mini
+# colorscript -e crunchbang-mini
 # # neofetch
 # colorscript -e crunch
-macchina
+# macchina
 # echo "  " $(date)
 # pfetch
 

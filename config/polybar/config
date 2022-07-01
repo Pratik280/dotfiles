@@ -14,10 +14,10 @@ accentSix = #F1FA8C
 bottom = false
 ;monitor = ${env:MONITOR:HDMI-1}
 width = 100%
-height = 34
+height = 30
 offset-x = 0%
 offset-y = 0%
-radius = 8
+radius = 0
 fixed-center = true
 line-size = 0
 
@@ -26,7 +26,7 @@ foreground = ${colors.foregroundClr}
 # line-size = 0
 # line-color = ${colors.nord15}
 
-border-size = 10
+border-size = 0
 border-color = #00000000
 
 padding-left = 0
