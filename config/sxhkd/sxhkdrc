@@ -38,8 +38,9 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f,n}
   ~/dotfiles/scripts/rofi-projs.sh,\
   ~/dotfiles/scripts/rofi-wallp.sh }
 
-super + b; {b, c, f, l}
-  { flatpak run com.brave.Browser, google-chrome-stable, firefox, librewolf }
+# browsers
+super + b; {b, c, f}
+  { flatpak run com.microsoft.Edge, google-chrome-stable, firefox}
 
 # file browser
 super + n

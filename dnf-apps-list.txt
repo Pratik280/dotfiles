@@ -1,0 +1,170 @@
+ID     | Command line                                                                                           | Date and time    | Action(s)      | Altered
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+   168 | -y install --disablerepo=* /tmp/akmods.raKRO9Am/results/kmod-v4l2loopback-5.18.7-200.fc36.x86_64-0.12. | 2022-07-02 02:52 | Install        |    1   
+   167 | upgrade                                                                                                | 2022-07-02 02:50 | C, E, I, U     |   47 EE
+   166 | install -y pandoc texlive-beamer texlive-ec                                                            | 2022-06-30 09:56 | Install        |  319   
+   165 | install tex(cmti7.pfb)                                                                                 | 2022-06-30 09:45 | Install        |   25   
+   164 | -y install --disablerepo=* /tmp/akmods.IpTFghWV/results/kmod-v4l2loopback-5.18.6-200.fc36.x86_64-0.12. | 2022-06-28 18:42 | Install        |    1   
+   163 | upgrade                                                                                                | 2022-06-28 18:40 | C, E, I, U     |   45 EE
+   162 | install maven                                                                                          | 2022-06-28 11:12 | Install        |   33   
+   161 | install bspwm                                                                                          | 2022-06-25 16:48 | Install        |    1   
+   160 | install xset                                                                                           | 2022-06-25 11:50 | Install        |    1   
+   159 | install picom                                                                                          | 2022-06-25 11:06 | Install        |    1   
+   158 | remove picom                                                                                           | 2022-06-25 01:38 | Removed        |    1   
+   157 | remove papirus-icon-theme                                                                              | 2022-06-25 01:31 | Removed        |    1   
+   156 | upgrade                                                                                                | 2022-06-25 01:27 | I, U           |   84   
+   155 | remove i3status                                                                                        | 2022-06-22 18:51 | Removed        |    3   
+   154 | install i3status                                                                                       | 2022-06-22 18:43 | Install        |    3   
+   153 | install docker-ce docker-ce-cli containerd.io docker-compose-plugin                                    | 2022-06-22 11:36 | Install        |    7  <
+   152 | install awesome.x86_64                                                                                 | 2022-06-21 19:32 | Install        |    7 > 
+   151 | upgrade                                                                                                | 2022-06-21 10:08 | Upgrade        |   31   
+   150 | remove alacritty                                                                                       | 2022-06-21 00:41 | Removed        |    1   
+   149 | install alacritty                                                                                      | 2022-06-21 00:34 | Install        |    1   
+   148 | install neovim                                                                                         | 2022-06-20 22:31 | Install        |    9   
+   147 | remove neovim                                                                                          | 2022-06-20 22:30 | Removed        |    9   
+   146 | autoremove                                                                                             | 2022-06-18 13:34 | Removed        |    2   
+   145 | -y install --disablerepo=* /tmp/akmods.jMRjGzNx/results/kmod-v4l2loopback-5.18.5-200.fc36.x86_64-0.12. | 2022-06-18 13:20 | Install        |    1   
+   144 | upgrade                                                                                                | 2022-06-18 13:17 | C, E, I, U     |  155 EE
+   143 | install python-i3ipc                                                                                   | 2022-06-18 09:26 | Install        |    2   
+   142 | install java-latest-openjdk-devel.x86_64                                                               | 2022-06-17 18:24 | Install        |    3   
+   141 | install java-1.8.0-openjdk-devel.x86_64                                                                | 2022-06-17 18:23 | Install        |   11   
+   140 | remove java-1.8.0-openjdk.x86_64                                                                       | 2022-06-17 18:18 | Removed        |   10   
+   139 | remove java-latest-openjdk.x86_64                                                                      | 2022-06-17 18:18 | Removed        |    2   
+   138 | install redis                                                                                          | 2022-06-17 12:49 | Install        |    1   
+   137 | install java-1.8.0-openjdk.x86_64                                                                      | 2022-06-17 09:56 | Install        |    2   
+   136 | remove java-1.8.0-openjdk.x86_64                                                                       | 2022-06-17 09:53 | Removed        |    4   
+   135 | remove java-17-openjdk.x86_64                                                                          | 2022-06-17 09:52 | Removed        |    2   
+   134 | install java-latest-openjdk.x86_64                                                                     | 2022-06-17 09:50 | Install        |    2   
+   133 | -y install --disablerepo=* /tmp/akmods.spY1Bfb5/results/kmod-v4l2loopback-5.17.12-300.fc36.x86_64-0.12 | 2022-06-07 06:30 | Install        |    1   
+   132 | upgrade                                                                                                | 2022-06-07 06:27 | C, E, I, U     |   61 EE
+   131 | install javafx                                                                                         | 2022-06-05 09:52 | Install        |    4   
+   130 | -y install --disablerepo=* /tmp/akmods.JCpIYjR3/results/kmod-v4l2loopback-5.17.11-300.fc36.x86_64-0.12 | 2022-06-04 20:25 | Install        |    1   
+   129 | upgrade                                                                                                | 2022-06-04 20:19 | C, E, I, U     |  371 EE
+   128 | autoremove                                                                                             | 2022-05-14 15:55 | Removed        |    7 EE
+   127 | -y install --disablerepo=* /tmp/akmods.05BvLkDB/results/kmod-v4l2loopback-5.17.6-300.fc36.x86_64-0.12. | 2022-05-14 14:27 | Install        |    1   
+   126 | upgrade                                                                                                | 2022-05-14 14:23 | C, E, I, U     |  126 EE
+   125 | remove mysql                                                                                           | 2022-05-14 13:59 | Removed        |    2  <
+   124 | install lxappearance                                                                                   | 2022-05-14 01:08 | Install        |    2 > 
+   123 | autoremove                                                                                             | 2022-05-10 22:00 | Removed        |   14 E<
+   122 | -y install --disablerepo=* /tmp/akmods.3KlvgENH/results/kmod-v4l2loopback-5.17.5-300.fc36.x86_64-0.12. | 2022-05-10 21:54 | Install        |    1 >#
+   121 | system-upgrade upgrade                                                                                 | 2022-05-10 21:36 | C, D, E, I, O, | 2235 E<
+   120 | install /home/pratikc/Downloads/zoom_x86_64.rpm                                                        | 2022-05-10 10:05 | Install        |    1 >E
+   119 | upgrade                                                                                                | 2022-05-10 09:37 | Upgrade        |   31   
+   118 | -y install --disablerepo=* /tmp/akmods.DWlyPbaH/results/kmod-v4l2loopback-5.17.5-200.fc35.x86_64-0.12. | 2022-05-06 04:48 | Install        |    1   
+   117 | upgrade                                                                                                | 2022-05-06 04:46 | C, E, I, U     |   19 EE
+   116 | upgrade                                                                                                | 2022-05-03 23:50 | Upgrade        |   34   
+   115 | upgrade                                                                                                | 2022-04-30 18:22 | Upgrade        |   42   
+   114 | install helix                                                                                          | 2022-04-29 14:27 | Install        |    1  <
+   113 | remove brave-browser                                                                                   | 2022-04-28 18:59 | Removed        |    3 >E
+   112 | -y install --disablerepo=* /tmp/akmods.vI2oNZnU/results/kmod-v4l2loopback-5.17.4-200.fc35.x86_64-0.12. | 2022-04-26 19:43 | Install        |    1   
+   111 | install kmod-v4l2loopback                                                                              | 2022-04-26 19:43 | Install        |   41 EE
+   110 | remove v4l2loopback                                                                                    | 2022-04-26 19:43 | Removed        |   41 EE
+   109 | -y install --disablerepo=* /tmp/akmods.6zEniRwl/results/kmod-v4l2loopback-5.17.4-200.fc35.x86_64-0.12. | 2022-04-26 19:39 | Install        |    1   
+   108 | install v4l2loopback                                                                                   | 2022-04-26 19:39 | Install        |   41 EE
+   107 | upgrade                                                                                                | 2022-04-26 04:06 | C, E, I, U     |   49 EE
+   106 | upgrade                                                                                                | 2022-04-23 09:56 | I, U           |   39   
+   105 | install code                                                                                           | 2022-04-19 09:36 | Install        |    1  <
+   104 | install lxpolkit                                                                                       | 2022-04-19 02:01 | Install        |    1 > 
+   103 | remove lxsession                                                                                       | 2022-04-19 01:55 | Removed        |    2   
+   102 | upgrade                                                                                                | 2022-04-19 01:33 | C, E, I, U     |   54   
+   101 | install picom                                                                                          | 2022-04-18 23:04 | Install        |    1   
+   100 | install xev                                                                                            | 2022-04-18 22:36 | Install        |    1   
+    99 | install slock                                                                                          | 2022-04-18 22:33 | Install        |    1   
+    98 | install pavucontrol                                                                                    | 2022-04-18 22:23 | Install        |    1   
+    97 | install viewnior maim sxhkd                                                                            | 2022-04-18 22:15 | Install        |    6   
+    96 | install yaru-theme                                                                                     | 2022-04-18 22:14 | Install        |    9   
+    95 | install papirus-icon-theme                                                                             | 2022-04-18 22:08 | Install        |    1   
+    94 | install thunar                                                                                         | 2022-04-18 22:06 | Install        |    7   
+    93 | install nitrogen                                                                                       | 2022-04-18 22:03 | Install        |    2   
+    92 | install lxappearance                                                                                   | 2022-04-18 22:03 | Install        |    2   
+    91 | install polybar                                                                                        | 2022-04-18 22:03 | Install        |    2   
+    90 | install i3-gaps                                                                                        | 2022-04-18 22:01 | Install        |    3   
+    89 | remove picom                                                                                           | 2022-04-18 01:29 | Removed        |    1   
+    88 | remove nitrogen                                                                                        | 2022-04-18 01:27 | Removed        |    2   
+    87 | remove pavucontrol                                                                                     | 2022-04-18 01:24 | Removed        |    1   
+    86 | install pandoc                                                                                         | 2022-04-17 16:50 | Install        |    2   
+    85 | install unrar                                                                                          | 2022-04-16 20:32 | Install        |    1   
+    84 | install bat                                                                                            | 2022-04-16 00:06 | Install        |    1   
+    83 | upgrade                                                                                                | 2022-04-15 23:40 | I, U           |   19   
+    82 | install /home/pratikc/Downloads/appimagelauncher-2.2.0-travis995.0f91801.x86_64.rpm                    | 2022-04-15 21:15 | Install        |    1 EE
+    81 | install -y ./mongodb-mongosh-1.1.1.el8.x86_64.rpm                                                      | 2022-04-13 20:54 | Install        |    1   
+    80 | install -y ./mongodb-org-shell-5.0.7-1.el8.x86_64.rpm                                                  | 2022-04-13 20:53 | Install        |    1   
+    79 | install /home/pratikc/Downloads/mongodb-org-server-5.0.7-1.el8.x86_64.rpm                              | 2022-04-13 20:51 | Install        |    2 EE
+    78 | install gcolor3                                                                                        | 2022-04-13 18:21 | Install        |    2   
+    77 | install jq                                                                                             | 2022-04-12 13:20 | Install        |    2   
+    76 | install sxiv                                                                                           | 2022-04-12 13:19 | Install        |    1   
+    75 | upgrade                                                                                                | 2022-04-12 09:28 | Upgrade        |   27 EE
+    74 | remove papirus-icon-theme yaru-theme viewnior lxappearance maim i3-gaps polybar sxhkd                  | 2022-04-12 09:19 | Removed        |   23   
+    73 | install papirus-icon-theme                                                                             | 2022-04-10 23:52 | Install        |    1   
+    72 | install yaru-theme                                                                                     | 2022-04-10 23:46 | Install        |    9   
+    71 | install xkill                                                                                          | 2022-04-10 23:34 | Install        |    1   
+    70 | remove chromium                                                                                        | 2022-04-09 20:41 | Removed        |    3   
+    69 | install chromium                                                                                       | 2022-04-09 20:40 | Install        |    3   
+    68 | upgrade                                                                                                | 2022-04-09 17:36 | Upgrade        |   60   
+    67 | -y install cargo                                                                                       | 2022-04-09 11:22 | Install        |    3   
+    66 | autoremove                                                                                             | 2022-04-05 20:01 | Removed        |    2 EE
+    65 | upgrade                                                                                                | 2022-04-05 19:54 | I, O, U        |   27 EE
+    64 | install java-17-openjdk.x86_64                                                                         | 2022-04-05 19:51 | Install        |   10   
+    63 | install mysql-workbench                                                                                | 2022-04-04 19:06 | Install        |   31  <
+    62 | install community-mysql-server                                                                         | 2022-04-04 18:44 | Install        |    8 >E
+    61 | remove community-mysql-server                                                                          | 2022-04-04 18:43 | Removed        |    8 EE
+    60 | install community-mysql-server                                                                         | 2022-04-04 18:35 | Install        |    8 EE
+    59 | remove chromium                                                                                        | 2022-04-04 18:18 | Removed        |    3  <
+    58 | install brave-browser                                                                                  | 2022-04-04 18:03 | Install        |    3 ><
+    57 | -y install ffmpeg-devel                                                                                | 2022-04-04 17:44 | Install        |    1 > 
+    56 | -y install ffmpeg                                                                                      | 2022-04-04 17:43 | Install        |    1   
+    55 | install gparted                                                                                        | 2022-04-03 17:50 | Install        |    1   
+    54 | install chromium                                                                                       | 2022-04-03 16:38 | Install        |    3   
+    53 | remove chromium                                                                                        | 2022-04-03 16:21 | Removed        |    3   
+    52 | install chromium                                                                                       | 2022-04-03 16:19 | Install        |    3   
+    51 | install redshift                                                                                       | 2022-04-03 01:23 | Install        |    1 EE
+    50 | install gperftools-libs                                                                                | 2022-04-02 12:20 | Install        |    1   
+    49 | remove chromium                                                                                        | 2022-04-01 20:06 | Removed        |    3   
+    48 | install viewnior                                                                                       | 2022-04-01 19:26 | Install        |    2   
+    47 | install neofetch                                                                                       | 2022-04-01 19:26 | Install        |   17   
+    46 | install maim                                                                                           | 2022-04-01 19:22 | Install        |    3   
+    45 | install lxappearance                                                                                   | 2022-04-01 18:49 | Install        |    2   
+    44 | install arc-theme                                                                                      | 2022-04-01 18:48 | Install        |    2   
+    43 | install pavucontrol                                                                                    | 2022-04-01 18:47 | Install        |    1   
+    42 | install polkit-gnome                                                                                   | 2022-04-01 18:46 | Install        |    1   
+    41 | install chromium                                                                                       | 2022-04-01 18:24 | Install        |    3   
+    40 | install nitrogen                                                                                       | 2022-04-01 17:58 | Install        |    2   
+    39 | install picom                                                                                          | 2022-04-01 17:53 | Install        |    1   
+    38 | install polybar                                                                                        | 2022-04-01 17:52 | Install        |    2   
+    37 | install i3-gaps                                                                                        | 2022-04-01 17:51 | Install        |    3  <
+    36 | install sxhkd                                                                                          | 2022-04-01 00:47 | Install        |    1 > 
+    35 | remove sxhkd                                                                                           | 2022-04-01 00:43 | Removed        |    1   
+    34 | autoremove                                                                                             | 2022-03-31 22:50 | Removed        |    8   
+    33 | upgrade                                                                                                | 2022-03-31 22:47 | Upgrade        |   27   
+    32 | install google-chrome-stable                                                                           | 2022-03-31 22:45 | Install        |    2   
+    31 | remove google-chrome                                                                                   | 2022-03-31 22:40 | Removed        |    2   
+    30 | install google-chrome                                                                                  | 2022-03-31 22:34 | Install        |    2  <
+    29 | install xprop                                                                                          | 2022-03-31 22:09 | Install        |    1 > 
+    28 | install python3-pip python3-wheel                                                                      | 2022-03-31 18:59 | Install        |    2   
+    27 | install rofi                                                                                           | 2022-03-31 15:40 | Install        |    3   
+    26 | install youtube-dl                                                                                     | 2022-03-31 15:39 | Install        |    2   
+    25 | install mpv                                                                                            | 2022-03-31 15:38 | Install        |   14   
+    24 | install sxhkd                                                                                          | 2022-03-31 15:34 | Install        |    1   
+    23 | install cmake                                                                                          | 2022-03-31 15:20 | Install        |    7   
+    22 | install stacer                                                                                         | 2022-03-31 15:18 | Install        |    2   
+    21 | remove neofetch                                                                                        | 2022-03-31 15:17 | Removed        |   22   
+    20 | install neofetch                                                                                       | 2022-03-31 15:14 | Install        |   22   
+    19 | install make automake gcc gcc-c++ kernel-devel                                                         | 2022-03-31 15:13 | Install        |    9   
+    18 | install @development-tools                                                                             | 2022-03-31 15:11 | Install        |   40 EE
+    17 | install neovim                                                                                         | 2022-03-31 14:55 | Install        |   10   
+    16 | install ranger                                                                                         | 2022-03-31 14:53 | Install        |    1   
+    15 | install kitty                                                                                          | 2022-03-31 14:41 | Install        |    4   
+    14 | install fzf                                                                                            | 2022-03-31 14:33 | Install        |    1   
+    13 | install exa                                                                                            | 2022-03-31 14:32 | Install        |    3   
+    12 | install steam                                                                                          | 2022-03-31 13:38 | Install        |  176   
+    11 | remove gnome-software                                                                                  | 2022-03-31 13:33 | Removed        |   17   
+    10 | install discord                                                                                        | 2022-03-31 13:29 | Install        |   16  <
+     9 | remove libreoffice*                                                                                    | 2022-03-31 13:21 | Removed        |   75 > 
+     8 | install xclip                                                                                          | 2022-03-31 12:47 | Install        |    1   
+     7 | group upgrade --with-optional Multimedia                                                               | 2022-03-31 12:03 | I, U           |    4   
+     6 | install lame* --exclude=lame-devel                                                                     | 2022-03-31 12:03 | Install        |    1   
+     5 | install gstreamer1-plugins-bad-* gstreamer1-plugins-good-* gstreamer1-plugins-base gstreamer1-plugin-o | 2022-03-31 12:02 | Install        |   68  <
+     4 | install https://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-35.noarch.rpm         | 2022-03-31 11:53 | Install        |    1 > 
+     3 | install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-35.noarch.rpm               | 2022-03-31 11:52 | Install        |    1  <
+     2 | update                                                                                                 | 2022-03-31 11:46 | I, O, U        |  785 >E
+     1 |                                                                                                        | 2021-10-26 11:10 | Install        | 1729 EE

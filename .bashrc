@@ -120,7 +120,7 @@ alias suspend='systemctl suspend'
 
 alias refreshdnf="sudo dnf makecache --refresh"
 alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
-alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt"
+alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
 alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something

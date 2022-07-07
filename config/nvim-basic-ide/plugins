@@ -1,0 +1,6 @@
+  -- my-plugins
+  use { "Mofiqul/dracula.nvim" }
+  use { "vimwiki/vimwiki" }
+  use { "iamcco/markdown-preview.nvim" }
+  use { "junegunn/goyo.vim" }
+
