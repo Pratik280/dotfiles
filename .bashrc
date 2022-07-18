@@ -118,10 +118,14 @@ alias suspend='systemctl suspend'
 # cleaning
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
-alias refreshdnf="sudo dnf makecache --refresh"
-alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
-alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+# alias refreshdnf="sudo dnf makecache --refresh"
+# alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+# alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
+# alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+ 
+alias update="sudo apt update"
+alias upgrade="sudo apt update && sudo apt upgrade"
+alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -129,9 +133,10 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # neovim
-alias n='nvim .'
-alias v='nvim .'
-alias vim='nvim .'
+alias n='nvim'
+alias v='nvim'
+alias vim='nvim'
+alias vi='nvim'
 
 alias img='sxiv -b -q -t *'
 alias clock='tty-clock'
@@ -329,17 +334,18 @@ alias r="ranger"
 # vim mode in bash
 # set -o vi
 
+# aliases for system status service for psql (wsl)
+alias psql-status="sudo service postgresql status"
+alias psql-start="sudo service postgresql start"
+alias psql-stop="sudo service postgresql stop"
+
 export PATH=$PATH:~/dotfiles/scripts/
 
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-# export NODE_PATH="npm root -g"
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
 [ -f ~/fzf.bash ] && source ~/.fzf.bash
 source /usr/share/fzf/shell/key-bindings.bash
-# source /usr/share/fzf/shell/completion.bash
+source /usr/share/fzf/shell/completion.bash
 alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
 alias javasel="sudo alternatives --config java"
 # Starship prompt
@@ -358,9 +364,13 @@ eval "$(starship init bash)"
 # colorscript -e crunch
 # macchina
 # echo "  " $(date)
-# pfetch
+pfetch
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
