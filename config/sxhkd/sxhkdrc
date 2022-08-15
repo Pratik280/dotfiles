@@ -40,11 +40,11 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f,n}
 
 # browsers
 super + b; {b, c, f}
-  { flatpak run com.microsoft.Edge, google-chrome-stable, firefox}
+  { flatpak run com.microsoft.Edge, flatpak run com.google.Chrome, flatpak run org.mozilla.firefox}
 
 # file browser
 super + n
-  thunar
+  pcmanfm
 
 super + c
   code

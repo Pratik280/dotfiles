@@ -17,26 +17,6 @@ fi
 
 export HISTCONTROL=ignoreboth:erasedups
 
-# go lang
-export PATH=$PATH:/usr/local/go/bin
-export PATH=$PATH:~/go/bin
-export BAT_THEME="Nord"
-
-# cargo path
-export PATH=$PATH:/home/pratikc/.cargo/bin
-# Make nano the default editor
-
-export JAVA_HOME=/usr/lib/jvm/java-18-openjdk-18.0.1.0.10-1.rolling.fc36.x86_64
-export PATH=$JAVA_HOME/bin:$PATH
-export PATH=$PATH:/home/pratikc/Downloads/apache-maven-3.8.6/bin
-
-# mongo alias to start instance
-alias start-mongo='sudo systemctl start mongod && sudo systemctl enable mongod && mongo'
-alias start-mysql='service mysqld start'
-# alias mysql-start="mysql -h localhost -u root -p"
-
-alias kubectl="minikube kubectl --"
-
 export EDITOR='nvim'
 export VISUAL='nvim'
 
@@ -49,14 +29,11 @@ fi
 if [ -d "$HOME/.local/bin" ] ;
   then PATH="$HOME/.local/bin:$PATH"
 fi
-
+shopt -s autocd
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
-
-#kitty image viewer
-alias icat="kitty +kitten icat"
-
+export PATH="~/bin:$PATH"
 # curl
 alias weather="curl wttr.in"
 alias parrot="curl parrot.live"
@@ -102,7 +79,6 @@ up () {
 
 alias mkdir='mkdir -pv'
 
-
 alias suspend='systemctl suspend'
 
 # Aliases for software managment
@@ -138,13 +114,6 @@ alias v='nvim'
 alias vim='nvim'
 alias vi='nvim'
 
-alias img='sxiv -b -q -t *'
-alias clock='tty-clock'
-
-alias anime-folder="cd /run/media/pratikc/9C2E-3351/Anime"
-
-alias nemod="nemo 00MAIN/ repos/  Documents/ Downloads/Telegram\ Desktop/ dotfiles/ .config/ --tabs"
-
 # git
 alias addup='git add -u'
 alias addall='git add .'
@@ -170,84 +139,14 @@ alias df='df -h'
 
 #pacman unlock
 alias unlock="sudo rm /var/lib/pacman/db.lck"
-alias rmpacmanlock="sudo rm /var/lib/pacman/db.lck"
-
-#use all cores
-alias uac="sh ~/.bin/main/000*"
-
-#ps
-alias psa="ps auxf"
-alias psgrep="ps aux | grep -v grep | grep -i -e VSZ -e"
-
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
 #add new fonts
 alias update-fc='sudo fc-cache -fv'
 
-#copy bashrc-latest over on bashrc - cb= copy bashrc
-# alias cb='sudo cp /etc/skel/.bashrc ~/.bashrc && source ~/.bashrc'
-#copy /etc/skel/.zshrc over on ~/.zshrc - cb= copy zshrc
-#alias cz='sudo cp /etc/skel/.zshrc ~/.zshrc && exec zsh'
-
-#switch between bash and zsh
-alias tobash="sudo chsh $USER -s /bin/bash && echo 'Now log out.'"
-alias tozsh="sudo chsh $USER -s /bin/zsh && echo 'Now log out.'"
-
-#hardware info --short
-alias hw="hwinfo --short"
-
-#skip integrity check
-alias yayskip='yay -S --mflags --skipinteg'
-alias trizenskip='trizen -S --skipinteg'
-
-#check vulnerabilities microcode
-alias microcode='grep . /sys/devices/system/cpu/vulnerabilities/*'
-
-#get fastest mirrors in your neighborhood
-alias mirror="sudo reflector -f 30 -l 30 --number 10 --verbose --save /etc/pacman.d/mirrorlist"
-alias mirrord="sudo reflector --latest 30 --number 10 --sort delay --save /etc/pacman.d/mirrorlist"
-alias mirrors="sudo reflector --latest 30 --number 10 --sort score --save /etc/pacman.d/mirrorlist"
-alias mirrora="sudo reflector --latest 30 --number 10 --sort age --save /etc/pacman.d/mirrorlist"
-#our experimental - best option for the moment
-alias mirrorx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 5 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
-alias mirrorxx="sudo reflector --age 6 --latest 20  --fastest 20 --threads 20 --sort rate --protocol https --save /etc/pacman.d/mirrorlist"
-
-#shopt
-shopt -s autocd # change to named directory
-shopt -s cdspell # autocorrects cd misspellings
-shopt -s cmdhist # save multi-line commands in history as single line
-shopt -s dotglob
-shopt -s histappend # do not overwrite history
-shopt -s expand_aliases # expand aliases
-
-alias ytv-best="youtube-dl -f bestvideo+bestaudio "
-
-#Recent Installed Packages
-alias rip="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -200 | nl"
-alias riplong="expac --timefmt='%Y-%m-%d %T' '%l\t%n %v' | sort | tail -3000 | nl"
-
-#Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
-
-#search content with ripgrep
-alias rg="rg --sort path"
-
-#get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
-
 #nvim for important configuration files
 #know what you do in these files
-alias nlightdm="sudo $EDITOR /etc/lightdm/lightdm.conf"
-alias npacman="sudo $EDITOR /etc/pacman.conf"
-alias ngrub="sudo $EDITOR /etc/default/grub"
-alias nconfgrub="sudo $EDITOR /boot/grub/grub.cfg"
-alias nmkinitcpio="sudo $EDITOR /etc/mkinitcpio.conf"
-alias nmirrorlist="sudo $EDITOR /etc/pacman.d/mirrorlist"
-alias nsddm="sudo $EDITOR /etc/sddm.conf"
-alias nfstab="sudo $EDITOR /etc/fstab"
-alias nnsswitch="sudo $EDITOR /etc/nsswitch.conf"
-alias nsamba="sudo $EDITOR /etc/samba/smb.conf"
 alias nb="$EDITOR ~/.bashrc"
 alias nz="$EDITOR ~/.zshrc"
 alias nq="$EDITOR ~/.config/qtile/config.py"
@@ -255,18 +154,6 @@ alias nn="$EDITOR ~/.config/nvim/init.vim"
 alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
 alias bat="bat --style=numbers"
-# alias find="find . -type f | fzf"
-alias duhere="du -sh * | sort -r -h"
-#maintenance
-alias big="expac -H M '%m\t%n' | sort -h | nl"
-alias downgrada="sudo downgrade --ala-url https://bike.seedhost.eu/arcolinux/"
-
-#systeminfo
-alias probe="sudo -E hw-probe -all -upload"
-alias sysfailed="systemctl list-units --failed"
-
-#give the list of all installed desktops - xsessions desktops
-alias xd="ls /usr/share/xsessions"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -331,21 +218,10 @@ alias nightlight="redshift -O 4500K -r -P"
 alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
-# vim mode in bash
-# set -o vi
-
-# aliases for system status service for psql (wsl)
-alias psql-status="sudo service postgresql status"
-alias psql-start="sudo service postgresql start"
-alias psql-stop="sudo service postgresql stop"
-
-export PATH=$PATH:~/dotfiles/scripts/
-
-
 
 [ -f ~/fzf.bash ] && source ~/.fzf.bash
-source /usr/share/fzf/shell/key-bindings.bash
-source /usr/share/fzf/shell/completion.bash
+source /usr/share/doc/fzf/examples/key-bindings.bash
+source /usr/share/doc/fzf/examples/completion.bash
 alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
 alias javasel="sudo alternatives --config java"
 # Starship prompt
@@ -364,7 +240,7 @@ eval "$(starship init bash)"
 # colorscript -e crunch
 # macchina
 # echo "  " $(date)
-pfetch
+# pfetch
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION

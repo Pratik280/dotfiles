@@ -8,7 +8,9 @@
 
 # Defining our web browser.
 # DMBROWSER="flatpak run org.chromium.Chromium"
-DMBROWSER="flatpak run com.brave.Browser"
+# DMBROWSER="flatpak run com.brave.Browser"
+DMBROWSER="flatpak run com.microsoft.Edge"
+# DMBROWSER="flatpak run org.mozilla.firefox"
 # DMBROWSER="brave-browser"
 
 # An array of search engines.  You can edit this list to add/remove
@@ -38,6 +40,7 @@ declare -a options=(
 "translate - https://translate.google.com/?sl=auto&tl=en&text="
 "urban - https://www.urbandictionary.com/define.php?term="
 "wikipedia - https://en.wikipedia.org/wiki/"
+"flathub - https://flathub.org/apps/search/"
 "quit"
 )
 

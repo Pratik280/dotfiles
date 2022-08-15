@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 chosen=$(echo -e "[Cancel]\nRandom\nAbstract\nAnime\nDracula\nFantasy\nGame\nMisc\nNord\nPhoto-real" | rofi -dmenu -i)
 
 if [[ $chosen = "Random" ]]; then
