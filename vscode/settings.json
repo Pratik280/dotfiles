@@ -121,7 +121,6 @@
   // ],
   // vim
   "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "workbench.startupEditor": "none",
   "security.workspace.trust.untrustedFiles": "open",
   "terminal.external.linuxExec": "kitty",
   //"workbench.colorTheme": "Nord",
@@ -176,5 +175,5 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "glassit-linux.opacity": 95,
-  "workbench.colorTheme": "Dracula Soft"
+  "workbench.startupEditor": "none"
 }

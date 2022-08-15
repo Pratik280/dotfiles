@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'Mofiqul/dracula.nvim'
-Plug 'christianchiarulli/nvcode-color-schemes.vim'
+Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
+Plug 'catppuccin/nvim', {'as': 'catppuccin'}
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-surround'
@@ -14,11 +15,12 @@ Plug 'lambdalisue/fern.vim'
 call plug#end()
 
 " -------------------- colortheme -------------------
+let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
 if (has("termguicolors"))
  set termguicolors
 endif
 let g:nvcode_termcolors=256
-colorscheme onedark " nvcode onedark nord aurora 
+colorscheme catppuccin
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none
