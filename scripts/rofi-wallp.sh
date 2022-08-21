@@ -1,5 +1,5 @@
 #!/bin/bash
-chosen=$(echo -e "[Cancel]\nRandom\nAbstract\nAnime\nDracula\nFantasy\nGame\nMisc\nNord\nPhoto-real" | rofi -dmenu -i)
+chosen=$(echo -e "[Cancel]\nRandom\nAbstract\nAnime\nDracula\nFantasy\nGame\nMisc\nNord\nCatppuccin\nPhoto-real" | rofi -dmenu -i)
 
 if [[ $chosen = "Random" ]]; then
   nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill
@@ -17,6 +17,8 @@ elif [[ $chosen = "Misc" ]]; then
   nitrogen --random ~/Pictures/wallpapers/misc/ --set-zoom-fill
 elif [[ $chosen = "Nord" ]]; then
   nitrogen --random ~/Pictures/wallpapers/nord/ --set-zoom-fill
+elif [[ $chosen = "Catppuccin" ]]; then
+  nitrogen --random ~/Pictures/wallpapers/catppuccin/ --set-zoom-fill
 elif [[ $chosen = "Photo-real" ]]; then
   nitrogen --random ~/Pictures/wallpapers/photo-real/ --set-zoom-fill
 fi

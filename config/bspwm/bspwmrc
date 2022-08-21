@@ -4,7 +4,8 @@
 ~/dotfiles/config/polybar/launch.sh &
 lxpolkit &
 exec sxhkd &
-nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill &
+#nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill &
+nitrogen ~/Pictures/wallpapers/catppuccin/debian-magenta-blue-1920x1080.png --set-zoom-fill &
 nitrogen --restore &
 picom --experimental-backends &
 # picom --experimental-backends --corner-radius 12 &

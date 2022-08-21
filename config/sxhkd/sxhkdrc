@@ -40,8 +40,10 @@ super + d ; {d,x,c,w,s,e,m,5,2,4,f,n}
 
 # browsers
 super + b; {b, c, f}
-  { flatpak run com.microsoft.Edge, flatpak run com.google.Chrome, flatpak run org.mozilla.firefox}
+  { flatpak run com.brave.Browser, flatpak run com.google.Chrome, flatpak run org.mozilla.firefox}
 
+# flatpak run com.microsoft.Edge
+#
 # file browser
 super + n
   pcmanfm

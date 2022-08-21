@@ -8,7 +8,8 @@ configuration {
 @theme "/dev/null"
 
 * {
-  backgroundClrOne : #282A36;
+  /* backgroundClrOne : #282A36; */
+  backgroundClrOne : #24273a;
   backgroundClrTwo : #44475A;
   foregroundClr : #F8F8F2;
   

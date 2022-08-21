@@ -1,8 +1,8 @@
 #!/bin/bash
 # BROWSER="flatpak run org.chromium.Chromium"
-BROWSER="flatpak run com.microsoft.Edge"
+# BROWSER="flatpak run com.microsoft.Edge"
 # BROWSER="flatpak run org.mozilla.firefox"
-# BROWSER="flatpak run com.brave.Browser"
+BROWSER="flatpak run com.brave.Browser"
 # BROWSER="brave-browser"
 
 declare -a options=(

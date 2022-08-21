@@ -1,0 +1,5 @@
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash" #Hide text and show splash
+GRUB_GFXMODE=1920x1080x32,auto
+GRUB_GFXPAYLOAD_LINUX=keep
+GRUB_BACKGROUND="/boot/grub/debian.png"
+# GRUB_FONT="/boot/grub/fonts/inconsolata.pf2"

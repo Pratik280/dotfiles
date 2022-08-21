@@ -100,8 +100,8 @@ alias suspend='systemctl suspend'
 # alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 alias update="sudo apt update"
-alias upgrade="sudo apt update && sudo apt upgrade"
-alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean"
+alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
+alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -112,7 +112,7 @@ alias rm='rm -i'
 alias n='nvim'
 alias v='nvim'
 alias vim='nvim'
-alias vi='nvim'
+# alias vi='nvim'
 
 # git
 alias addup='git add -u'
@@ -241,6 +241,7 @@ eval "$(starship init bash)"
 # macchina
 # echo "  " $(date)
 # pfetch
+neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 
 # BEGIN_KITTY_SHELL_INTEGRATION
@@ -250,4 +251,3 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
