@@ -122,12 +122,12 @@ format-padding = 1
 
 [module/kernel]
 type = custom/script
-#exec = ~/dotfiles/scripts/polybar-kernel.sh
-exec = ( lsb_release -ds || cat /etc/*release || uname -om ) 2>/dev/null | head -n1
+exec = ~/dotfiles/scripts/polybar-kernel.sh
+#exec = ( lsb_release -ds || cat /etc/*release || uname -om ) 2>/dev/null | head -n1
 label = " %output%"
 # format-prefix = " "
-# format-prefix = "  "
-format-prefix = "  "
+format-prefix = "  "
+# format-prefix = "  "
 # format-prefix-foreground = ${colors.nord4}
 interval = 10
 # format-underline = ${colors.nord13}

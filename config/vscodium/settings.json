@@ -4,17 +4,17 @@
 
   "editor.fontFamily": "'InconsolataLGC Nerd Font'",
   "editor.fontSize": 15,
-  "workbench.colorTheme": "Nord",
+  "workbench.colorTheme": "Catppuccin Macchiato",
   // "workbench.iconTheme": "material-icon-theme",
+  "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "hidden",
-  "workbench.statusBar.visible": true,
-  // "workbench.activityBar.visible": false,
+  "workbench.statusBar.visible": false,
+  "workbench.activityBar.visible": false,
   "terminal.integrated.inheritEnv": false,
-  // "breadcrumbs.enabled": false,
+  "breadcrumbs.enabled": false,
   "editor.minimap.enabled": false,
   "editor.renderWhitespace": "none",
   "editor.renderLineHighlight": "none",
-
 
   // cursor customization
   "editor.cursorBlinking": "solid",
@@ -61,7 +61,11 @@
 
   // FOR FRONT-END -- auto-complete: on
   "editor.quickSuggestionsDelay": 0,
-  "editor.quickSuggestions": true,
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
   "editor.suggest.showTypeParameters": true,
   "editor.hover.enabled": true,
   "editor.copyWithSyntaxHighlighting": false,
@@ -80,7 +84,7 @@
   
   // ==== GIT ====
   "git.decorations.enabled": false,
-  "git.enabled": false,
+  // "git.enabled": false,
 
   // ==== Settings ====
 

@@ -94,14 +94,14 @@ alias suspend='systemctl suspend'
 # cleaning
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
-# alias refreshdnf="sudo dnf makecache --refresh"
-# alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
-# alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-# alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+alias refreshdnf="sudo dnf makecache --refresh"
+alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
+alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
-alias update="sudo apt update"
-alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
-alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias update="sudo apt update"
+#alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
+#alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -219,11 +219,6 @@ alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
 
-[ -f ~/fzf.bash ] && source ~/.fzf.bash
-source /usr/share/doc/fzf/examples/key-bindings.bash
-source /usr/share/doc/fzf/examples/completion.bash
-alias fzf="fzf --cycle --info=hidden --preview='bat --color=always --style=numbers {}'"
-alias javasel="sudo alternatives --config java"
 # Starship prompt
 eval "$(starship init bash)"
 # figlet -f small PRATIK PC
@@ -243,10 +238,10 @@ eval "$(starship init bash)"
 # pfetch
 neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
-
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
+
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
