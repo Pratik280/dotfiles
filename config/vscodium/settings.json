@@ -8,7 +8,7 @@
   // "workbench.iconTheme": "material-icon-theme",
   "workbench.sideBar.location": "right",
   "window.menuBarVisibility": "hidden",
-  "workbench.statusBar.visible": false,
+  // "workbench.statusBar.visible": false,
   "workbench.activityBar.visible": false,
   "terminal.integrated.inheritEnv": false,
   "breadcrumbs.enabled": false,
@@ -83,7 +83,7 @@
   ],
   
   // ==== GIT ====
-  "git.decorations.enabled": false,
+  // "git.decorations.enabled": false,
   // "git.enabled": false,
 
   // ==== Settings ====

@@ -37,10 +37,11 @@ menu(){
   printf "21. You say run\n"
   printf "22. You say run lofi\n"
   printf "23. Demon Slayer - Survive and Get the Blade lofi\n"
-  printf "24. Sigma Grind Guitar\n"
+  printf "24. Sigma Grindset\n"
   printf "25. HxH Departure Lofi\n"
   printf "26. You too can become a hero Lofi\n"
   printf "27. MHA main theme Lofi\n"
+  printf "28. Can you feel sigma\n"
 }
 
 
@@ -147,8 +148,8 @@ main() {
             URL="https://youtu.be/HfJnB8sekZ0"
       ;;
 		24)
-			notification "Sigma Grind Guitar";
-            URL="https://youtu.be/AHGVAwbs2dA"
+			notification "Sigma Grindset";
+            URL="https://youtu.be/1-emQo-7O3Y"
       ;;
 		25)
 			notification "HxH Departure Lofi";
@@ -161,6 +162,10 @@ main() {
 		27)
 			notification "MHA main theme lofi";
             URL="https://youtu.be/zoqSMwRAZsg"
+      ;;
+		28)
+			notification "Can you feel Sigma";
+            URL="https://youtu.be/6pDCeZI2vl0"
 			break
 			;;
 	esac

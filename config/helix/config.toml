@@ -1,5 +1,5 @@
 #theme = "mygruvbox"
-theme = "everforestdarkplus"
+theme = "catppuccin"
 
 [editor]
 line-number = "relative"

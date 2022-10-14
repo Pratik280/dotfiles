@@ -4,8 +4,9 @@
 ~/dotfiles/config/polybar/launch.sh &
 lxpolkit &
 exec sxhkd &
-#nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill &
-nitrogen ~/Pictures/wallpapers/catppuccin/fedora-magenta-blue-1920x1080.png --set-zoom-fill &
+nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill &
+# nitrogen ~/Pictures/wallpapers/catppuccin/fedora-magenta-blue-1920x1080.png --set-zoom-fill &
+# nitrogen ~/Pictures/wallpapers/anime/kurapika.png --set-zoom-fill &
 nitrogen --restore &
 picom --experimental-backends &
 # picom --experimental-backends --corner-radius 12 &
@@ -18,10 +19,6 @@ bspc monitor -d 1 2 3 4 5 6 7 8
 bspc config border_width         2
 bspc config window_gap           6
 bspc config top_padding 30
-# bspc config window_gap           11
-# bspc config top_padding 44
-# bspc config window_gap           20
-# bspc config top_padding 40
 bspc config ignore_ewmh_struts true
 
 bspc config split_ratio          0.5
@@ -30,19 +27,14 @@ bspc config gapless_monocle      true
 bspc config single_monocle			false
 bspc config focus_follows_pointer	true
 
-bspc rule -a discord desktop='^5'
-bspc rule -a Steam desktop='^3'
-bspc rule -a Pavucontrol desktop='^1'
-bspc rule -a Org.gnome.Nautilus desktop='^1'
+# bspc rule -a discord desktop='^5'
+# bspc rule -a Steam desktop='^3'
+# bspc rule -a Org.gnome.Nautilus desktop='^1'
+# bspc rule -a NoiseTorch desktop='^8'
+bspc rule -a Pavucontrol desktop='^5'
 bspc rule -a Brave-browser desktop='^2'
-bspc rule -a NoiseTorch desktop='^8'
-# bspc rule -a steam_app_1172470 desktop='^3'
-# bspc rule -a steam_app_868270 desktop='^3'
 bspc rule -a Viewnior state=floating
 bspc rule -a Eog state=floating
-# bspc rule -a discord desktop='^5' state=floating follow=on
-# bspc rule -a Kupfer.py focus=on
-# bspc rule -a Screenkey manage=off
 
 # fullscreen in tile shows bar
 # bspc config ignore_ewmh_fullscreen all

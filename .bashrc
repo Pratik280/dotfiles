@@ -17,8 +17,8 @@ fi
 
 export HISTCONTROL=ignoreboth:erasedups
 
-export EDITOR='nvim'
-export VISUAL='nvim'
+export EDITOR='/home/pratik/bin/nvim'
+export VISUAL='/home/pratik/bin/nvim'
 
 PS1='[\u@\h \W]\$ '
 
@@ -111,7 +111,7 @@ alias rm='rm -i'
 # neovim
 alias n='nvim'
 alias v='nvim'
-alias vim='nvim'
+# alias vim='nvim'
 # alias vi='nvim'
 
 # git
@@ -148,8 +148,6 @@ alias update-fc='sudo fc-cache -fv'
 #nvim for important configuration files
 #know what you do in these files
 alias nb="$EDITOR ~/.bashrc"
-alias nz="$EDITOR ~/.zshrc"
-alias nq="$EDITOR ~/.config/qtile/config.py"
 alias nn="$EDITOR ~/.config/nvim/init.vim"
 alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
