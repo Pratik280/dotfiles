@@ -218,7 +218,6 @@ alias daylight="redshift -O 6500K -r -P"
 alias r="ranger"
 
 # Starship prompt
-eval "$(starship init bash)"
 # figlet -f small PRATIK PC
 # pfetch
 # ~/fm6000 -asok -n -c bright_white
@@ -244,3 +243,4 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+eval "$(starship init bash)"
