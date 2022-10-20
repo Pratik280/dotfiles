@@ -17,8 +17,8 @@ fi
 
 export HISTCONTROL=ignoreboth:erasedups
 
-export EDITOR='/home/pratik/bin/nvim'
-export VISUAL='/home/pratik/bin/nvim'
+#export EDITOR='/home/pratik/bin/nvim'
+#export VISUAL='/home/pratik/bin/nvim'
 
 PS1='[\u@\h \W]\$ '
 
@@ -34,18 +34,18 @@ shopt -s autocd
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
 export PATH="~/bin:$PATH"
-# curl
-alias weather="curl wttr.in"
-alias parrot="curl parrot.live"
-alias btc="curl rate.sx"
+export PATH="~/Applications:$PATH"
 
 # Changing "ls" to "exa"
-alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
-alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
-alias ll='exa -l --color=always --icons --group-directories-first'  # long format
-alias lt='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git'
-alias tree='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
-alias l.='exa -a | egrep "^\."'
+#alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
+#alias la='exa -a --color=always --icons --group-directories-first'  # all files and dirs
+#alias ll='exa -l --color=always --icons --group-directories-first'  # long format
+#alias lt='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git'
+#alias tree='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
+#alias l.='exa -a | egrep "^\."'
+
+alias ll='ls -la'
+alias la='ls -a'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -109,8 +109,8 @@ alias mv='mv -i'
 alias rm='rm -i'
 
 # neovim
-alias n='nvim'
-alias v='nvim'
+#alias n='nvim'
+#alias v='nvim'
 # alias vim='nvim'
 # alias vi='nvim'
 
@@ -233,7 +233,7 @@ alias r="ranger"
 # macchina
 # echo "  " $(date)
 # pfetch
-neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
+#neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
@@ -243,4 +243,4 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-eval "$(starship init bash)"
+#eval "$(starship init bash)"

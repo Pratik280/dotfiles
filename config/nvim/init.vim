@@ -1,17 +1,18 @@
 call plug#begin()
-Plug 'Mofiqul/dracula.nvim'
-Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
-Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+Plug 'martinsione/darkplus.nvim'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
 Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
-Plug 'vimwiki/vimwiki'
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
-Plug 'junegunn/goyo.vim'
 Plug 'lambdalisue/fern.vim'
+"Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
+"Plug 'Mofiqul/dracula.nvim'
+"Plug 'catppuccin/nvim', {'as': 'catppuccin'}
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'vimwiki/vimwiki'
+"Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+"Plug 'junegunn/goyo.vim'
 call plug#end()
 
 " -------------------- colortheme -------------------
@@ -20,7 +21,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let g:nvcode_termcolors=256
-colorscheme catppuccin
+colorscheme darkplus
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none
@@ -109,16 +110,16 @@ require('lualine').setup()
 END
 
 " -------------------- treesitter -------------------
-
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
+"
+"lua << EOF
+"require'nvim-treesitter.configs'.setup {
+"  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+"  highlight = {
+"    enable = true,              -- false will disable the whole extension
+"    disable = { "c", "rust" },  -- list of language that will be disabled
+"  },
+"}
+"EOF
 
 " ------------------ MarkdowmPreview Setting ----------------- 
 " let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
@@ -148,7 +149,7 @@ let g:fern#default_hidden = 1
 let g:fern#disable_drawer_auto_quit = 1
 
 " noremap <silent> <C-b> :Fern . -drawer -reveal=% -toggle -width=40<CR><C-w>=
-noremap <leader>e :Fern . -drawer -reveal=% -toggle -width=40<CR><C-w>=
+noremap <leader>e :Fern . -right -drawer -reveal=% -toggle -width=40<CR><C-w>=
       
 function! s:init_fern() abort
   nmap <buffer><expr>

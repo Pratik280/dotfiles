@@ -1,6 +1,6 @@
 {
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
-  // "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  //"editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 13,
   "window.zoomLevel": 1.5,
   "editor.lineHeight": 2,
@@ -176,5 +176,6 @@
   "workbench.sideBar.location": "right",
   "glassit-linux.opacity": 95,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Catppuccin"
+  "workbench.colorTheme": "Catppuccin",
+  "window.titleBarStyle": "custom"
 }
