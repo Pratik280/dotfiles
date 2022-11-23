@@ -11,10 +11,10 @@
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "toggle",
-  "editor.scrollbar.horizontal": "hidden",
-  "editor.scrollbar.horizontalScrollbarSize": 6,
-  "editor.scrollbar.vertical": "hidden",
-  "editor.scrollbar.verticalScrollbarSize": 6,
+  // "editor.scrollbar.horizontal": "hidden",
+  // "editor.scrollbar.horizontalScrollbarSize": 6,
+  // "editor.scrollbar.vertical": "hidden",
+  // "editor.scrollbar.verticalScrollbarSize": 6,
   // disable git
   "git.decorations.enabled": false,
   // "git.enabled": false,
@@ -176,6 +176,5 @@
   "workbench.sideBar.location": "right",
   "glassit-linux.opacity": 95,
   "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Catppuccin",
   "window.titleBarStyle": "custom"
 }

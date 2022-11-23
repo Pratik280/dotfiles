@@ -8,27 +8,50 @@
 #export GTK_IM_MODULE=ibus
 #export XMODIFIERS=@im=dbus
 #export QT_IM_MODULE=ibus
-if [ -d "$HOME/.local/bin" ] ; then
-    PATH="$HOME/.local/bin:$PATH"
-fi
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
 export HISTCONTROL=ignoreboth:erasedups
 
-#export EDITOR='/home/pratik/bin/nvim'
-#export VISUAL='/home/pratik/bin/nvim'
+export EDITOR=nvim
+export VISUAL=nvim
 
 PS1='[\u@\h \W]\$ '
+
+#PATH="${PATH:+${PATH}:}/var/home/pratik/Applications"
+#PATH="${PATH:+${PATH}:}/var/home/pratik/bin"
+#PATH="${PATH:+${PATH}:}/var/home/pratik/bin/ubuntu"
+#PATH="${PATH:+${PATH}:}/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin"
+
+if [ -d "$HOME/.local/bin" ] ; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
 
 if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
 
-if [ -d "$HOME/.local/bin" ] ;
-  then PATH="$HOME/.local/bin:$PATH"
+if [ -d "/var/home/pratik/Applications" ] ;
+  then PATH="/var/home/pratik/Applications:$PATH"
 fi
+
+if [ -d "/var/home/pratik/bin" ] ;
+  then PATH="/var/home/pratik/bin:$PATH"
+fi
+
+if [ -d "/var/home/pratik/bin/ubuntu" ] ;
+  then PATH="/var/home/pratik/bin/ubuntu:$PATH"
+fi
+
+if [ -d "/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin" ] ;
+  then PATH="/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin:$PATH"
+fi
+
+if [ -d "/var/home/pratik/bin/ubuntu/" ] ;
+  then PATH="/var/home/pratik/bin/ubuntu/:$PATH"
+fi
+
 shopt -s autocd
 
 #ignore upper and lowercase when TAB completion
@@ -43,6 +66,8 @@ export PATH="~/Applications:$PATH"
 #alias lt='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git'
 #alias tree='exa -aT --color=always --icons --group-directories-first -h --git-ignore --ignore-glob .git' # tree listing
 #alias l.='exa -a | egrep "^\."'
+
+alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
 
 alias ll='ls -la'
 alias la='ls -a'
@@ -82,6 +107,7 @@ alias mkdir='mkdir -pv'
 alias suspend='systemctl suspend'
 
 # Aliases for software managment
+# ARCH
 # pacman or pm
 # alias pacman='sudo pacman --color auto'
 # alias update='sudo pacman -Syyu'
@@ -94,11 +120,17 @@ alias suspend='systemctl suspend'
 # cleaning
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
-alias refreshdnf="sudo dnf makecache --refresh"
-alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
-alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+# FEDORA
+#alias refreshdnf="sudo dnf makecache --refresh"
+#alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+#alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
+#alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
+# SILVERBLUE
+alias update="rpm-ostree upgrade && flatpak update"
+alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
+ 
+# UBUNTU DEBIAN
 #alias update="sudo apt update"
 #alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
 #alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
@@ -236,11 +268,8 @@ alias r="ranger"
 #neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
-if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+#if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
 
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 #eval "$(starship init bash)"
