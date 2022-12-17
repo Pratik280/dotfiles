@@ -56,8 +56,7 @@ shopt -s autocd
 
 #ignore upper and lowercase when TAB completion
 bind "set completion-ignore-case on"
-export PATH="~/bin:$PATH"
-export PATH="~/Applications:$PATH"
+export PATH
 
 # Changing "ls" to "exa"
 #alias ls='exa -al --color=always --icons --group-directories-first' # my preferred listing
@@ -127,7 +126,7 @@ alias suspend='systemctl suspend'
 #alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-alias update="rpm-ostree upgrade && flatpak update"
+alias update="rpm-ostree upgrade && flatpak update && distrobox upgrade --all"
 alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
@@ -271,5 +270,6 @@ alias r="ranger"
 #if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
+alias docker="podman"
 
 #eval "$(starship init bash)"

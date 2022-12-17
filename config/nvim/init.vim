@@ -22,7 +22,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let g:nvcode_termcolors=256
-colorscheme ayu-light
+colorscheme darkplus
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none

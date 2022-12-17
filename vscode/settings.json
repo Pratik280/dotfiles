@@ -120,10 +120,9 @@
   //     "markdown"
   // ],
   // vim
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
   "security.workspace.trust.untrustedFiles": "open",
-  "terminal.external.linuxExec": "kitty",
-  //"workbench.colorTheme": "Nord",
+  // "terminal.external.linuxExec": "kitty",
   // autocmp off
   // "editor.quickSuggestionsDelay": 10000,
   // "editor.quickSuggestions": false,
@@ -176,5 +175,6 @@
   "workbench.sideBar.location": "right",
   "glassit-linux.opacity": 95,
   "workbench.startupEditor": "none",
-  "window.titleBarStyle": "custom"
+  "window.titleBarStyle": "custom",
+  "files.autoSave": "afterDelay"
 }
