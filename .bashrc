@@ -126,7 +126,7 @@ alias suspend='systemctl suspend'
 #alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-alias update="rpm-ostree upgrade && flatpak update && distrobox upgrade --all"
+alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
 alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
@@ -271,5 +271,6 @@ alias r="ranger"
 # END_KITTY_SHELL_INTEGRATION
 
 alias docker="podman"
+alias docker-compose="podman-compose"
 
 #eval "$(starship init bash)"
