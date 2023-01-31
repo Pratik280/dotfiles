@@ -2,12 +2,11 @@
   "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'",
   //"editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 13,
-  "window.zoomLevel": 1.5,
   "editor.lineHeight": 2,
   "update.showReleaseNotes": false,
   // minimal
   // "workbench.statusBar.visible": false,
-  // "workbench.activityBar.visible": false,
+  "workbench.activityBar.visible": false,
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
   "window.menuBarVisibility": "toggle",
@@ -176,5 +175,6 @@
   "glassit-linux.opacity": 95,
   "workbench.startupEditor": "none",
   "window.titleBarStyle": "custom",
-  "files.autoSave": "afterDelay"
+  "files.autoSave": "afterDelay",
+  "window.zoomLevel": 1
 }

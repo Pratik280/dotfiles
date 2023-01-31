@@ -67,6 +67,8 @@ export PATH
 #alias l.='exa -a | egrep "^\."'
 
 alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
+alias kubectl="minikube kubectl --"
+alias brave="flatpak run com.brave.Browser"
 
 alias ll='ls -la'
 alias la='ls -a'

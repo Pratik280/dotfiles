@@ -17,7 +17,7 @@ Plug 'Shatur/neovim-ayu'
 call plug#end()
 
 " -------------------- colortheme -------------------
-let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
+"let g:catppuccin_flavour = "macchiato" " latte, frappe, macchiato, mocha
 if (has("termguicolors"))
  set termguicolors
 endif
