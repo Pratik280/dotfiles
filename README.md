@@ -71,7 +71,8 @@ dnf copr enable bzaidan/Hyprland
 ```
 sudo dnf install hyprland swaybg wofi \
 qt5ct qt6ct kitty lxappearance \
-ranger neovim pavucontrol neofetch
+ranger neovim pavucontrol neofetch \
+wireplumber polkit-gnome dunst
 ```
 
 ## Setting up KVM 
@@ -83,7 +84,7 @@ ranger neovim pavucontrol neofetch
 sudo dnf install @virtualization
 ```
 ```
-sudo dnf install virt-manager
+sudo dnf install virt-manager spice-vdagent spice-gtk xf86-video-qxl
 ```
 ```
 sudo systemctl start libvirtd
