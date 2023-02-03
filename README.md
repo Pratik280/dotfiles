@@ -49,7 +49,7 @@ newgrp docker
 sudo docker run hello-world
 ```
 
-## Installing necessary flatpak apps
+## Installing necessary [flatpak](https://flatpak.org/setup/Fedora) apps
 ```
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
@@ -62,7 +62,7 @@ com.spotify.Client org.mozilla.firefox org.qbittorrent.qBittorrent
 org.telegram.desktop org.x.Warpinator
 ```
 
-## Setting up Hyprland WM
+## Setting up [Hyprland](https://wiki.hyprland.org/) WM
 [Fedora copr repository for hyprland](https://copr.fedorainfracloud.org/coprs/bzaidan/Hyprland/)
 ```
 dnf copr enable bzaidan/Hyprland
@@ -71,6 +71,27 @@ dnf copr enable bzaidan/Hyprland
 ```
 sudo dnf install hyprland swaybg wofi \
 qt5ct qt6ct kitty lxappearance \
-ranger neovim pavucontrol 
+ranger neovim pavucontrol neofetch
+```
+
+## Setting up KVM 
+- [Guide](https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/)
+- [Using Windows 11 in KVM | Secure Boot, Simulated TPM, & VirtIO Guest Tools - Trafotin](https://youtu.be/i-OHcENVMG0)
+- [Gnome Boxes | Installing Windows 10 on Linux - Chris Titus Tech](https://youtu.be/c1c5wiQhgZU)
+
+```
+sudo dnf install @virtualization
+```
+```
+sudo dnf install virt-manager
+```
+```
+sudo systemctl start libvirtd
+```
+```
+sudo systemctl enable libvirtd
+```
+```
+sudo usermod -a -G libvirt $(whoami)
 ```
 
