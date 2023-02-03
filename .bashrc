@@ -32,24 +32,8 @@ if [ -d "$HOME/.bin" ] ;
   then PATH="$HOME/.bin:$PATH"
 fi
 
-if [ -d "/var/home/pratik/Applications" ] ;
-  then PATH="/var/home/pratik/Applications:$PATH"
-fi
-
-if [ -d "/var/home/pratik/bin" ] ;
-  then PATH="/var/home/pratik/bin:$PATH"
-fi
-
-if [ -d "/var/home/pratik/bin/ubuntu" ] ;
-  then PATH="/var/home/pratik/bin/ubuntu:$PATH"
-fi
-
-if [ -d "/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin" ] ;
-  then PATH="/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin:$PATH"
-fi
-
-if [ -d "/var/home/pratik/bin/ubuntu/" ] ;
-  then PATH="/var/home/pratik/bin/ubuntu/:$PATH"
+if [ -d "$HOME/dotfiles/scripts" ] ;
+  then PATH="$HOME/dotfiles/scripts:$PATH"
 fi
 
 shopt -s autocd
@@ -67,11 +51,13 @@ export PATH
 #alias l.='exa -a | egrep "^\."'
 
 alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
+alias ubox="distrobox enter ubuntu-22-04"
+alias neofetch="neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg"
 alias kubectl="minikube kubectl --"
 alias brave="flatpak run com.brave.Browser"
 
-alias ll='ls -la'
-alias la='ls -a'
+alias ll='ls -la --color=auto'
+alias la='ls -a --color=auto'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -266,13 +252,13 @@ alias r="ranger"
 # macchina
 # echo "  " $(date)
 # pfetch
-#neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
+neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 #if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
-alias docker="podman"
-alias docker-compose="podman-compose"
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-#eval "$(starship init bash)"
+eval "$(starship init bash)"

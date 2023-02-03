@@ -7,6 +7,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'lambdalisue/fern.vim'
 Plug 'Shatur/neovim-ayu'
+Plug 'catppuccin/nvim'
 "Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
 "Plug 'Mofiqul/dracula.nvim'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -22,7 +23,7 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let g:nvcode_termcolors=256
-colorscheme darkplus
+colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none

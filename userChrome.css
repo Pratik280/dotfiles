@@ -1,4 +1,3 @@
-
 /* Source file https://github.com/MrOtherGuy/firefox-csshacks/tree/master/chrome/navbar_tabs_responsive_oneliner.css made available under Mozilla Public License v. 2.0
 See the above repository for updates as well as full license text. */
 
@@ -12,10 +11,11 @@ See the above repository for updates as well as full license text. */
 
 /* Modify it to suit your needs */
 @media screen and (min-width: 1100px){
-  :root{ --tab-block-margin: var(--proton-tab-block-margin) }
+  :root[tabsintitlebar][sizemode="normal"]{
+    --uc-window-drag-space-width: 24px;
+  }
   :root[uidensity="compact"]{
     --tab-block-margin: 2px !important;
-    --proton-tab-block-margin: 2px !important;
     }
   
   /* Modify these to change relative widths or default height */
@@ -24,9 +24,10 @@ See the above repository for updates as well as full license text. */
     --uc-toolbar-height: 40px;
     --uc-urlbar-min-width: 50vw; /* minimum width for opened urlbar */
   }
-  @media (-moz-proton){
-    #scrollbutton-up,#scrollbutton-down{ border-block-width: 2px !important; }
-  }
+
+  #scrollbutton-up,
+  #scrollbutton-down{ border-block-width: 2px !important; }
+  
 /* prevent urlbar overflow on narrow windows */
 /* Dependent on how many items are in navigation toolbar ADJUST AS NEEDED */
   @media screen and (max-width: 1500px){
@@ -54,12 +55,24 @@ See the above repository for updates as well as full license text. */
   }
 
   /* Window drag space  */
-  :root[tabsintitlebar="true"] #nav-bar{ padding-left: 24px !important }
+  :root[tabsintitlebar="true"] #nav-bar{ padding-left: var(--uc-window-drag-space-width) !important }
 
-/* Rules specific to window controls on right layout */
-  @supports -moz-bool-pref("layout.css.osx-font-smoothing.enabled"){
-    .titlebar-buttonbox-container{ position: fixed; display: block; left: 0px; z-index: 3; }
-    :root[tabsintitlebar="true"] #nav-bar{ padding-left: 96px !important; padding-right: 0px !important; }
+  /* Rules for window controls on left layout */
+
+  @media (-moz-gtk-csd-reversed-placement),
+         (-moz-platform: macos){
+    .titlebar-buttonbox-container{
+      position: fixed;
+      display: flex;
+      left: 0px;
+      z-index: 3;
+      height: var(--uc-toolbar-height);
+      align-items: center
+    }
+    :root[tabsintitlebar="true"] #nav-bar{ padding-inline: calc(var(--uc-window-drag-space-width,0px) + 84px) 0px !important; }
+  }
+  @media (-moz-platform: macos){
+    :root[tabsintitlebar="true"] #nav-bar{ padding-inline: calc(var(--uc-window-drag-space-width,0px) + 72px) 0px !important; }
   }
 
   /* 1px margin on touch density causes tabs to be too high */
@@ -74,3 +87,4 @@ See the above repository for updates as well as full license text. */
 }
 /* Fix customization view */
 #customization-panelWrapper > .panel-arrowbox > .panel-arrow{ margin-inline-end: initial !important; }
+
