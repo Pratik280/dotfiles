@@ -171,7 +171,8 @@ main() {
 	esac
     # run mpv with args and selected url
     # added title arg to make sure the pkill command kills only this instance of mpv
-    mpv $ARGS --title="radio-mpv" $URL --no-video --shuffle --loop
+    # mpv $ARGS --title="radio-mpv" $URL --no-video --shuffle --loop
+    flatpak run io.mpv.Mpv $ARGS --title="radio-mpv" $URL --no-video --shuffle --loop
 }
 
 pkill -f radio-mpv || main

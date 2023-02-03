@@ -59,20 +59,24 @@ flatpak install flathub com.brave.Browser com.discordapp.Discord \
 com.github.GradienceTeam.Gradience com.github.tchx84.Flatseal \
 com.google.Chrome com.mattjakeman.ExtensionManager \
 com.spotify.Client org.mozilla.firefox org.qbittorrent.qBittorrent 
-org.telegram.desktop org.x.Warpinator
+org.telegram.desktop org.x.Warpinator io.mpv.Mpv
 ```
 
 ## Setting up [Hyprland](https://wiki.hyprland.org/) WM
+
+[arewewaylandyet.com](https://arewewaylandyet.com/)
+
 [Fedora copr repository for hyprland](https://copr.fedorainfracloud.org/coprs/bzaidan/Hyprland/)
 ```
 dnf copr enable bzaidan/Hyprland
 ```
 
 ```
-sudo dnf install hyprland swaybg wofi \
+sudo dnf install hyprland swaybg\
 qt5ct qt6ct kitty lxappearance \
 ranger neovim pavucontrol neofetch \
-wireplumber polkit-gnome dunst
+wireplumber polkit-gnome dunst\
+xdg-desktop-portal-wlr rofi-wayland\
 ```
 
 ## Setting up KVM 

@@ -2,7 +2,7 @@ configuration {
   display-drun: "Applications:";
   display-window: "Windows:";
   drun-display-format: "{icon}  {name}";
-  modi: "window,run,drun";
+  modi: "run,drun";
 }
 
 @theme "/dev/null"
@@ -66,8 +66,8 @@ inputbar {
 
 listview {
   background-color: @backgroundClrOne;
-  columns: 3;
-  lines: 8;
+  columns: 4;
+  lines: 10;
 }
 
 mainbox {
@@ -83,5 +83,6 @@ prompt {
 }
 
 window {
+  border-radius: 12;
   transparency: "real";
 }

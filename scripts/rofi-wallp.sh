@@ -2,23 +2,23 @@
 chosen=$(echo -e "[Cancel]\nRandom\nAbstract\nAnime\nDracula\nFantasy\nGame\nMisc\nNord\nCatppuccin\nPhoto-real" | rofi -dmenu -i)
 
 if [[ $chosen = "Random" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Abstract" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/abstract/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/abstract/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Anime" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/anime/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/anime/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Dracula" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/dracula/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/dracula/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Fantasy" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/fantasy/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/fantasy/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Game" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/game/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/game/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Misc" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/misc/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/misc/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Nord" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/nord/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/nord/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Catppuccin" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/catppuccin/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/catppuccin/. -type f | shuf -n1) -m fill
 elif [[ $chosen = "Photo-real" ]]; then
-  nitrogen --random ~/Pictures/wallpapers/photo-real/ --set-zoom-fill
+  swaybg -i $(find /home/pratik/Pictures/wallpapers/photo-real/. -type f | shuf -n1) -m fill
 fi
