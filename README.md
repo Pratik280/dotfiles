@@ -117,9 +117,10 @@ dnf copr enable bzaidan/Hyprland
 ```
 sudo dnf install hyprland swaybg\
 qt5ct qt6ct kitty lxappearance \
-ranger pavucontrol\
+ranger pavucontrol slurp swaylock\
 wireplumber polkit-gnome dunst\
 xdg-desktop-portal-wlr rofi-wayland\
+grim \
 ```
 
 ## Setting up KVM 

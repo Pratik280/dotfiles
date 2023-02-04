@@ -18,17 +18,17 @@ chosen=$(echo -e "[Cancel]\nLock\nLogout\nShutdown\nReboot\nSuspend\nHibernate\n
 if [[ $chosen = "Logout" ]]; then
 	jwm -exit
 elif [[ $chosen = "Lock" ]]; then
-	swaylock
+	slock
 elif [[ $chosen = "Shutdown" ]]; then
 	systemctl poweroff
 elif [[ $chosen = "Reboot" ]]; then
 	systemctl reboot
 elif [[ $chosen = "Suspend" ]]; then
-	systemctl suspend && swaylock
+	systemctl suspend && slock
 elif [[ $chosen = "Hibernate" ]]; then
-	systemctl hibernate && swaylock
+	systemctl hibernate && slock
 elif [[ $chosen = "Suspend-then-hibernate" ]]; then
-	systemctl suspend-then-hibernate && swaylock
+	systemctl suspend-then-hibernate && slock
 fi
 
 
