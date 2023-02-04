@@ -7,9 +7,10 @@ BROWSER="flatpak run com.brave.Browser"
 
 declare -a options=(
 "quit"
-"College meet - https://meet.google.com/landing?authuser=1"
 "Github Repos - https://github.com/Pratik280?tab=repositories"
 "Youtube Subscription - https://www.youtube.com/feed/subscriptions"
+"Google meet - https://meet.google.com/landing?authuser=0"
+"Dotfiles Github - https://github.com/Pratik280/dotfiles"
 "Youtube Watch Later - https://www.youtube.com/playlist?list=WL"
 "yt daily-dev - https://www.youtube.com/playlist?list=PLnQe65T2ABT-IfvcNrzzGmEa4YKUIsrOE"
 "Twitch - https://www.twitch.tv/"

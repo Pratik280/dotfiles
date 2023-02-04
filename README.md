@@ -13,6 +13,49 @@ distrobox-create -i docker.io/library/ubuntu:22.04 -n ubuntu
 distrobox-create -i docker.io/library/archlinux:latest -n arch
 ```
 
+Install necessary packages in arch distrobox
+```
+distrobox enter arch
+```
+
+Install yay-bin
+```
+git clone https://aur.archlinux.org/yay-bin.git
+```
+```
+pacman -S --needed git base-devel
+```
+```
+makepkg -si
+```
+```
+sudo pacman -S neofetch neovim imagemagick jdk11-openjdk vscodium-bin
+```
+
+Exporting arch packages to host machine
+```
+distrobox-export --app gnome-tweaks &&
+distrobox-export --app vscodium &&
+distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
+distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
+distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/
+```
+
+#### Yay cheatsheet
+```
+yay -Syu                 : updates entire system and AUR packages
+yay <package_name>       : Searches package in pacman repos and AUR repos
+yay -S <package_name>    : Installs a package
+
+yay -Rns <package_name>  : Deletes package completely
+yay -c                   : Removes unused dependencies
+yay -Sc                  : Removes pacman and AUR cache
+```
+
+**Useful guides**
+- [Archwiki Java OpenJDK](https://wiki.archlinux.org/title/java)
+- [Yay guide youtube](https://youtu.be/NzNuFN9hqjI)
+
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
 ```
 sudo dnf -y install dnf-plugins-core
@@ -74,7 +117,7 @@ dnf copr enable bzaidan/Hyprland
 ```
 sudo dnf install hyprland swaybg\
 qt5ct qt6ct kitty lxappearance \
-ranger neovim pavucontrol neofetch \
+ranger pavucontrol\
 wireplumber polkit-gnome dunst\
 xdg-desktop-portal-wlr rofi-wayland\
 ```

@@ -19,11 +19,6 @@ export VISUAL=nvim
 
 PS1='[\u@\h \W]\$ '
 
-#PATH="${PATH:+${PATH}:}/var/home/pratik/Applications"
-#PATH="${PATH:+${PATH}:}/var/home/pratik/bin"
-#PATH="${PATH:+${PATH}:}/var/home/pratik/bin/ubuntu"
-#PATH="${PATH:+${PATH}:}/var/home/pratik/bin/ubuntu/node-v18.12.0-linux-x64/bin"
-
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
@@ -51,7 +46,8 @@ export PATH
 #alias l.='exa -a | egrep "^\."'
 
 alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
-alias ubox="distrobox enter ubuntu-22-04"
+# alias ubox="distrobox enter ubuntu-22-04"
+alias abox="distrobox enter arch"
 alias neofetch="neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg"
 alias kubectl="minikube kubectl --"
 alias brave="flatpak run com.brave.Browser"
@@ -108,14 +104,14 @@ alias suspend='systemctl suspend'
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # FEDORA
-#alias refreshdnf="sudo dnf makecache --refresh"
-#alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+alias refreshdnf="sudo dnf makecache --refresh"
+alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
 #alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-#alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
-alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
+#alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
 #alias update="sudo apt update"
@@ -129,8 +125,8 @@ alias rm='rm -i'
 
 # neovim
 #alias n='nvim'
-#alias v='nvim'
-# alias vim='nvim'
+alias v='nvim'
+ alias vim='nvim'
 # alias vi='nvim'
 
 # git
@@ -157,7 +153,7 @@ alias fgrep='fgrep --color=auto'
 alias df='df -h'
 
 #pacman unlock
-alias unlock="sudo rm /var/lib/pacman/db.lck"
+# alias unlock="sudo rm /var/lib/pacman/db.lck"
 #grub update
 alias update-grub="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 
@@ -170,7 +166,7 @@ alias nb="$EDITOR ~/.bashrc"
 alias nn="$EDITOR ~/.config/nvim/init.vim"
 alias nk="$EDITOR ~/.config/kitty/kitty.conf"
 
-alias bat="bat --style=numbers"
+# alias bat="bat --style=numbers"
 
 # # ex = EXtractor for all kinds of archives
 # # usage: ex <file>
@@ -199,36 +195,8 @@ ex ()
   fi
 }
 
-# timer and stopwatch
-
-function countdown(){
-   date1=$((`date +%s` + $1)); 
-   while [ "$date1" -ge `date +%s` ]; do 
-     echo -ne "$(date -u --date @$(($date1 - `date +%s`)) +%H:%M:%S)\r";
-     sleep 0.1
-   done
-}
-function stopwatch(){
-  date1=`date +%s`; 
-   while true; do 
-    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
-    sleep 0.1
-   done
-}
-
-alias c25="countdown $((25*60))"
-alias c5="countdown $((5*60))"
-
-# alias default css
-alias css="cp ~/00MAIN/00MAIN/htmlCssDesign/default.css ."
-alias html="cp ~/00MAIN/00MAIN/htmlCssDesign/index.html ."
-alias scss="cp -R ~/00MAIN/00MAIN/htmlCssDesign/scss ."
-
 # play song in loop in background
 alias play-song="mpv --no-video --loop"
-
-# git commands for 00MAIN and dotfiles
-alias git-dot="git add -A && git commit -am. && git push origin main"
 
 # redshift
 alias nightlight="redshift -O 4500K -r -P"
@@ -236,26 +204,10 @@ alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
 
-# Starship prompt
-# figlet -f small PRATIK PC
-# pfetch
-# ~/fm6000 -asok -n -c bright_white
-# motivate
-# ./repos/pfetch/pfetch
-# colorscript -e panes
-# colorscript -e elfman
-# polybar-kernel.sh
-# colorscript -e blocks1
-# colorscript -e crunchbang-mini
-# # neofetch
-# colorscript -e crunch
-# macchina
-# echo "  " $(date)
-# pfetch
 neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
-#if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
 # END_KITTY_SHELL_INTEGRATION
 
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
