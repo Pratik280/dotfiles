@@ -8,6 +8,8 @@ BROWSER="flatpak run com.brave.Browser"
 declare -a options=(
 "quit"
 "Github Repos - https://github.com/Pratik280?tab=repositories"
+"Zaney dots - https://gitlab.com/Zaney/dots"
+"Linux Cast dots - https://gitlab.com/thelinuxcast/my-dots"
 "Youtube Subscription - https://www.youtube.com/feed/subscriptions"
 "Google meet - https://meet.google.com/landing?authuser=0"
 "Dotfiles Github - https://github.com/Pratik280/dotfiles"

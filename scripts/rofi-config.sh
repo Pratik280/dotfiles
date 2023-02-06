@@ -7,6 +7,7 @@ DMEDITOR="kitty -e nvim"
 declare -a options=(
 "quit"
 "bash - $HOME/dotfiles/.bashrc"
+"bash - $HOME/dotfiles/README.md"
 "i3 - $HOME/dotfiles/config/i3/config"
 "Hyprland - $HOME/dotfiles/config/hypr/hyprlandd.conf"
 "autostart - $HOME/dotfiles/config/i3/autostart.sh"

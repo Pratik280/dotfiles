@@ -29,7 +29,7 @@ pacman -S --needed git base-devel
 makepkg -si
 ```
 ```
-sudo pacman -S neofetch neovim imagemagick jdk11-openjdk vscodium-bin
+sudo yay -S neofetch neovim imagemagick jdk11-openjdk vscodium-bin
 ```
 
 Exporting arch packages to host machine
@@ -120,7 +120,7 @@ qt5ct qt6ct kitty lxappearance \
 ranger pavucontrol slurp swaylock\
 wireplumber polkit-gnome dunst\
 xdg-desktop-portal-wlr rofi-wayland\
-grim \
+grim kmod-v4l2loopback \
 ```
 
 ## Setting up KVM 

@@ -11,7 +11,7 @@
 # - Give it exec priviledge, or chmod +x /path/to/power.sh
 # - Run it
 
-chosen=$(echo -e "[Cancel]\nLock\nLogout\nShutdown\nReboot\nSuspend\nHibernate\nSuspend-then-hibernate" | rofi -dmenu -i)
+chosen=$(echo -e "[Cancel]\nLock\nLogout\nShutdown\nReboot\nSuspend" | rofi -dmenu -i)
 # Info about some states are available here:
 # https://www.freedesktop.org/software/systemd/man/systemd-sleep.conf.html#Description
 
@@ -25,10 +25,6 @@ elif [[ $chosen = "Reboot" ]]; then
 	systemctl reboot
 elif [[ $chosen = "Suspend" ]]; then
 	systemctl suspend && swaylock
-elif [[ $chosen = "Hibernate" ]]; then
-	systemctl hibernate && swaylock
-elif [[ $chosen = "Suspend-then-hibernate" ]]; then
-	systemctl suspend-then-hibernate && swaylock
 fi
 
 

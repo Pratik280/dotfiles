@@ -54,6 +54,7 @@ alias brave="flatpak run com.brave.Browser"
 
 alias ll='ls -la --color=auto'
 alias la='ls -a --color=auto'
+alias ls='ls -a --color=auto'
 
 #fix obvious typo's
 alias cd..='cd ..'
@@ -105,7 +106,7 @@ alias suspend='systemctl suspend'
 
 # FEDORA
 alias refreshdnf="sudo dnf makecache --refresh"
-alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update"
+alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update && distrobox-upgrade --all"
 #alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
 alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
@@ -204,7 +205,7 @@ alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
 
-neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
+# neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi

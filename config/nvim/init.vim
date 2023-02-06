@@ -23,7 +23,8 @@ if (has("termguicolors"))
  set termguicolors
 endif
 let g:nvcode_termcolors=256
-colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+" colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+colorscheme darkplus
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none
