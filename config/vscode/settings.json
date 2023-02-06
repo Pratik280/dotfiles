@@ -176,6 +176,5 @@
   "window.titleBarStyle": "custom",
   "files.autoSave": "afterDelay",
   "window.zoomLevel": 1,
-  "workbench.startupEditor": "none",
-  "workbench.colorTheme": "Catppuccin Macchiato"
+  "workbench.startupEditor": "none"
 }
