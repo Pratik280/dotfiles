@@ -31,7 +31,11 @@ sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-releas
 ### Multimedia codecs
 ```
 sudo dnf groupupdate core
+```
+```
 sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+```
+```
 sudo dnf groupupdate sound-and-video
 ```
 
