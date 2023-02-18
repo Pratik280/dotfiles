@@ -131,7 +131,7 @@ Exporting arch packages to host machine
 distrobox-export --app vscodium &&
 distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
 distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/
+distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/ &&
 distrobox-export --bin /usr/sbin/vscodium --export-path ~/.local/bin/
 ```
 
