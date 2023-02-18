@@ -1,51 +1,4 @@
-# Setting up my Fedora System (KDE plasma)
-
-## Initial tweaks
-
-### Speeding up dnf
-
-- References
-  - [Tech Hut - 7 Things You MUST DO After Installing Fedora](https://youtu.be/RrRpXs2pkzg)
-  - [The Linux Cast - 5 Things To Do After Installing Fedora](https://youtu.be/DEAzqHz9LPs)
-
-```
-sudo vi /etc/dnf/dnf.conf
-```
-
-```
-fastestmirror=True
-max_parallel_downloads=10
-defaultyes=True
-keepcache=True
-```
-
-```
-sudo dnf upgrade
-```
-
-### Enable extra 3rd party [rpm fusion repositories](https://rpmfusion.org/Configuration)
-```
-sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-```
-
-### Multimedia codecs
-```
-sudo dnf groupupdate core
-sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
-sudo dnf groupupdate sound-and-video
-```
-
-## Installing necessary [flatpak](https://flatpak.org/setup/Fedora) apps
-```
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-```
-
-```
-flatpak install flathub com.brave.Browser com.discordapp.Discord \
-com.google.Chrome com.spotify.Client \
-org.mozilla.firefox org.qbittorrent.qBittorrent \
-org.telegram.desktop io.mpv.Mpv flatpak install flathub org.mozilla.firefox
-```
+# Setting up my Fedora Workstation System
 
 ## Setting up [Distrobox](https://github.com/89luca89/distrobox) 
 ```
@@ -139,6 +92,36 @@ newgrp docker
 sudo docker run hello-world
 ```
 
+## Installing necessary [flatpak](https://flatpak.org/setup/Fedora) apps
+```
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+```
+
+```
+flatpak install flathub com.brave.Browser com.discordapp.Discord \
+com.github.GradienceTeam.Gradience com.github.tchx84.Flatseal \
+com.google.Chrome com.mattjakeman.ExtensionManager \
+com.spotify.Client org.mozilla.firefox org.qbittorrent.qBittorrent 
+org.telegram.desktop org.x.Warpinator io.mpv.Mpv
+```
+
+## Setting up [Hyprland](https://wiki.hyprland.org/) WM
+
+[arewewaylandyet.com](https://arewewaylandyet.com/)
+
+[Fedora copr repository for hyprland](https://copr.fedorainfracloud.org/coprs/bzaidan/Hyprland/)
+```
+dnf copr enable bzaidan/Hyprland
+```
+
+```
+sudo dnf install hyprland swaybg\
+qt5ct qt6ct kitty lxappearance \
+ranger pavucontrol slurp swaylock\
+wireplumber polkit-gnome dunst\
+xdg-desktop-portal-wlr rofi-wayland\
+grim kmod-v4l2loopback \
+```
 
 ## Setting up KVM 
 - [Guide](https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/)
@@ -160,3 +143,4 @@ sudo systemctl enable libvirtd
 ```
 sudo usermod -a -G libvirt $(whoami)
 ```
+

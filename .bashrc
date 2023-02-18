@@ -105,14 +105,14 @@ alias suspend='systemctl suspend'
 # alias clean="sudo paccache -rk1 && yay -Yc && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # FEDORA
-alias refreshdnf="sudo dnf makecache --refresh"
-alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update && distrobox-upgrade --all"
-#alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias refreshdnf="sudo dnf makecache --refresh"
+#alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update && distrobox-upgrade --all"
+##alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
+#alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-#alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
-#alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
+alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
+alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
 #alias update="sudo apt update"
@@ -214,4 +214,7 @@ if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integr
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
-eval "$(starship init bash)"
+#eval "$(starship init bash)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+complete -C /usr/bin/terraform terraform
