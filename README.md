@@ -23,6 +23,10 @@ keepcache=True
 sudo dnf upgrade
 ```
 
+```
+sudo dnf install git-core
+```
+
 ### Enable extra 3rd party [rpm fusion repositories](https://rpmfusion.org/Configuration)
 ```
 sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
@@ -48,64 +52,8 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.brave.Browser com.discordapp.Discord \
 com.google.Chrome com.spotify.Client \
 org.mozilla.firefox org.qbittorrent.qBittorrent \
-org.telegram.desktop io.mpv.Mpv flatpak install flathub org.mozilla.firefox
+org.telegram.desktop io.mpv.Mpv
 ```
-
-## Setting up [Distrobox](https://github.com/89luca89/distrobox) 
-```
-curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
-```
-
-```
-distrobox-create -i docker.io/library/ubuntu:22.04 -n ubuntu
-```
-
-```
-distrobox-create -i docker.io/library/archlinux:latest -n arch
-```
-
-Install necessary packages in arch distrobox
-```
-distrobox enter arch
-```
-
-Install yay-bin
-```
-git clone https://aur.archlinux.org/yay-bin.git
-```
-```
-pacman -S --needed git base-devel
-```
-```
-makepkg -si
-```
-```
-sudo yay -S neofetch neovim imagemagick jdk11-openjdk vscodium-bin
-```
-
-Exporting arch packages to host machine
-```
-distrobox-export --app gnome-tweaks &&
-distrobox-export --app vscodium &&
-distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/
-```
-
-#### Yay cheatsheet
-```
-yay -Syu                 : updates entire system and AUR packages
-yay <package_name>       : Searches package in pacman repos and AUR repos
-yay -S <package_name>    : Installs a package
-
-yay -Rns <package_name>  : Deletes package completely
-yay -c                   : Removes unused dependencies
-yay -Sc                  : Removes pacman and AUR cache
-```
-
-**Useful guides**
-- [Archwiki Java OpenJDK](https://wiki.archlinux.org/title/java)
-- [Yay guide youtube](https://youtu.be/NzNuFN9hqjI)
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
 ```
@@ -142,6 +90,70 @@ newgrp docker
 ```
 sudo docker run hello-world
 ```
+
+## Setting up [Distrobox](https://github.com/89luca89/distrobox) 
+```
+curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sh -s -- --prefix ~/.local
+```
+
+```
+distrobox-create -i docker.io/library/ubuntu:22.04 -n ubuntu
+```
+
+```
+distrobox-create -i docker.io/library/archlinux:latest -n arch
+```
+
+Install necessary packages in arch distrobox
+```
+distrobox enter arch
+```
+
+Install yay-bin
+```
+sudo pacman -S --needed git base-devel
+```
+```
+git clone https://aur.archlinux.org/yay-bin.git
+```
+```
+makepkg -si
+```
+```
+sudo yay -S neofetch neovim imagemagick jdk11-openjdk
+```
+```
+sudo yay vscodium-bin
+```
+
+Exporting arch packages to host machine
+```
+distrobox-export --app vscodium &&
+distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
+distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
+distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/
+distrobox-export --bin /usr/sbin/vscodium --export-path ~/.local/bin/
+```
+
+From inside distrobox [Use docker from within distrobox](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md#using-podman-or-docker-inside-a-distrobox)
+```
+sudo ln -s /usr/bin/distrobox-host-exec /usr/local/bin/docker
+```
+
+#### Yay cheatsheet
+```
+yay -Syu                 : updates entire system and AUR packages
+yay <package_name>       : Searches package in pacman repos and AUR repos
+yay -S <package_name>    : Installs a package
+
+yay -Rns <package_name>  : Deletes package completely
+yay -c                   : Removes unused dependencies
+yay -Sc                  : Removes pacman and AUR cache
+```
+
+**Useful guides**
+- [Archwiki Java OpenJDK](https://wiki.archlinux.org/title/java)
+- [Yay guide youtube](https://youtu.be/NzNuFN9hqjI)
 
 
 ## Setting up KVM 
