@@ -153,7 +153,7 @@ sudo docker run hello-world
 sudo dnf install @virtualization
 ```
 ```
-sudo dnf install virt-manager spice-vdagent spice-gtk xf86-video-qxl
+sudo dnf install virt-manager spice-vdagent spice-gtk xf86-video-qxl virt-install virt-viewer
 ```
 ```
 sudo systemctl start libvirtd
