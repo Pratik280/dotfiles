@@ -106,13 +106,13 @@ alias suspend='systemctl suspend'
 
 # FEDORA
 #alias refreshdnf="sudo dnf makecache --refresh"
-#alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update && distrobox-upgrade --all"
+alias update="sudo dnf makecache --refresh && sudo dnf upgrade && flatpak update && distrobox-upgrade --all"
 ##alias package-sync="dnf history > ~/dotfiles/dnf-apps-list.txt && flatpak list > ~/dotfiles/flatpack-list.txt"
-#alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
+alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
-alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
+#alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
 #alias update="sudo apt update"
