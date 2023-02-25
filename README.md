@@ -120,15 +120,22 @@ git clone https://aur.archlinux.org/yay-bin.git
 makepkg -si
 ```
 ```
-sudo yay -S neofetch neovim imagemagick jdk11-openjdk
+yay -S neofetch neovim imagemagick jdk11-openjdk
 ```
 ```
-sudo yay vscodium-bin
+yay vscodium-bin ranger kitty python-pip starship
+```
+```
+pip install pillow
 ```
 
 Exporting arch packages to host machine
 ```
 distrobox-export --app vscodium &&
+distrobox-export --app ranger &&
+distrobox-export --app kitty &&
+distrobox-export --bin /usr/sbin/ranger --export-path ~/.local/bin/ &&
+distrobox-export --bin /usr/sbin/starship --export-path ~/.local/bin/ &&
 distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
 distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
 distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/ &&
@@ -175,4 +182,24 @@ sudo systemctl enable libvirtd
 ```
 ```
 sudo usermod -a -G libvirt $(whoami)
+```
+
+## Symbolic links for dotfiles
+
+- Install [vim-plug](https://github.com/junegunn/vim-plug) for neovim in arch distrobox
+
+```bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+```
+
+```bash
+rm -rf ~/.bashrc &&
+ln -s ~/dotfiles/.bashrc ~/ &&
+ln -s ~/dotfiles/config/ranger/ ~/.config/ &&
+ln -s ~/dotfiles/config/kitty/ ~/.config/ &&
+ln -s ~/dotfiles/config/nvim/ ~/.config/ &&
+ln -s ~/dotfiles/config/starship.toml ~/.config/ &&
+ln -s ~/dotfiles/config/vscode/keybindings.json ~/.config/VSCodium/User/ &&
+ln -s ~/dotfiles/config/vscode/settings.json ~/.config/VSCodium/User/ 
 ```
