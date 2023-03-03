@@ -52,7 +52,9 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 flatpak install flathub com.brave.Browser com.discordapp.Discord \
 com.google.Chrome com.spotify.Client \
 org.mozilla.firefox org.qbittorrent.qBittorrent \
-org.telegram.desktop io.mpv.Mpv com.github.iwalton3.jellyfin-media-player
+org.telegram.desktop io.mpv.Mpv com.github.iwalton3.jellyfin-media-player \
+com.valvesoftware.Steam com.heroicgameslauncher.hgl io.github.seadve.Kooha \
+com.obsproject.Studio 
 ```
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
