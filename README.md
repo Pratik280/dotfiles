@@ -106,6 +106,18 @@ yay -Sc                  : Removes pacman and AUR cache
 
 - YAST -> Install hypervisor tools.
 
+```
+sudo systemctl start libvirtd
+```
+```
+sudo systemctl enable libvirtd
+```
+```
+sudo usermod -a -G libvirt $(whoami)
+```
+```
+sudo virsh net-start default
+```
 
 ## Symbolic links for dotfiles
 
