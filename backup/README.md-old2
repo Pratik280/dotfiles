@@ -2,15 +2,46 @@
 
 ## Initial tweaks
 
-### Enable customization using KDE widget customization saver.
+### Speeding up dnf
 
-### Disable baloo and other background services.
+- References
+  - [Tech Hut - 7 Things You MUST DO After Installing Fedora](https://youtu.be/RrRpXs2pkzg)
+  - [The Linux Cast - 5 Things To Do After Installing Fedora](https://youtu.be/DEAzqHz9LPs)
+
 ```
-balooctl disable && balooctl purge
+sudo vi /etc/dnf/dnf.conf
 ```
 
-Other services to turn off:
-- Autostart background services -> turn off: Night color location, Kscreen, Search folder updater, bluetooth.
+```
+fastestmirror=True
+max_parallel_downloads=10
+defaultyes=True
+keepcache=True
+```
+
+```
+sudo dnf upgrade
+```
+
+```
+sudo dnf install git-core
+```
+
+### Enable extra 3rd party [rpm fusion repositories](https://rpmfusion.org/Configuration)
+```
+sudo dnf install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+```
+
+### Multimedia codecs
+```
+sudo dnf groupupdate core
+```
+```
+sudo dnf groupupdate multimedia --setop="install_weak_deps=False" --exclude=PackageKit-gstreamer-plugin
+```
+```
+sudo dnf groupupdate sound-and-video
+```
 
 ## Installing necessary [flatpak](https://flatpak.org/setup/Fedora) apps
 ```
@@ -27,8 +58,40 @@ com.obsproject.Studio
 ```
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
+```
+sudo dnf -y install dnf-plugins-core
+```
 
-Install docker from YAST
+```
+sudo dnf config-manager \
+    --add-repo \
+    https://download.docker.com/linux/fedora/docker-ce.repo
+```
+
+```
+sudo dnf install docker-ce docker-ce-cli containerd.io docker-compose-plugin
+```
+
+```
+sudo systemctl start docker
+```
+```
+sudo systemctl enable docker
+```
+
+```
+sudo groupadd docker
+```
+```
+sudo usermod -aG docker $USER
+```
+```
+newgrp docker
+```
+
+```
+sudo docker run hello-world
+```
 
 ## Setting up [Distrobox](https://github.com/89luca89/distrobox) 
 ```
@@ -103,9 +166,25 @@ yay -Sc                  : Removes pacman and AUR cache
 
 
 ## Setting up KVM 
+- [Guide](https://fedoramagazine.org/full-virtualization-system-on-fedora-workstation-30/)
+- [Using Windows 11 in KVM | Secure Boot, Simulated TPM, & VirtIO Guest Tools - Trafotin](https://youtu.be/i-OHcENVMG0)
+- [Gnome Boxes | Installing Windows 10 on Linux - Chris Titus Tech](https://youtu.be/c1c5wiQhgZU)
 
-- YAST -> Install hypervisor tools.
-
+```
+sudo dnf install @virtualization
+```
+```
+sudo dnf install virt-manager spice-vdagent spice-gtk xf86-video-qxl virt-install virt-viewer
+```
+```
+sudo systemctl start libvirtd
+```
+```
+sudo systemctl enable libvirtd
+```
+```
+sudo usermod -a -G libvirt $(whoami)
+```
 
 ## Symbolic links for dotfiles
 
