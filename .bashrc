@@ -16,6 +16,8 @@ export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR=nvim
 export VISUAL=nvim
+export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/tools
 
 PS1='[\u@\h \W]\$ '
 
@@ -29,6 +31,10 @@ fi
 
 if [ -d "$HOME/dotfiles/scripts" ] ;
   then PATH="$HOME/dotfiles/scripts:$PATH"
+fi
+
+if [ -d "$HOME/Android/Sdk/platform-tools" ] ;
+  then PATH="$HOME/Android/Sdk/platform-tools:$PATH"
 fi
 
 shopt -s autocd
