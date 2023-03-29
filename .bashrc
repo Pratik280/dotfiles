@@ -16,8 +16,13 @@ export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR=nvim
 export VISUAL=nvim
+
 export ANDROID_HOME=$HOME/Android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
+
+export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
 
 PS1='[\u@\h \W]\$ '
 
@@ -33,9 +38,9 @@ if [ -d "$HOME/dotfiles/scripts" ] ;
   then PATH="$HOME/dotfiles/scripts:$PATH"
 fi
 
-if [ -d "$HOME/Android/Sdk/platform-tools" ] ;
-  then PATH="$HOME/Android/Sdk/platform-tools:$PATH"
-fi
+#if [ -d "$HOME/Android/Sdk/platform-tools" ] ;
+#  then PATH="$HOME/Android/Sdk/platform-tools:$PATH"
+#fi
 
 shopt -s autocd
 
@@ -54,6 +59,7 @@ export PATH
 alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
 # alias ubox="distrobox enter ubuntu-22-04"
 alias abox="distrobox enter arch"
+alias ubox="distrobox enter ubuntuminecraft"
 alias neofetch="neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg"
 alias kubectl="minikube kubectl --"
 alias brave="flatpak run com.brave.Browser"

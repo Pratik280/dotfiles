@@ -1,4 +1,4 @@
-# Setting up my Fedora System (KDE plasma)
+# Setting up my Open(sus)e Tumbleweed System (KDE plasma)
 
 ## Initial tweaks
 
