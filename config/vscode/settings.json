@@ -177,5 +177,6 @@
   "files.autoSave": "afterDelay",
   "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
-  "editor.linkedEditing": true
+  "editor.linkedEditing": true,
+  "typescript.updateImportsOnFileMove.enabled": "always"
 }
