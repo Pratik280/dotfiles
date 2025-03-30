@@ -29,7 +29,7 @@ com.obsproject.Studio
 ```
 sudo zypper install --no-recommends opi kitty git starship
 sudo zypper install docker docker-compose docker-compose-switch
-sudo zypper install --no-recommends hyprland wofi hyprpaper hyprlock
+sudo zypper install --no-recommends hyprland wofi hyprpaper hyprlock hyprland-devel
 ```
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
@@ -134,4 +134,5 @@ ln -s ~/dotfiles/config/nvim/ ~/.config/ &&
 ln -s ~/dotfiles/config/starship.toml ~/.config/ &&
 ln -s ~/dotfiles/config/vscode/keybindings.json ~/.config/VSCodium/User/ &&
 ln -s ~/dotfiles/config/vscode/settings.json ~/.config/VSCodium/User/ 
+ln -s ~/dotfiles/config/hypr/ ~/.config
 ```
