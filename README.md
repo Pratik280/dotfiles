@@ -40,7 +40,7 @@ distrobox-create -i docker.io/library/ubuntu:22.04 -n ubuntu
 ```
 
 ```
-distrobox-create -i docker.io/library/archlinux:latest -n arch
+distrobox-create --absolutely-disable-root-password-i-am-really-positively-sure -i docker.io/library/archlinux:latest -n arch
 ```
 
 Install necessary packages in arch distrobox
@@ -58,27 +58,18 @@ git clone https://aur.archlinux.org/yay-bin.git
 ```
 makepkg -si
 ```
+
 ```
-yay -S neofetch neovim imagemagick jdk11-openjdk
-```
-```
-yay vscodium-bin ranger kitty python-pip starship
-```
-```
-pip install pillow
+yay -S neofetch neovim jdk21-openjdk code kitty starship
+distrobox-export --app code
+distrobox-export --app kitty
+distrobox-export --bin /usr/sbin/neofetch --export-path ~/.local/bin/
+distrobox-export --bin /usr/sbin/nvim ~/.local/bin/
+distrobox-export --bin /usr/sbin/starship ~/.local/bin/
 ```
 
-Exporting arch packages to host machine
 ```
-distrobox-export --app vscodium &&
-distrobox-export --app ranger &&
-distrobox-export --app kitty &&
-distrobox-export --bin /usr/sbin/ranger --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/starship --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/convert --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/mogrify --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/nvim --export-path ~/.local/bin/ &&
-distrobox-export --bin /usr/sbin/vscodium --export-path ~/.local/bin/
+pip install pillow
 ```
 
 From inside distrobox [Use docker from within distrobox](https://github.com/89luca89/distrobox/blob/main/docs/useful_tips.md#using-podman-or-docker-inside-a-distrobox)
