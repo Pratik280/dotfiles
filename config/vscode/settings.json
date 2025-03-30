@@ -1,18 +1,19 @@
 {
-  // "editor.fontFamily": "'Inconsolata  LGC Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
+  //  "editor.fontFamily": "InconsolataLGC Nerd Font",
+  //  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
   "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 13,
   "editor.lineHeight": 2,
   "update.showReleaseNotes": false,
   // minimal
-  // "workbench.statusBar.visible": false,
-  "workbench.activityBar.visible": false,
+  //"workbench.statusBar.visible": false,
+  //"workbench.activityBar.visible": false,
   "editor.minimap.enabled": false,
   "breadcrumbs.enabled": false,
-  "window.menuBarVisibility": "toggle",
+  //"window.menuBarVisibility": "toggle",
   // "editor.scrollbar.horizontal": "hidden",
   // "editor.scrollbar.horizontalScrollbarSize": 6,
-  // "editor.scrollbar.vertical": "hidden",
+  // "editor.scrollbar.vertical": "hidden",kkk
   // "editor.scrollbar.verticalScrollbarSize": 6,
   // disable git
   // "git.decorations.enabled": false,
@@ -79,7 +80,7 @@
   // "editor.parameterHints.enabled": false,
   "files.trimFinalNewlines": true,
   "window.restoreWindows": "none",
-  "editor.occurrencesHighlight": false,
+  "editor.occurrencesHighlight": "off",
   "glassit.alpha": 250,
   // tabs and spaces
   "editor.tabSize": 2,
@@ -178,5 +179,6 @@
   "window.zoomLevel": 1,
   "workbench.startupEditor": "none",
   "editor.linkedEditing": true,
-  "typescript.updateImportsOnFileMove.enabled": "always"
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "workbench.colorTheme": "Catppuccin Macchiato"
 }

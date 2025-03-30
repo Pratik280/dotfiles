@@ -27,9 +27,9 @@ com.obsproject.Studio
 ```
 
 ```
-sudo zypper install --no-recommends opi kitty git starship
+sudo zypper install --no-recommends opi kitty git starship fontawesome-fonts
 sudo zypper install docker docker-compose docker-compose-switch
-sudo zypper install --no-recommends hyprland wofi hyprpaper hyprlock hyprland-devel
+sudo zypper install --no-recommends hyprland wofi hyprpaper hyprlock hyprland-devel waybar hyprland-qtutils
 ```
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
@@ -66,7 +66,7 @@ makepkg -si
 ```
 
 ```
-yay -S neofetch neovim jdk21-openjdk code kitty starship
+yay -S neofetch neovim jdk21-openjdk code kitty starship ttf-font-awesome
 distrobox-export --app code
 distrobox-export --app kitty
 distrobox-export --bin /usr/sbin/neofetch --export-path ~/.local/bin/
@@ -135,4 +135,8 @@ ln -s ~/dotfiles/config/starship.toml ~/.config/ &&
 ln -s ~/dotfiles/config/vscode/keybindings.json ~/.config/VSCodium/User/ &&
 ln -s ~/dotfiles/config/vscode/settings.json ~/.config/VSCodium/User/ 
 ln -s ~/dotfiles/config/hypr/ ~/.config
+ln -s ~/dotfiles/config/vscode/settings.json ~/.config/Code\ -\ OSS/User/ 
+ln -s ~/dotfiles/config/vscode/keybindings.json ~/.config/Code\ -\ OSS/User/
+ln -s ~/dotfiles/config/waybar/ ~/.config/
+ln -s ~/dotfiles/config/fastfetch/ ~/.config/
 ```
