@@ -26,6 +26,12 @@ com.valvesoftware.Steam com.heroicgameslauncher.hgl io.github.seadve.Kooha \
 com.obsproject.Studio 
 ```
 
+```
+sudo zypper install --no-recommends opi kitty git starship
+sudo zypper install docker docker-compose docker-compose-switch
+sudo zypper install --no-recommends hyprland wofi hyprpaper hyprlock
+```
+
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)
 
 Install docker from YAST
