@@ -1,1 +1,0 @@
-bspwm polybar rofi picom maim xset neovim kitty nitrogen pcmanfm exa ranger sxhkd pavucontrol lxappearance viewnior redshift bat slock lxsession lxpolkit firefox
