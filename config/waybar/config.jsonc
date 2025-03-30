@@ -2,7 +2,8 @@
   "layer": "top",
   "modules-left": ["hyprland/workspaces"],
   "modules-center": ["hyprland/window"],
-  "modules-right": ["tray", "cpu", "memory", "idle_inhibitor", "clock", "pulseaudio"],
+  // "modules-right": ["tray", "cpu", "memory", "idle_inhibitor", "clock", "pulseaudio"],
+  "modules-right": ["tray", "cpu", "memory", "clock", "pulseaudio"],
 
 "hyprland/window": {
     "format": "{title}",

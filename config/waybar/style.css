@@ -44,7 +44,7 @@ tooltip {
 	border-radius: 3px;
 	border-bottom: 2px solid @bg;
 	border-right: 2px solid @bg;
-    border-color: @lbg;
+  border-color: @lbg;
 	background-color: @yellow;
 	color: @bg;
 }
@@ -68,6 +68,7 @@ window#waybar {
 
 #workspaces {
   margin: 5px 5px 2px 5px;
+  margin-left: 10px;
   border-radius: 3px;
   padding: 1px;
   background-color: @bg;
@@ -221,7 +222,7 @@ window#waybar {
 
 #backlight,
 #pulseaudio {
-	margin-right: 0px;
+	margin-right: 10px;
 	margin-left: 5px;
 	padding-left: 10px;
   	padding-right: 7.5px;

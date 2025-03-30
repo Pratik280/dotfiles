@@ -66,8 +66,8 @@ inputbar {
 
 listview {
   background-color: @backgroundClrOne;
-  columns: 4;
-  lines: 8;
+  columns: 1;
+  lines: 6;
 }
 
 mainbox {
