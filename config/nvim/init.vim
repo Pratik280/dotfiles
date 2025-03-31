@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'martinsione/darkplus.nvim'
+"Plug 'martinsione/darkplus.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -24,7 +24,8 @@ if (has("termguicolors"))
 endif
 let g:nvcode_termcolors=256
 " colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-colorscheme darkplus
+"colorscheme darkplus
+colorscheme catppuccin-mocha
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none

@@ -27,9 +27,9 @@ com.obsproject.Studio
 ```
 
 ```
-sudo zypper install --no-recommends opi kitty git starship fontawesome-fonts
+sudo zypper install opi kitty git starship fontawesome-fonts papirus-icon-theme 
 sudo zypper install docker docker-compose docker-compose-switch
-sudo zypper install --no-recommends hyprland rofi hyprpaper hyprlock hyprland-devel waybar hyprland-qtutils
+sudo zypper install --no-recommends hyprland rofi hyprpaper hyprlock hyprland-devel waybar hyprland-qtutils hyprshot swaync hypridle
 ```
 
 ## Setting up [Docker](https://docs.docker.com/engine/install/fedora/)

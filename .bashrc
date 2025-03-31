@@ -60,7 +60,7 @@ alias iij="~/bin/ubuntu/idea-IC-222.4345.14/bin/idea.sh"
 # alias ubox="distrobox enter ubuntu-22-04"
 alias abox="distrobox enter arch"
 alias ubox="distrobox enter ubuntuminecraft"
-alias neofetch="neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg"
+#alias neofetch="neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg"
 alias kubectl="minikube kubectl --"
 alias brave="flatpak run com.brave.Browser"
 
@@ -133,8 +133,8 @@ alias suspend='systemctl suspend'
 
 # Opensuse Tumbleweed
 alias refreshzypper="sudo zypper refresh"
-alias update="sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
-alias clean="sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
+alias update="sudo zypper refresh && sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
+alias clean="sudo zypper refresh && sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -235,4 +235,5 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 
 complete -C /usr/bin/terraform terraform
 eval "$(starship init bash)"
-fastfetch
+fastfetch -l small
+
