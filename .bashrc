@@ -23,6 +23,7 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 
 export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+MOZ_ENABLE_WAYLAND=1
 
 PS1='[\u@\h \W]\$ '
 
@@ -132,9 +133,9 @@ alias suspend='systemctl suspend'
 #alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # Opensuse Tumbleweed
-alias refreshzypper="sudo zypper refresh"
-alias update="sudo zypper refresh && sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
-alias clean="sudo zypper refresh && sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
+alias suserefresh="sudo zypper refresh"
+alias suseupdate="sudo zypper refresh && sudo zypper update && sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
+alias suseclean="sudo zypper refresh && sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -234,6 +235,8 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 complete -C /usr/bin/terraform terraform
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
 eval "$(starship init bash)"
-fastfetch -l small
+fastfetch -l none
 

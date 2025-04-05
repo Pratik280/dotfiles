@@ -27,7 +27,7 @@ com.obsproject.Studio
 ```
 
 ```
-sudo zypper install opi kitty git starship fontawesome-fonts papirus-icon-theme 
+sudo zypper install opi kitty git starship fontawesome-fonts papirus-icon-theme xdg-desktop-portal-hyprland
 sudo zypper install docker docker-compose docker-compose-switch
 sudo zypper install --no-recommends hyprland rofi hyprpaper hyprlock hyprland-devel waybar hyprland-qtutils hyprshot swaync hypridle
 ```
