@@ -1,5 +1,5 @@
 call plug#begin()
-"Plug 'martinsione/darkplus.nvim'
+Plug 'martinsione/darkplus.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-surround'
 Plug 'alvan/vim-closetag'
@@ -7,7 +7,7 @@ Plug 'jiangmiao/auto-pairs'
 Plug 'tpope/vim-commentary'
 Plug 'lambdalisue/fern.vim'
 Plug 'Shatur/neovim-ayu'
-Plug 'catppuccin/nvim'
+"Plug 'catppuccin/nvim'
 "Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
 "Plug 'Mofiqul/dracula.nvim'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
@@ -24,8 +24,8 @@ if (has("termguicolors"))
 endif
 let g:nvcode_termcolors=256
 " colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
-"colorscheme darkplus
-colorscheme catppuccin-mocha
+colorscheme darkplus
+"colorscheme catppuccin-mocha
 syntax on
 hi Normal guibg=none ctermbg=none
 hi LineNr guibg=none ctermbg=none

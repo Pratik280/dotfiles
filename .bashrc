@@ -22,7 +22,8 @@ export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:$ANDROID_HOME/tools
 
-export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+#export JAVA_HOME=/usr/lib/jvm/java-11-openjdk/
+export JAVA_HOME=/usr/lib/jvm/java-21-openjdk/
 MOZ_ENABLE_WAYLAND=1
 
 PS1='[\u@\h \W]\$ '
@@ -128,14 +129,14 @@ alias suspend='systemctl suspend'
 #alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
-#alias update="sudo apt update"
-#alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
-#alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
+alias update="sudo apt update"
+alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
+alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # Opensuse Tumbleweed
-alias suserefresh="sudo zypper refresh"
-alias suseupdate="sudo zypper refresh && sudo zypper update && sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
-alias suseclean="sudo zypper refresh && sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias suserefresh="sudo zypper refresh"
+#alias suseupdate="sudo zypper refresh && sudo zypper update && sudo zypper dist-upgrade && flatpak update && distrobox-upgrade --all"
+#alias suseclean="sudo zypper refresh && sudo zypper clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # confirm before overwriting something
 alias cp="cp -i"
@@ -223,6 +224,8 @@ alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
 
+alias fastfetch="fastfetch -l none"
+
 # neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
 # BEGIN_KITTY_SHELL_INTEGRATION
@@ -239,4 +242,7 @@ export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_DESKTOP=Hyprland
 eval "$(starship init bash)"
 fastfetch -l none
+
+export DBX_CONTAINER_MANAGER="docker"
+xset -b
 
