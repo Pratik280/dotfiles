@@ -181,6 +181,5 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false,
-  "dev.containers.dockerPath": "/app/tools/podman/bin/podman-remote",
-  "dev.containers.dockerSocketPath": "/run/user/1000/podman/podman.sock"
+  "dev.containers.dockerPath": "podman"
 }
