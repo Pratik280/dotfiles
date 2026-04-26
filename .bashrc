@@ -15,7 +15,10 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR=nvim
+alias nvim='flatpak run io.neovim.nvim'
+alias vim='flatpak run io.neovim.nvim'
 export VISUAL=nvim
+alias code='flatpak run com.visualstudio.code'
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
@@ -125,13 +128,13 @@ alias suspend='systemctl suspend'
 # alias clean="sudo dnf autoremove && sudo dnf clean dbcache && sudo dnf clean expire-cache && sudo dnf clean metadata && sudo dnf clean packages && sudo dnf clean all && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # SILVERBLUE
-#alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
-#alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
+alias update="rpm-ostree upgrade && flatpak update -y && distrobox upgrade --all"
+alias clean="rpm-ostree cleanup -b && rpm-ostree cleanup -p && rpm-ostree cleanup -r && sudo rm -rf /var/tmp/flatpak-cache*"
  
 # UBUNTU DEBIAN
-alias update="sudo apt update"
-alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
-alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
+#alias update="sudo apt update"
+#alias upgrade="sudo apt update && sudo apt upgrade && flatpak update"
+#alias clean="sudo apt update && sudo apt autoremove --purge && sudo apt autoclean && sudo apt clean && sudo rm -rf /var/tmp/flatpak-cache*"
 
 # Opensuse Tumbleweed
 #alias suserefresh="sudo zypper refresh"
@@ -145,8 +148,8 @@ alias rm='rm -i'
 
 # neovim
 #alias n='nvim'
-alias v='nvim'
-alias vim='nvim'
+#alias v='nvim'
+#alias vim='nvim'
 # alias vi='nvim'
 
 # git
@@ -224,7 +227,7 @@ alias daylight="redshift -O 6500K -r -P"
 
 alias r="ranger"
 
-alias fastfetch="fastfetch -l none"
+#alias fastfetch="fastfetch -l none"
 
 # neofetch --kitty ~/00MAIN/00MAIN/image-for-kitty/kurapika-heart.jpg
 
@@ -240,9 +243,9 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 complete -C /usr/bin/terraform terraform
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_DESKTOP=Hyprland
+#fastfetch -l none
+
+#export DBX_CONTAINER_MANAGER="docker"
+#xset -b
+
 eval "$(starship init bash)"
-fastfetch -l none
-
-export DBX_CONTAINER_MANAGER="docker"
-xset -b
-
