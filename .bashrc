@@ -18,7 +18,7 @@ export EDITOR=nvim
 alias nvim='flatpak run io.neovim.nvim'
 alias vim='flatpak run io.neovim.nvim'
 export VISUAL=nvim
-alias code='flatpak run com.visualstudio.code'
+#alias code='flatpak run com.visualstudio.code'
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator

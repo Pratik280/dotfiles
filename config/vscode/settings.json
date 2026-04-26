@@ -180,5 +180,7 @@
   "editor.linkedEditing": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.startupEditor": "none",
-  "redhat.telemetry.enabled": false
+  "redhat.telemetry.enabled": false,
+  "dev.containers.dockerPath": "/app/tools/podman/bin/podman-remote",
+  "dev.containers.dockerSocketPath": "/run/user/1000/podman/podman.sock"
 }

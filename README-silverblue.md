@@ -1,104 +1,107 @@
-# Setting up Fedora Silverblue
-------------------------------
-## 🚀 Fedora Silverblue Java Dev Setup## 1. Core System Preparation
-Silverblue is immutable. We keep the base system clean by using Flatpaks for GUI tools and Containers for development.
-## Update and Install Basics
+## 🚀 Fedora Silverblue: VS Code + Podman Setup Guide
 
-# Ensure the system is up to date
-rpm-ostree update
-# Reboot if updates were installed
+This guide focuses on the "Native Layering" approach. By installing VS Code and the Podman-Docker shim via `rpm-ostree`, you eliminate the permission headaches caused by Flatpak sandboxing.
+
+---
+
+### 1. Install VS Code and Podman Shim
+Layering these packages ensures that VS Code has direct access to the Podman socket and the system-level container tools.
+
+```bash
+# 1. Import Microsoft's GPG Key
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+
+# 2. Add the official VS Code Repository
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo
+
+# 3. Install VS Code and the Podman-Docker helper (shim)
+# This shim allows VS Code to use 'podman' when it looks for 'docker'
+sudo rpm-ostree install code podman-docker
+
+# 4. REBOOT (Required to apply system layers on Silverblue)
 systemctl reboot
+```
 
-## Enable Flathub
+---
 
-flatpak remote-add --if-not-exists flathub https://flathub.org
+### 2. Enable the Communication Bridge
+After rebooting, you must activate the user-level socket. Without this, VS Code cannot "talk" to the Podman engine.
 
-------------------------------
-## 2. Install Essential Tools (Flatpak)
-We install VS Code and Neovim as Flatpaks to avoid layering packages onto the OS-tree.
+```bash
+# 1. Start and enable the Podman socket for your user
+systemctl --user enable --now podman.socket
 
-# Install VS Code
-flatpak install flathub com.visualstudio.code
-# Install Neovim
-flatpak install flathub io.neovim.nvim
-# Install Flatseal (to manage permissions)
-flatpak install flathub com.github.tchx84.Flatseal
+# 2. Verify the socket is active (Should say 'active (listening)')
+systemctl --user status podman.socket
 
-## 🔧 Configure Permissions (Crucial)
+# 3. CRITICAL: Create the Maven cache folder on your host
+# If this folder is missing, the Dev Container will fail to start.
+mkdir -p ~/.m2
+```
 
-   1. Open Flatseal.
-   2. Select Visual Studio Code.
-   3. Enable All system files (or System Bus) to allow it to communicate with the Podman socket.
-   4. (Optional) Do the same for Neovim if you plan to use it to edit files across the system.
+---
 
-------------------------------
-## 3. Configure VS Code for Podman
-Since Silverblue uses Podman instead of Docker, you must tell VS Code where to find it.
+### 3. VS Code Internal Configuration
+Open VS Code and adjust these specific settings to ensure it routes container commands to Podman instead of Docker.
 
-   1. Open VS Code.
-   2. Install the Dev Containers extension (ms-vscode-remote.remote-containers).
-   3. Open Settings (Ctrl + ,) and set:
-   * Dev Containers: Docker Path: podman
-      * Dev Containers: Execute In Container Process: true
-   
-------------------------------
-## 4. The Spring Boot Dev Container
-Create a folder named .devcontainer in your project root and add this devcontainer.json. This setup includes Java 21, Maven, and the REST Client.
-## project-root/.devcontainer/devcontainer.json
+1.  **Install Required Extensions:**
+    * **Dev Containers** (Microsoft)
+    * **Extension Pack for Java** (Microsoft)
+2.  **Open Settings (`Ctrl + ,`):**
+    * Search for `Dev > Containers: Docker Path`.
+    * Set this to: `podman`
+3.  **Disable Docker Compose V2:**
+    * Search for `Dev > Containers: Use Docker Compose V2`.
+    * **Uncheck** this box (Podman works better with V1 compatibility in VS Code).
 
+---
+
+### 4. Spring Boot Dev Container Config
+Create a folder named `.devcontainer` in your Spring Boot project root. Create a file inside it named `devcontainer.json` with this configuration designed for Fedora Silverblue:
+
+```json
 {
-  "name": "Spring Boot Dev Environment",
-  "image": "://microsoft.com",
-  "features": {
-    "ghcr.io/devcontainers/features/java:1": {
-      "installMaven": "true"
+    "name": "Spring Boot Podman",
+    "image": "mcr.microsoft.com/devcontainers/java:21-bullseye",
+    
+    // Explicitly handle SELinux and Workspace mounting for Silverblue
+    "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind,Z",
+    "workspaceFolder": "/workspace",
+    "updateRemoteUserUID": false,
+
+    "runArgs": [
+        "--userns=keep-id",
+        "--security-opt", "label=disable"
+    ],
+
+    "containerUser": "vscode",
+    "overrideCommand": true,
+
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "vscjava.vscode-java-pack",
+                "vmware.vscode-spring-boot-dashboard",
+                "humao.rest-client"
+            ]
+        }
+    },
+
+    "mounts": [
+        // Mounts your host Maven cache so you don't re-download dependencies
+        "source=${localEnv:HOME}/.m2,target=/home/vscode/.m2,type=bind,Z"
+    ],
+
+    "remoteEnv": {
+        "DOCKER_HOST": "unix:///run/user/1000/podman/podman.sock"
     }
-  },
-  "customizations": {
-    "vscode": {
-      "extensions": [
-        "vscjava.vscode-java-pack",
-        "vscjava.vscode-spring-initializr",
-        "vscjava.vscode-spring-boot-dashboard",
-        "humao.rest-client",
-        "vscodevim.vim"
-      ],
-      "settings": {
-        "java.configuration.runtimes": [
-          {
-            "name": "JavaSE-21",
-            "path": "/usr/local/sdkman/candidates/java/current",
-            "default": true
-          }
-        ]
-      }
-    }
-  },
-  "forwardPorts": [8080],
-  "remoteUser": "vscode",
-  "postCreateCommand": "mvn clean install"
 }
+```
 
-------------------------------
-## 5. Terminal Access & Workflow
-Once you click "Reopen in Container" in VS Code, the environment is live.
-## How to enter the container from your Host Terminal
-Since you are on Silverblue, you might want to use your host terminal to jump into the active container:
+---
 
-# Add this to your ~/.bashrc or ~/.zshrc
-alias dce='podman exec -it $(podman ps --format "{{.Names}}" | grep vsc- | head -n 1) /bin/bash'
-
-## Why this is better than Distrobox?
-
-* Isolation: Every project has its own Java version.
-* Portability: The config stays with your code in Git.
-* Automation: VS Code handles the container lifecycle (Start/Stop) automatically.
-
-------------------------------
-## 💡 Quick Tips for Silverblue Users
-
-* Persistence: Your code is "bind-mounted." Changes in the container save to your host disk immediately.
-* First Run: The first build takes time (downloading images/JDKs). Subsequent starts are nearly instant due to Podman caching.
-* Cleaning Up: Use podman system prune occasionally to remove old project images and save space on your Silverblue drive.
-
-------------------------------
+### Summary Checklist to Start
+1.  Ensure `podman.socket` is running.
+2.  Open your project in VS Code.
+3.  Press `F1` and select **"Dev Containers: Reopen in Container"**.
+4.  Run your app via the terminal: `./mvnw spring-boot:run`.

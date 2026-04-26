@@ -1,4 +1,5 @@
-call plug#begin()
+"call plug#begin()
+call plug#begin('~/.var/app/io.neovim.nvim/data/nvim/plugged')
 Plug 'martinsione/darkplus.nvim'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'tpope/vim-surround'
@@ -11,7 +12,7 @@ Plug 'Shatur/neovim-ayu'
 "Plug 'christianchiarulli/nvcode-color-schemes.vim' " nvcode onedark nord aurora 
 "Plug 'Mofiqul/dracula.nvim'
 "Plug 'catppuccin/nvim', {'as': 'catppuccin'}
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 "Plug 'vimwiki/vimwiki'
 "Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 "Plug 'junegunn/goyo.vim'
@@ -115,15 +116,15 @@ EOF
 
 " -------------------- treesitter -------------------
 "
-lua << EOF
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
-  highlight = {
-    enable = true,              -- false will disable the whole extension
-    disable = { "c", "rust" },  -- list of language that will be disabled
-  },
-}
-EOF
+"lua << EOF
+"require'nvim-treesitter.configs'.setup {
+"  ensure_installed = "all", -- one of "all", "maintained" (parsers with maintainers), or a list of languages
+"  highlight = {
+"    enable = true,              -- false will disable the whole extension
+"    disable = { "c", "rust" },  -- list of language that will be disabled
+"  },
+"}
+"EOF
 
 " ------------------ MarkdowmPreview Setting ----------------- 
 " let g:mkdp_auto_start = 1 "1 : preview opens when mkdown buffer is opened in vim
