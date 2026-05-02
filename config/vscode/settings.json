@@ -1,9 +1,10 @@
 {
-  //  "editor.fontFamily": "InconsolataLGC Nerd Font",
+   "editor.fontFamily": "InconsolataLGC Nerd Font",
   //  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
-  "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
-  "editor.fontSize": 13,
+  // "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
+  "editor.fontSize": 11,
   "editor.lineHeight": 2,
+  "window.zoomLevel": 0.65,
   "update.showReleaseNotes": false,
   // minimal
   //"workbench.statusBar.visible": false,
@@ -24,56 +25,10 @@
     // // "editorCursor.foreground": "#ffff00",
     // "editorCursor.foreground": "#EBCB8B",
     "terminalCursor.foreground": "#ffff00",
-    "[Gruvbox Dark Medium]": {
-      // "sideBar.foreground": "#c7c7c7",
-      "sideBar.background": "#242424",
-      "sideBarSectionHeader.background": "#1E1E1E",
-      "editor.background": "#1E1E1E",
-      "breadcrumb.background": "#1E1E1E",
-      "statusBar.background": "#1E1E1E",
-      // "statusBar.foreground": "#626262",
-      "minimap.background": "#1E1E1E",
-      "titleBar.activeBackground": "#1E1E1E",
-      "editorGroupHeader.tabsBackground": "#1E1E1E",
-      "activityBar.background": "#1E1E1E",
-      "tab.inactiveBackground": "#262626",
-      "tab.activeBackground": "#333333",
-      "tab.activeBorder": "#333333",
-      // "editorLineNumber.foreground": "#282C34"
-      "editorGutter.background": "#1E1E1E",
-      "panel.background": "#1E1E1E",
-      "terminal.background": "#1E1E1E"
-      // "editor.lineHighlightBackground": "#ffffff",
-      // "editor.lineHighlightBorder": "#0000ff"
-    }
-    // "[Nord]": {
-    //   // "sideBar.foreground": "#c7c7c7",
-    //   "sideBar.background": "#23262F",
-    //   "sideBarSectionHeader.background": "#282C34",
-    //   "editor.background": "#282C34",
-    //   "breadcrumb.background": "#282C34",
-    //   "statusBar.background": "#282C34",
-    //   // "statusBar.foreground": "#626262",
-    //   "minimap.background": "#282C34",
-    //   "titleBar.activeBackground": "#282C34",
-    //   "editorGroupHeader.tabsBackground": "#282C34",
-    //   "activityBar.background": "#23262F",
-    //   "tab.inactiveBackground": "#2E3440",
-    //   "tab.activeBackground": "#5E81AC",
-    //   "tab.activeBorder": "#282C34",
-    //   // "editorLineNumber.foreground": "#282C34"
-    //   "editorGutter.background": "#282C34",
-    //   "panel.background": "#282C34",
-    //   "terminal.background": "#282C34"
-    //   // "editor.lineHighlightBackground": "#ffffff",
-    //   // "editor.lineHighlightBorder": "#0000ff"
-    // }
   },
   "editor.cursorBlinking": "expand",
   "workbench.settings.useSplitJSON": true,
   "extensions.ignoreRecommendations": true,
-  // window
-  // editor
   "diffEditor.wordWrap": "on",
   "editor.acceptSuggestionOnEnter": "off",
   "editor.renderLineHighlight": "all",
@@ -176,10 +131,10 @@
   "glassit-linux.opacity": 95,
   // "window.titleBarStyle": "custom",
   "files.autoSave": "afterDelay",
-  "window.zoomLevel": 1,
   "editor.linkedEditing": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "workbench.startupEditor": "none",
   "redhat.telemetry.enabled": false,
-  "dev.containers.dockerPath": "podman"
+  "dev.containers.dockerPath": "podman",
+  "workbench.activityBar.location": "top"
 }

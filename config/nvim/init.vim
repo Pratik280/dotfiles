@@ -1,4 +1,4 @@
-"call plug#begin()
+call plug#begin()
 call plug#begin('~/.var/app/io.neovim.nvim/data/nvim/plugged')
 Plug 'martinsione/darkplus.nvim'
 Plug 'nvim-lualine/lualine.nvim'

@@ -16,7 +16,13 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 # 3. Install VS Code and the Podman-Docker helper (shim)
 # This shim allows VS Code to use 'podman' when it looks for 'docker'
-sudo rpm-ostree install code podman-docker
+sudo rpm-ostree install code podman-docker neovim
+
+ln -s ~/repos/dotfiles/config/nvim/ ~/.config/
+rm -rf ~/.config/Code/User/keybindings.json
+rm -rf ~/.config/Code/User/settings.json
+ln -s ~/repos/dotfiles/config/vscode/keybindings.json ~/.config/Code/User/keybindings.json
+ln -s ~/repos/dotfiles/config/vscode/settings.json ~/.config/Code/User/settings.json
 
 # 4. REBOOT (Required to apply system layers on Silverblue)
 systemctl reboot

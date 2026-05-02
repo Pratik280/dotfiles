@@ -15,8 +15,11 @@
 export HISTCONTROL=ignoreboth:erasedups
 
 export EDITOR=nvim
-alias nvim='flatpak run io.neovim.nvim'
-alias vim='flatpak run io.neovim.nvim'
+
+alias rj='clear && javac /var/home/pratikc/Documents/tmp/Main.java && java /var/home/pratikc/Documents/tmp/Main'
+alias runjava='clear && javac Main.java && java Main'
+
+alias vim='nvim'
 export VISUAL=nvim
 #alias code='flatpak run com.visualstudio.code'
 
