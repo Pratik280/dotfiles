@@ -17,6 +17,8 @@ flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.C
 - Setup github ssh
 
 ```bash
+git config --global user.email "pratikchandlekar280@gmai.com"
+git config --global user.name "Pratik Chandlekar"
 mkdir repos
 cd repos
 git clone git@github.com:Pratik280/dotfiles.git
