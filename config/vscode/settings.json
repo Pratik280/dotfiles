@@ -49,7 +49,6 @@
   "editor.renderWhitespace": "none",
   "editor.matchBrackets": "never",
 
-  "editor.hover.enabled": "off",
   "editor.parameterHints.enabled": false,
 
   "editor.codeLens": false,
@@ -72,6 +71,8 @@
   "editor.defaultFormatter": "esbenp.prettier-vscode",
 
   "files.trimFinalNewlines": true,
+
+  "editor.hover.enabled": true,
 
   "[python]": {
     "editor.tabSize": 4
@@ -219,5 +220,17 @@
   // Updates
   // ======================================================
 
-  "update.showReleaseNotes": false
+  "update.showReleaseNotes": false,
+
+  // ======================================================
+  // ULTRA MINIMAL ZEN MODE
+  // ======================================================
+
+  "zenMode.fullScreen": true,
+  "zenMode.centerLayout": true,
+  "zenMode.hideActivityBar": true,
+  "zenMode.hideStatusBar": true,
+  "zenMode.hideLineNumbers": false,
+  "zenMode.restore": true,
+  "zenMode.silentNotifications": true,
 }

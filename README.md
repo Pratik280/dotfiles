@@ -14,8 +14,9 @@ flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.C
 
 Shortcuts
 ```bash
-flatpak run app.zen_browser.zen --new-window https://chatgpt.com/?temporary-chat=true
-flatpak run app.zen_browser.zen --new-window https://gemini.google.com/app
+flatpak run com.brave.Browser --app=https://gemini.google.com/app
+flatpak run com.brave.Browser --app=https://chatgpt.com/?temporary-chat=true
+flatpak run com.brave.Browser --app=https://web.whatsapp.com/
 ```
 
 
