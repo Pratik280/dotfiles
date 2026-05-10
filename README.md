@@ -8,7 +8,14 @@ rpm-ostree upgrade
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.Client org.chromium.Chromium org.telegram.desktop
+flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.Client com.brave.Browser org.telegram.desktop
+
+```
+
+Shortcuts
+```bash
+flatpak run app.zen_browser.zen --new-window https://chatgpt.com/?temporary-chat=true
+flatpak run app.zen_browser.zen --new-window https://gemini.google.com/app
 ```
 
 
@@ -32,6 +39,8 @@ curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y
 rm -rf ~/.bashrc 
 ln -s ~/repos/dotfiles/.bashrc ~/
 ln -s ~/repos/dotfiles/config/starship.toml ~/.config/
+mkdir ~/.local/share/fonts
+cp -r ~/repos/dotfiles/fonts/* ~/.local/share/fonts/
 ```
 
 ## Setting up [Distrobox](https://github.com/89luca89/distrobox) 

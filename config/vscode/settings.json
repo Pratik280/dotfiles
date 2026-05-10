@@ -1,104 +1,170 @@
 {
-   "editor.fontFamily": "InconsolataLGC Nerd Font",
-  //  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
+  // ======================================================
+  // Editor - Appearance
+  // ======================================================
+
+  // "editor.fontFamily": "InconsolataLGC Nerd Font",
+  "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
   // "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
   "editor.fontSize": 11,
   "editor.lineHeight": 2,
-  "window.zoomLevel": 0.65,
-  "update.showReleaseNotes": false,
-  // minimal
-  //"workbench.statusBar.visible": false,
-  //"workbench.activityBar.visible": false,
-  "editor.minimap.enabled": false,
-  "breadcrumbs.enabled": false,
-  //"window.menuBarVisibility": "toggle",
-  // "editor.scrollbar.horizontal": "hidden",
-  // "editor.scrollbar.horizontalScrollbarSize": 6,
-  // "editor.scrollbar.vertical": "hidden",kkk
-  // "editor.scrollbar.verticalScrollbarSize": 6,
-  // disable git
-  // "git.decorations.enabled": false,
-  // "git.enabled": false,
-  // "git.path": null,
-  // "git.autofetch": false,
-  "workbench.colorCustomizations": {
-    // // "editorCursor.foreground": "#ffff00",
-    // "editorCursor.foreground": "#EBCB8B",
-    "terminalCursor.foreground": "#ffff00",
-  },
+
   "editor.cursorBlinking": "expand",
-  "workbench.settings.useSplitJSON": true,
-  "extensions.ignoreRecommendations": true,
-  "diffEditor.wordWrap": "on",
-  "editor.acceptSuggestionOnEnter": "off",
   "editor.renderLineHighlight": "all",
-  // "editor.parameterHints.enabled": false,
-  "files.trimFinalNewlines": true,
-  "window.restoreWindows": "none",
+
+  "editor.minimap.enabled": false,
+  "editor.linkedEditing": true,
   "editor.occurrencesHighlight": "off",
-  "glassit.alpha": 250,
-  // tabs and spaces
+
+  "editor.scrollbar.horizontal": "hidden",
+  "editor.scrollbar.vertical": "hidden",
+
+  "editor.acceptSuggestionOnEnter": "off",
+
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+
+  "editor.smoothScrolling": true,
+
+  "editor.guides.indentation": false,
+  "editor.glyphMargin": false,
+
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.overviewRulerLanes": 0,
+
+  "editor.lineNumbers": "relative",
+
+  "editor.renderWhitespace": "none",
+  "editor.matchBrackets": "never",
+
+  "editor.hover.enabled": "off",
+  "editor.parameterHints.enabled": false,
+
+  "editor.codeLens": false,
+  "editor.lightbulb.enabled": "off",
+
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+
+  "editor.stickyScroll.enabled": false,
+  "editor.folding": false,
+
+  // ======================================================
+  // Editor - Formatting & Indentation
+  // ======================================================
+
   "editor.tabSize": 2,
   "editor.detectIndentation": false,
-  "[typescript]": {
-    "editor.tabSize": 2
-  },
-  "[html]": {
-    "editor.tabSize": 2
-  },
-  "[css]": {
-    "editor.tabSize": 2
-  },
-  "[scss]": {
-    "editor.tabSize": 2
-  },
+
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+  "files.trimFinalNewlines": true,
+
   "[python]": {
     "editor.tabSize": 4
   },
 
-  //tailwind
+  // ======================================================
+  // Window & Workbench
+  // ======================================================
+
+  "window.zoomLevel": 0.65,
+  "window.restoreWindows": "none",
+  "window.commandCenter": false,
+
+  "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
+
+  "workbench.sideBar.location": "right",
+  "workbench.activityBar.location": "top",
+  "workbench.secondarySideBar.defaultVisibility": "hidden",
+
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.settings.useSplitJSON": true,
+
+  "workbench.editor.enablePreview": false,
+  "workbench.tips.enabled": false,
+
+  "breadcrumbs.enabled": false,
+
+  // ======================================================
+  // Explorer - Minimal Folder Tree
+  // ======================================================
+
+  "explorer.confirmDragAndDrop": false,
+  "explorer.compactFolders": false,
+
+  "workbench.tree.renderIndentGuides": "none",
+  "workbench.tree.indent": 10,
+
+  // ======================================================
+  // Files
+  // ======================================================
+
+  "files.autoSave": "afterDelay",
+
+  // ======================================================
+  // Diff & Git
+  // ======================================================
+
+  "diffEditor.wordWrap": "on",
+  "scm.diffDecorations": "none",
+
+  "problems.decorations.enabled": false,
+
+  // ======================================================
+  // Theme & UI Customization
+  // ======================================================
+
+  "workbench.colorCustomizations": {
+    "terminalCursor.foreground": "#ffff00"
+  },
+
+  "glassit.alpha": 250,
+  "glassit-linux.opacity": 95,
+
+  // ======================================================
+  // Terminal
+  // ======================================================
+
+  "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.tabs.enabled": false,
+
+  // ======================================================
+  // Tailwind & CSS
+  // ======================================================
+
   "css.validate": false,
+
   "tailwindCSS.includeLanguages": {
     "html": "html",
     "javascript": "javascript",
     "css": "css"
   },
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  // emmet
-  //emmet inside react jsx
-  // "emmet.includeLanguages": {
-  //     "javascript": "javascriptreact"
-  // },
-  // "emmet.excludeLanguages": [
-  //     "markdown"
-  // ],
-  // vim
-  // "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
-  "security.workspace.trust.untrustedFiles": "open",
-  // "terminal.external.linuxExec": "kitty",
-  // autocmp off
-  // "editor.quickSuggestionsDelay": 10000,
-  // "editor.quickSuggestions": false,
-  // "editor.suggest.showTypeParameters": false,
-  "editor.hover.enabled": "off",
-  // "diffEditor.ignoreTrimWhitespace": false,
-  // java
-  // "java.completion.enabled": false,
-  //"java.configuration.checkProjectSettingsExclusions": false,
+
+  // ======================================================
+  // Vim
+  // ======================================================
 
   "vim.easymotion": true,
   "vim.incsearch": true,
-  "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": true,
   "vim.hlsearch": true,
+
+  "vim.useCtrlKeys": true,
+  "vim.useSystemClipboard": true,
+
+  "vim.smartRelativeLine": true,
+
   "vim.insertModeKeyBindings": [
     {
       "before": ["j", "k"],
       "after": ["<Esc>"]
     }
   ],
+
   "vim.normalModeKeyBindingsNonRecursive": [
     {
       "before": ["<leader>", "d"],
@@ -109,32 +175,35 @@
       "commands": [":nohl"]
     }
   ],
+
   "vim.handleKeys": {
     "<C-a>": false,
     "<C-f>": false
   },
-  "explorer.confirmDragAndDrop": false,
-  "oneDarkPro.vivid": false,
 
-  // "[javascript]": {
-  //   "editor.defaultFormatter": "esbenp.prettier-vscode"
-  // },
-  // Set the default
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  // Enable per-language
-  "[javascript]": {
-    "editor.formatOnSave": true
-  },
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.sideBar.location": "right",
-  "glassit-linux.opacity": 95,
-  // "window.titleBarStyle": "custom",
-  "files.autoSave": "afterDelay",
-  "editor.linkedEditing": true,
+  // ======================================================
+  // TypeScript
+  // ======================================================
+
   "typescript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none",
+
+  // ======================================================
+  // Extensions & Telemetry
+  // ======================================================
+
+  "extensions.ignoreRecommendations": true,
   "redhat.telemetry.enabled": false,
+  "chat.viewSessions.enabled": false,
+
+  // ======================================================
+  // Dev Containers
+  // ======================================================
+
   "dev.containers.dockerPath": "podman",
-  "workbench.activityBar.location": "top"
+
+  // ======================================================
+  // Updates
+  // ======================================================
+
+  "update.showReleaseNotes": false
 }
