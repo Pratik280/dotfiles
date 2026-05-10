@@ -4,20 +4,19 @@
   // ======================================================
 
   // font family
-  // "editor.fontFamily": "InconsolataLGC Nerd Font",
   // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
   "editor.fontFamily": "InconsolataLGC Nerd Font",
-  // "editor.fontFamily": "RobotoMono Nerd Font",
-  // "editor.fontFamily": "'RobotoMono Nerd Font', 'monospace', monospace, 'Droid Sans Fallback'",
-
   "editor.fontSize": 12,
-  "editor.fontWeight": "600",
-  "editor.lineHeight": 26,
-  "editor.letterSpacing": 0.5,
+  "editor.fontWeight": "500",
+  "editor.lineHeight": 20,
+  "editor.letterSpacing": 0,
 
+  "terminal.integrated.fontFamily": "InconsolataLGC Nerd Font",
   "terminal.integrated.fontSize": 12,
-  "terminal.integrated.lineHeight": 1.3,
-  "terminal.integrated.letterSpacing": 0.5
+  "terminal.integrated.lineHeight": 1.0,
+  "terminal.integrated.gpuAcceleration": "on",
+
+  "terminal.integrated.letterSpacing": 0.5,
 
   "editor.cursorBlinking": "expand",
   "editor.renderLineHighlight": "all",
@@ -80,7 +79,7 @@
 
   "[java]": {
   "editor.tabSize": 4
-  }
+  },
 
   // ======================================================
   // Window & Workbench
