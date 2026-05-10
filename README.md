@@ -41,6 +41,7 @@ ln -s ~/repos/dotfiles/.bashrc ~/
 ln -s ~/repos/dotfiles/config/starship.toml ~/.config/
 mkdir ~/.local/share/fonts
 cp -r ~/repos/dotfiles/fonts/* ~/.local/share/fonts/
+fc-cache -fv
 ```
 
 ## Setting up [Distrobox](https://github.com/89luca89/distrobox) 
