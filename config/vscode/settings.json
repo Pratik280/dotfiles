@@ -71,7 +71,7 @@
 
   "files.trimFinalNewlines": true,
 
-  "editor.hover.enabled": true,
+  "editor.hover.enabled": "on",
 
   "[python]": {
     "editor.tabSize": 4
