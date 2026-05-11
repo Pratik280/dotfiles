@@ -8,7 +8,7 @@ rpm-ostree upgrade
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.Client com.brave.Browser org.telegram.desktop
+flatpak install flathub app.zen_browser.zen com.discordapp.Discord com.spotify.Client com.brave.Browser org.telegram.desktop com.github.tchx84.Flatseal
 
 ```
 
@@ -29,6 +29,7 @@ git config --global user.name "Pratik Chandlekar"
 mkdir repos
 cd repos
 git clone git@github.com:Pratik280/dotfiles.git
+git@github.com:Pratik280/pratik280.github.io.git
 ```
 
 ```bash
@@ -39,6 +40,7 @@ curl -sS https://starship.rs/install.sh | sh -s -- -b ~/.local/bin -y
 rm -rf ~/.bashrc 
 ln -s ~/repos/dotfiles/.bashrc ~/
 ln -s ~/repos/dotfiles/config/starship.toml ~/.config/
+ln -s ~/repos/dotfiles/config/nvim/init.lua ~/.config/nvim/
 mkdir ~/.local/share/fonts
 cp -r ~/repos/dotfiles/fonts/* ~/.local/share/fonts/
 fc-cache -fv
