@@ -35,6 +35,123 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
 
     --------------------------------------------------
+    -- DASHBOARD HOME PAGE
+    --------------------------------------------------
+
+    {
+        "nvimdev/dashboard-nvim",
+
+        event = "VimEnter",
+
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+
+        config = function()
+            require("dashboard").setup({
+                theme = "doom",
+
+                config = {
+                    header = {
+                        "",
+                        "   Pratik Dev Environment",
+                        "",
+                    },
+
+                    center = {
+                        {
+                            icon = "󰈞 ",
+                            desc = "Recent Files",
+                            action = "Telescope oldfiles",
+                            key = "r",
+                        },
+
+                        {
+                            icon = "  ",
+                            desc = "Projects",
+                            action = "Telescope projects",
+                            key = "p",
+                        },
+
+                        {
+                            icon = "  ",
+                            desc = "New File",
+                            action = "ene",
+                            key = "n",
+                        },
+
+                        {
+                            icon = "  ",
+                            desc = "Neovim Config",
+                            group = "@property",
+                            action = "edit ~/.config/nvim/init.lua",
+                            key = "c",
+                        },
+
+                        {
+                            icon = "  ",
+                            desc = "Find Files",
+                            group = "Label",
+                            action = "Telescope find_files",
+                            key = "f",
+                        },
+
+                        {
+                            icon = "  ",
+                            desc = "Quit",
+                            action = "qa",
+                            key = "q",
+                        },
+                    },
+
+                    footer = {
+                        "",
+                        "Linux • Neovim • Vimwiki",
+                    },
+                },
+            })
+        end,
+    },
+
+    --------------------------------------------------
+    -- TELESCOPE FUZZY FIND
+    --------------------------------------------------
+    {
+        "nvim-telescope/telescope.nvim",
+
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+        },
+
+        config = function()
+            local telescope = require("telescope")
+            local actions = require("telescope.actions")
+
+            telescope.setup({
+                defaults = {
+                    mappings = {
+                        i = {
+                            ["<C-j>"] = actions.move_selection_next,
+                            ["<C-k>"] = actions.move_selection_previous,
+                        },
+                    },
+                },
+            })
+        end,
+    },
+
+    --------------------------------------------------
+    -- PROJECT
+    --------------------------------------------------
+    {
+        "ahmedkhalf/project.nvim",
+
+        config = function()
+            require("project_nvim").setup()
+        end,
+    },
+
+    --------------------------------------------------
     -- FILE EXPLORER
     --------------------------------------------------
     {
@@ -142,6 +259,28 @@ require("lazy").setup({
 
         vim.g.vimwiki_global_ext = 0
     end,
+
+    --------------------------------------------------
+    -- STATUS BAR
+    --------------------------------------------------
+    {
+    "nvim-lualine/lualine.nvim",
+
+    dependencies = {
+        "nvim-tree/nvim-web-devicons",
+    },
+
+    config = function()
+        require("lualine").setup({
+            options = {
+                theme = "auto",
+                section_separators = "",
+                component_separators = "",
+                globalstatus = true,
+            },
+        })
+    end,
+},
 },
 
 })
@@ -161,6 +300,13 @@ vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
 vim.keymap.set("n", "<leader>ww", ":VimwikiIndex<CR>", { silent = true })
 vim.keymap.set("n", "<leader>wt", ":VimwikiTabIndex<CR>", { silent = true })
+
+local builtin = require("telescope.builtin")
+
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {}) -- leader + ff : find files
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})  -- leader + fg : search text across entire project
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})    -- leader + fb : switch between opened files / buffers
+vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})   -- leader + fr : recent files
 
 --------------------------------------------------
 -- ENABLE SYNTAX
