@@ -188,11 +188,14 @@ require("lazy").setup({
         require("nvim-treesitter").setup({
             ensure_installed = {
                 "lua",
-                "vim",
                 "java",
-                "javascript",
-                "json",
+                "markdown",
+                "markdown_inline",
                 "bash",
+                "json",
+                "yaml",
+                "html",
+                "css",
             },
 
             highlight = {
@@ -231,57 +234,59 @@ require("lazy").setup({
         "Mofiqul/vscode.nvim",
 
         config = function()
+            require("vscode").setup({
+                transparent = true,
+            })
+
             vim.cmd.colorscheme("vscode")
-            -- vim.cmd.colorscheme("habamax")
         end,
     },
 
     --------------------------------------------------
-    -- VSCODE THEME
+    -- VIM WIKI
     --------------------------------------------------
     {
-    "vimwiki/vimwiki",
+        "vimwiki/vimwiki",
 
-    init = function()
-        vim.g.vimwiki_list = {
-            {
-                path = "~/repos/pratik280.github.io/vimwiki/",
-                syntax = "default",
-                ext = ".wiki",
+        init = function()
+            vim.g.vimwiki_list = {
+                {
+                    path = "~/repos/pratik280.github.io/vimwiki/",
+                    syntax = "default",
+                    ext = ".wiki",
 
-                path_html = "~/repos/pratik280.github.io/",
-                custom_wiki2html = "",
-                template_path = "~/repos/pratik280.github.io/templates/",
-                template_default = "default",
-                template_ext = ".tpl",
+                    path_html = "~/repos/pratik280.github.io/",
+                    custom_wiki2html = "",
+                    template_path = "~/repos/pratik280.github.io/templates/",
+                    template_default = "default",
+                    template_ext = ".tpl",
+                }
             }
-        }
 
-        vim.g.vimwiki_global_ext = 0
-    end,
-
+            vim.g.vimwiki_global_ext = 0
+        end,
+    },
     --------------------------------------------------
     -- STATUS BAR
     --------------------------------------------------
     {
-    "nvim-lualine/lualine.nvim",
+        "nvim-lualine/lualine.nvim",
 
-    dependencies = {
-        "nvim-tree/nvim-web-devicons",
+        dependencies = {
+            "nvim-tree/nvim-web-devicons",
+        },
+
+        config = function()
+            require("lualine").setup({
+                options = {
+                    theme = "auto",
+                    section_separators = "",
+                    component_separators = "",
+                    globalstatus = true,
+                },
+            })
+        end,
     },
-
-    config = function()
-        require("lualine").setup({
-            options = {
-                theme = "auto",
-                section_separators = "",
-                component_separators = "",
-                globalstatus = true,
-            },
-        })
-    end,
-},
-},
 
 })
 
