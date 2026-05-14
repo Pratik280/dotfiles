@@ -181,29 +181,29 @@ require("lazy").setup({
     --------------------------------------------------
 
     {
-    "nvim-treesitter/nvim-treesitter",
-    build = ":TSUpdate",
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
 
-    config = function()
-        require("nvim-treesitter").setup({
-            ensure_installed = {
-                "lua",
-                "java",
-                "markdown",
-                "markdown_inline",
-                "bash",
-                "json",
-                "yaml",
-                "html",
-                "css",
-            },
+        config = function()
+            require("nvim-treesitter").setup({
+                ensure_installed = {
+                    "lua",
+                    "java",
+                    "markdown",
+                    "markdown_inline",
+                    "bash",
+                    "json",
+                    "yaml",
+                    "html",
+                    "css",
+                },
 
-            highlight = {
-                enable = true,
-            },
-        })
-    end,
-},
+                highlight = {
+                    enable = true,
+                },
+            })
+        end,
+    },
 
     --------------------------------------------------
     -- AUTOPAIRS
@@ -260,6 +260,21 @@ require("lazy").setup({
                     template_path = "~/repos/pratik280.github.io/templates/",
                     template_default = "default",
                     template_ext = ".tpl",
+                    diary_rel_path = "",
+                },
+                {
+                    path = "~/repos/diary_wiki/vimwiki/",
+                    syntax = "default",
+                    ext = ".wiki",
+
+                    path_html = "~/repos/diary_wiki/",
+                    custom_wiki2html = "",
+                    template_path = "~/repos/diary_wiki/templates/",
+                    template_default = "default",
+                    template_ext = ".tpl",
+                    diary_rel_path = "diary/",
+                    diary_index = "diary",
+                    diary_header = "Diary",
                 }
             }
 
@@ -290,6 +305,46 @@ require("lazy").setup({
 
 })
 
+
+--------------------------------------------------
+-- DIARY TEMPLATE
+--------------------------------------------------
+vim.api.nvim_create_autocmd("BufNewFile", {
+    pattern = "*/diary_wiki/vimwiki/diary/*.wiki",
+    callback = function()
+        local lines = {
+            "= " .. vim.fn.expand("%:t:r") .. " =",
+            "",
+            "== 🌅 Morning Intentions ==",
+            "* ",
+            "",
+            "== ✅ TODOs ==",
+            "* [ ] ",
+            "* [ ] ",
+            "* [ ] ",
+            "",
+            "== 📋 Daily Log ==",
+            "",
+            "=== 💼 Office ===",
+            "* ",
+            "",
+            "=== 🏠 Personal ===",
+            "* ",
+            "",
+            "=== 📚 Learning ===",
+            "* ",
+            "",
+            "== 💡 Notes & Ideas ==",
+            "",
+            "== 🌙 Evening Reflection ==",
+            "* *What went well:* ",
+            "* *What could be better:* ",
+            "* *Grateful for:* ",
+        }
+        vim.api.nvim_buf_set_lines(0, 0, -1, false, lines)
+    end,
+})
+
 --------------------------------------------------
 -- SHORTCUTS
 --------------------------------------------------
@@ -305,6 +360,8 @@ vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
 vim.keymap.set("n", "<leader>ww", ":VimwikiIndex<CR>", { silent = true })
 vim.keymap.set("n", "<leader>wt", ":VimwikiTabIndex<CR>", { silent = true })
+vim.keymap.set("n", "<leader>w1", "<cmd>VimwikiIndex 1<CR>")
+vim.keymap.set("n", "<leader>w2", "<cmd>VimwikiIndex 2<CR>")
 
 local builtin = require("telescope.builtin")
 
