@@ -427,8 +427,6 @@ vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
 
 -- wiki shortcuts
-vim.keymap.set("n", "<leader>ww", ":VimwikiIndex<CR>", { silent = true })
-vim.keymap.set("n", "<leader>wt", ":VimwikiTabIndex<CR>", { silent = true })
 vim.keymap.set("n", "<leader>w1", "<cmd>VimwikiIndex 1<CR>")
 vim.keymap.set("n", "<leader>w2", "<cmd>VimwikiIndex 2<CR>")
 
@@ -443,3 +441,4 @@ vim.keymap.set("n", "<leader>fr", builtin.oldfiles, {})   -- leader + fr : recen
 -- ENABLE SYNTAX
 --------------------------------------------------
 vim.cmd("syntax on")
+
