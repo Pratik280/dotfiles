@@ -346,6 +346,73 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 })
 
 --------------------------------------------------
+-- DIARY TODO SYNC
+--------------------------------------------------
+local function sync_diary_todos()
+    local wiki_root = "/var/home/pratikc/repos/diary_wiki/vimwiki/"
+    local today = os.date("%Y-%m-%d")
+    local diary_path = wiki_root .. "diary/" .. today .. ".wiki"
+
+    -- Read today's diary, collect all checkbox lines (any state, any indent)
+    local todos = {}
+    local f = io.open(diary_path, "r")
+    if f then
+        for line in f:lines() do
+            if line:match("^%s*%* %[.%]") then
+                table.insert(todos, line)
+            end
+        end
+        f:close()
+    end
+
+    -- Find the index buffer
+    local index_path = wiki_root .. "index.wiki"
+    local bufnr = vim.fn.bufnr(index_path)
+    if bufnr == -1 then return end
+
+    local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
+
+    -- Find == Active TODOs == section boundaries
+    local section_start, next_section = nil, nil
+    for i, line in ipairs(lines) do
+        if line:match("^== Active TODOs ==") then
+            section_start = i
+        elseif section_start and not next_section and i > section_start and line:match("^==") then
+            next_section = i - 1
+            break
+        end
+    end
+    if not section_start then return end
+    next_section = next_section or #lines
+
+    -- Build replacement block
+    local new_block = { "== Active TODOs ==" }
+    if #todos == 0 then
+        table.insert(new_block, "* (none for today)")
+    else
+        for _, t in ipairs(todos) do
+            table.insert(new_block, t)
+        end
+    end
+    table.insert(new_block, "")  -- blank line before next section
+
+    -- Replace section in buffer (0-indexed for nvim API)
+    vim.api.nvim_buf_set_lines(bufnr, section_start - 1, next_section, false, new_block)
+end
+
+-- Auto-sync when opening the index
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = "*/diary_wiki/vimwiki/index.wiki",
+    callback = sync_diary_todos,
+})
+
+-- Manual keybind: <Leader>wt
+vim.keymap.set("n", "<leader>wt", sync_diary_todos, { desc = "Sync diary TODOs to index" })
+
+-- Also expose as a command
+vim.api.nvim_create_user_command("SyncDiaryTodos", sync_diary_todos, {})
+
+--------------------------------------------------
 -- SHORTCUTS
 --------------------------------------------------
 
@@ -358,6 +425,8 @@ vim.keymap.set("n", "<C-k>", "<C-w>k", { silent = true })
 vim.keymap.set( "n", "<leader>e", ":NvimTreeToggle<CR>", { silent = true })
 vim.keymap.set("n", "<leader>/", "gcc", { remap = true })
 vim.keymap.set("v", "<leader>/", "gc", { remap = true })
+
+-- wiki shortcuts
 vim.keymap.set("n", "<leader>ww", ":VimwikiIndex<CR>", { silent = true })
 vim.keymap.set("n", "<leader>wt", ":VimwikiTabIndex<CR>", { silent = true })
 vim.keymap.set("n", "<leader>w1", "<cmd>VimwikiIndex 1<CR>")
