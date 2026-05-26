@@ -69,6 +69,7 @@ distrobox enter arch
 Install yay-bin
 ```
 sudo pacman -S --needed git base-devel
+sudo pacman -S wl-clipboard
 ```
 ```
 git clone https://aur.archlinux.org/yay-bin.git

@@ -267,7 +267,7 @@ require("lazy").setup({
                     syntax = "default",
                     ext = ".wiki",
 
-                    path_html = "~/repos/diary_wiki/",
+                    path_html = "~/repos/diary_wiki/html/",
                     custom_wiki2html = "",
                     template_path = "~/repos/diary_wiki/templates/",
                     template_default = "default",
@@ -412,6 +412,21 @@ vim.keymap.set("n", "<leader>wt", sync_diary_todos, { desc = "Sync diary TODOs t
 -- Also expose as a command
 vim.api.nvim_create_user_command("SyncDiaryTodos", sync_diary_todos, {})
 
+-- run java for DSA coding
+local function runjava()
+    -- 1. Save the current file automatically so you don't run old code
+    vim.cmd("write")
+    
+    -- 2. Open a horizontal split screen at the bottom
+    vim.cmd("vsplit")
+    vim.cmd("wincmd l") -- move cursor to the new split
+    vim.cmd("resize 30") -- make the terminal window 10 lines high
+    
+    -- 3. Run the compile and execute command inside a live terminal
+    vim.cmd("terminal javac *.java && java Main")
+end
+
+vim.api.nvim_create_user_command("RunJavaCode", runjava, {})
 --------------------------------------------------
 -- SHORTCUTS
 --------------------------------------------------
