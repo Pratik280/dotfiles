@@ -30,4 +30,9 @@
     "when": "sideBarFocus",
     "command": "workbench.action.focusActiveEditorGroup"
   },
+  {
+    "key": "ctrl+i",
+    "command": "-extension.vim_ctrl+i",
+    "when": "editorTextFocus && vim.active && vim.use<C-i> && !inDebugRepl"
+  },
 ]

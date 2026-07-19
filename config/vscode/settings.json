@@ -90,7 +90,7 @@
   "window.commandCenter": false,
 
   "workbench.startupEditor": "none",
-  "workbench.statusBar.visible": false,
+  // "workbench.statusBar.visible": false,
 
   "workbench.sideBar.location": "right",
   "workbench.activityBar.location": "top",
@@ -232,4 +232,10 @@
   "zenMode.hideLineNumbers": false,
   "zenMode.restore": true,
   "zenMode.silentNotifications": true,
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": false,
+    "scminput": false
+  },
 }
