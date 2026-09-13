@@ -6,9 +6,9 @@
   // font family
   // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
   "editor.fontFamily": "InconsolataLGC Nerd Font",
-  "editor.fontSize": 12,
-  "editor.fontWeight": "500",
-  "editor.lineHeight": 20,
+  "editor.fontSize": 11,
+  "editor.fontWeight": "700",
+  "editor.lineHeight": 22,
   "editor.letterSpacing": 0,
 
   "terminal.integrated.fontFamily": "InconsolataLGC Nerd Font",
@@ -85,7 +85,7 @@
   // Window & Workbench
   // ======================================================
 
-  "window.zoomLevel": 0.65,
+  "window.zoomLevel": 1.5,
   "window.restoreWindows": "none",
   "window.commandCenter": false,
 

@@ -1,0 +1,7 @@
+#!/bin/bash
+flatpak run com.google.Chrome \
+  --app="https://www.zee5.com/" \
+  --start-fullscreen \
+  --enable-features=UseOzonePlatform \
+  --ozone-platform=wayland \
+  --class=htpc

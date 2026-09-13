@@ -1,0 +1,8 @@
+#!/bin/bash
+flatpak run com.google.Chrome \
+  --app="https://www.youtube.com/tv#/surface?c=tv" \
+  --user-agent="Mozilla/5.0 (SmartTV; LINUX; SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 SmartTV" \
+  --start-fullscreen \
+  --enable-features=UseOzonePlatform \
+  --ozone-platform=wayland \
+  --class=htpc
