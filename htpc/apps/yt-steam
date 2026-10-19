@@ -1,5 +1,7 @@
 #!/bin/bash
-flatpak run com.google.Chrome \
+unset LD_PRELOAD
+
+google-chrome-stable \
   --app="https://www.youtube.com/tv#/surface?c=tv" \
   --user-agent="Mozilla/5.0 (SmartTV; LINUX; SmartTV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36 SmartTV" \
   --start-fullscreen \
