@@ -1,0 +1,34 @@
+
+# General
+set hidden
+set preview
+set sortby natural
+set dirfirst
+set scrolloff 5
+
+# Navigation (vim-style)
+map h updir
+map l open
+map j down
+map k up
+map gg top
+map G bottom
+
+# Go home
+map gh cd ~
+
+# Toggle hidden files
+map . set hidden!
+
+# Sort by name / size / modification time
+map sn :set sortby natural; set info
+map ss :set sortby size; set info size
+map st :set sortby time; set info time
+
+# Open shell in current directory
+map w $$SHELL
+
+# Create file or directory
+map mf $nvim "$(echo new-file)"
+
+cmd open $nvim "$f"
