@@ -1,0 +1,32 @@
+output "HDMI-A-1" {
+    mode "2560x1440@144.006"
+    scale 1
+}
+layout {
+    gaps 12
+}
+binds{
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "helium-browser"; }
+    Mod+C hotkey-overlay-title="Open ChatGPR" {spawn "helium-browser" "--app=https://chatgpt.com/?temporary-chat=true";}
+    Mod+G hotkey-overlay-title="Open Gemini" {spawn "helium-browser" "--app=https://gemini.google.com/app?hl=en-IN";}
+    Mod+E hotkey-overlay-title="Open File Explorer" { spawn "env" "QT_QPA_PLATFORMTHEME=kde" "dolphin"; }
+    Mod+Z hotkey-overlay-title="Open Niri Text Editor" { spawn "zeditor"; }
+}
+
+blur {
+    passes 3
+    offset 3
+    noise 0.02
+    saturation 1.15
+}
+
+window-rule {
+    match app-id="^dev.zed.Zed$"
+
+    opacity 1.0
+
+    background-effect {
+        blur true
+        xray false
+    }
+}

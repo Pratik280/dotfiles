@@ -230,17 +230,50 @@ require("lazy").setup({
     --------------------------------------------------
     -- VSCODE THEME
     --------------------------------------------------
+    --{
+    --    "Mofiqul/vscode.nvim",
+
+    --    config = function()
+    --        require("vscode").setup({
+    --            transparent = true,
+    --        })
+
+    --        vim.cmd.colorscheme("vscode")
+    --    end,
+    --},
+
     {
-        "Mofiqul/vscode.nvim",
-
+        "ellisonleao/gruvbox.nvim",
+        priority = 1000,
         config = function()
-            require("vscode").setup({
-                transparent = true,
-            })
-
-            vim.cmd.colorscheme("vscode")
+            vim.o.background = "dark"
+            vim.cmd.colorscheme("gruvbox")
         end,
     },
+
+    -- {
+    --   "catppuccin/nvim",
+    --   name = "catppuccin",
+    --   priority = 1000, -- Load this before all other plugins
+    --   config = function()
+    --     require("catppuccin").setup({
+    --       flavour = "mocha", -- latte, frappe, macchiato, mocha
+    --       transparent_background = false,
+    --       term_colors = true,
+    --       integrations = {
+    --         cmp = true,
+    --         gitsigns = true,
+    --         nvimtree = true,
+    --         treesitter = true,
+    --         notify = fzf,
+    --         -- lazy.nvim automatically detects and hooks integrations by default
+    --       }
+    --     })
+    -- 
+    --     -- Setup must be called before loading the colorscheme
+    --     vim.cmd.colorscheme "catppuccin"
+    --   end,
+    -- },
 
     --------------------------------------------------
     -- VIM WIKI
@@ -349,7 +382,7 @@ vim.api.nvim_create_autocmd("BufNewFile", {
 -- DIARY TODO SYNC
 --------------------------------------------------
 local function sync_diary_todos()
-    local wiki_root = "/var/home/pratikc/repos/diary_wiki/vimwiki/"
+    local wiki_root = "~/repos/diary_wiki/vimwiki/"
     local today = os.date("%Y-%m-%d")
     local diary_path = wiki_root .. "diary/" .. today .. ".wiki"
 

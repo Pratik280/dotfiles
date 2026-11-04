@@ -1,0 +1,62 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "icon_theme": "Zed (Default)",
+  "restore_on_startup": "launchpad",
+  "default_open_behavior": "new_window",
+  "cli_default_open_behavior": "new_window",
+  "autosave": {
+    "after_delay": {
+      "milliseconds": 1000
+    }
+  },
+  "markdown_preview": {
+    "font_family": "Inconsolata-g"
+  },
+  "cursor_animation": {
+    "enabled": true
+  },
+  "ui_font_family": "Inconsolata-g",
+  "buffer_font_family": "Inconsolata-g",
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+    "anthropic_retention": false
+  },
+  "session": {
+    "trust_all_worktrees": true
+  },
+  "vim_mode": true,
+  "ui_font_size": 18.0,
+  "buffer_font_size": 17.0,
+  "theme": "Gruvbox Dark",
+    "experimental.theme_overrides": {
+      "background.appearance": "blurred",
+
+      "background": "#282828CC",
+
+      "editor.background": "#28282899",
+      "editor.gutter.background": "#28282899",
+
+      "title_bar.background": "#3C383699",
+      "toolbar.background": "#3C383699",
+
+      "tab_bar.background": "#28282899",
+      "tab.active_background": "#3C383699",
+      "tab.inactive_background": "#28282899",
+
+      "panel.background": "#28282899",
+      "terminal.background": "#28282899",
+      "status_bar.background": "#3C383699",
+
+      "border": "#665C54AA",
+      "border.variant": "#50494599"
+
+  }
+}

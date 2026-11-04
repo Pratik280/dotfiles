@@ -6,12 +6,11 @@
   // font family
   // "editor.fontFamily": "'Inconsolata-g', 'monospace', monospace, 'Droid Sans Fallback'ZZ",
   "editor.fontFamily": "InconsolataLGC Nerd Font",
-  "editor.fontSize": 11,
+  "editor.fontSize": 12,
   "editor.fontWeight": "700",
-  "editor.lineHeight": 22,
+  "editor.lineHeight": 24,
   "editor.letterSpacing": 0,
 
-  "terminal.integrated.fontFamily": "InconsolataLGC Nerd Font",
   "terminal.integrated.fontSize": 12,
   "terminal.integrated.lineHeight": 1.0,
   "terminal.integrated.gpuAcceleration": "on",
@@ -85,7 +84,7 @@
   // Window & Workbench
   // ======================================================
 
-  "window.zoomLevel": 1.5,
+  "window.zoomLevel": 1.25,
   "window.restoreWindows": "none",
   "window.commandCenter": false,
 
@@ -238,4 +237,5 @@
     "markdown": false,
     "scminput": false
   },
+  "workbench.colorTheme": "Dark Modern",
 }
