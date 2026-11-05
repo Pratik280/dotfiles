@@ -7,6 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "toolbar": {
+    "agent_review": false,
+    "selections_menu": false,
+    "quick_actions": false,
+    "breadcrumbs": false
+  },
+  "current_line_highlight": "none",
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
   "icon_theme": "Zed (Default)",
   "restore_on_startup": "launchpad",
   "default_open_behavior": "new_window",
@@ -17,13 +29,13 @@
     }
   },
   "markdown_preview": {
-    "font_family": "Inconsolata-g"
+    "font_family": "InconsolataLGC Nerd Font"
   },
   "cursor_animation": {
     "enabled": true
   },
   "ui_font_family": "Inconsolata-g",
-  "buffer_font_family": "Inconsolata-g",
+  "buffer_font_family": "InconsolataLGC Nerd Font",
   "telemetry": {
     "diagnostics": false,
     "metrics": false,
